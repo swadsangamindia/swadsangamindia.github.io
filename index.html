@@ -26,8 +26,6 @@
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8403484408535539" crossorigin="anonymous"></script>
 
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -81,9 +79,9 @@
 </head>
 <body class="flex flex-col h-screen overflow-hidden select-none">
 
-  <!-- TOP BRAND & CONTROLLER HEADER -->
+  <!-- TOP HEADER -->
   <header class="bg-[#78350f] text-white border-b border-amber-900/50 px-4 md:px-8 py-3 flex justify-between items-center shrink-0 z-30 shadow-md">
-    <!-- Brand Title & Multi-Company Switcher -->
+    <!-- Store & Switcher -->
     <div class="flex items-center gap-3 md:gap-6">
       <div class="flex items-center gap-2.5">
         <div class="bg-gradient-to-tr from-amber-400 to-yellow-300 p-2 rounded-xl text-slate-950 shadow-sm">
@@ -131,7 +129,7 @@
 
       <!-- Google Login Button -->
       <div class="flex items-center pl-1.5 border-l border-amber-700/60">
-        <button onclick="handleGoogleSignIn()" id="auth-action-btn" class="w-7 h-7 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center shadow transition" title="Sign in with Google">
+        <button id="auth-action-btn" class="w-7 h-7 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center shadow transition" title="Sign in with Google">
           U
         </button>
       </div>
@@ -181,7 +179,7 @@
         </button>
       </nav>
 
-      <!-- Bottom Net Cash Position -->
+      <!-- Net Cash Display -->
       <div class="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 space-y-1">
         <div class="flex items-center justify-between">
           <span class="text-[10px] text-amber-800 font-bold uppercase tracking-wider">Net Cash Total</span>
@@ -195,7 +193,7 @@
     <!-- MAIN SCROLLABLE VIEWPORT -->
     <main class="flex-1 overflow-y-auto p-4 md:p-8 pb-28 md:pb-8 relative z-10">
 
-      <!-- 0. VIEW: ABOUT & OVERVIEW HUB (MASSIVE KNOWLEDGE REPOSITORY) -->
+      <!-- 0. VIEW: ABOUT & OVERVIEW HUB -->
       <div id="view-about" class="tab-view space-y-6">
         <section class="caphi-card p-6 md:p-8 space-y-8">
           <div class="max-w-4xl space-y-3">
@@ -282,7 +280,7 @@
             </div>
           </div>
 
-          <!-- ENCYCLOPEDIC FINANCIAL ARTICLES (FOR ADSENSE VALUE CRITERIA) -->
+          <!-- ENCYCLOPEDIC FINANCIAL ARTICLES -->
           <div class="pt-6 border-t border-amber-100 space-y-8 text-slate-700">
             <article class="space-y-3">
               <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
@@ -585,7 +583,7 @@
         </div>
       </div>
 
-      <!-- 5. VIEW: CALCULATORS (EXPANDED FINANCIAL UTILITIES) -->
+      <!-- 5. VIEW: CALCULATORS -->
       <div id="view-calculator" class="tab-view hidden space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- Due Interest Calculator -->
@@ -767,7 +765,7 @@
               <p class="text-[11px] text-slate-500" id="user-display-email">Not signed in</p>
             </div>
           </div>
-          <button id="auth-action-btn-settings" onclick="handleGoogleSignIn()" class="bg-[#78350f] hover:bg-[#92400e] text-white text-xs font-bold px-3.5 py-1.5 rounded-lg transition shadow-sm">
+          <button id="auth-action-btn-settings" class="bg-[#78350f] hover:bg-[#92400e] text-white text-xs font-bold px-3.5 py-1.5 rounded-lg transition shadow-sm">
             Sign In
           </button>
         </div>
@@ -829,7 +827,7 @@
         </div>
       </div>
 
-      <!-- PERSISTENT FOOTER FOR ADSENSE CRAWLER -->
+      <!-- FOOTER -->
       <footer class="mt-12 py-6 border-t border-amber-200 text-center text-xs text-slate-500 space-y-2">
         <p>© 2026 Khata Bahi Digital Ledger. Professional Cloud Accounting for Retailers.</p>
         <div class="flex items-center justify-center gap-4 text-amber-800 font-semibold">
@@ -884,7 +882,7 @@
     </div>
   </div>
 
-  <!-- MODAL: ADD ENTRY (PRO SALE/PURCHASE UNLOCK) -->
+  <!-- MODAL: ADD ENTRY -->
   <div id="modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
     <div class="caphi-card max-w-lg w-full p-5 md:p-6 shadow-xl max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center mb-4 pb-2 border-b border-slate-100">
@@ -974,7 +972,7 @@
     </div>
   </div>
 
-  <!-- MODAL: UPGRADE TO PRO (₹99 / 30 DAYS WITH UPI & QR) -->
+  <!-- MODAL: UPGRADE TO PRO -->
   <div id="upgrade-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
     <div class="caphi-card max-w-sm w-full p-6 shadow-xl relative space-y-4 border border-amber-300">
       <div class="flex justify-between items-center">
@@ -1053,8 +1051,8 @@
             <td id="pdf-item-desc" style="border-right: 1px solid #000; padding: 6px; font-weight: bold;">Goods</td>
             <td id="pdf-item-qty" style="border-right: 1px solid #000; padding: 6px; text-align: center;">1</td>
             <td id="pdf-item-price" style="border-right: 1px solid #000; padding: 6px; text-align: right;">0.00</td>
-            <td id="pdf-cgst-rate" style="border-right: 1px solid #000; padding: 6px; text-align: center;">9%</td>
-            <td id="pdf-sgst-rate" style="border-right: 1px solid #000; padding: 6px; text-align: center;">9%</td>
+            <td id="pdf-item-rate" style="border-right: 1px solid #000; padding: 6px; text-align: center;">9%</td>
+            <td id="pdf-item-sgst" style="border-right: 1px solid #000; padding: 6px; text-align: center;">9%</td>
             <td id="pdf-item-total" style="padding: 6px; text-align: right; font-weight: bold;">0.00</td>
           </tr>
         </tbody>
@@ -1076,7 +1074,7 @@
     </div>
   </div>
 
-  <!-- APPLICATION CORE SCRIPT -->
+  <!-- APPLICATION CORE LOGIC -->
   <script>
     lucide.createIcons();
 
@@ -1088,12 +1086,12 @@
     const RECEIVER_NAME = "Swad Sangam Khata Bahi";
     const PRO_PRICE = 99;
 
-    let companies = JSON.parse(localStorage.getItem('ledger_companies')) || [
+    window.companies = JSON.parse(localStorage.getItem('ledger_companies')) || [
       { id: 'c_default', name: 'My Main Shop', address: 'Delhi, India', gstin: 'N/A', phone: '' }
     ];
-    let activeCompanyId = localStorage.getItem('ledger_active_company_id') || companies[0].id;
-    let transactions = JSON.parse(localStorage.getItem(`ledger_tx_${activeCompanyId}`)) || [];
-    let currentUser = JSON.parse(localStorage.getItem('ledger_user')) || { name: 'Aditya', email: 'aditya@example.com', currency: '₹' };
+    window.activeCompanyId = localStorage.getItem('ledger_active_company_id') || window.companies[0].id;
+    window.transactions = JSON.parse(localStorage.getItem(`ledger_tx_${window.activeCompanyId}`)) || [];
+    window.currentUser = JSON.parse(localStorage.getItem('ledger_user')) || { name: 'Aditya', email: 'aditya@example.com', currency: '₹' };
 
     let isProUser = JSON.parse(localStorage.getItem('ledger_is_pro')) || false;
     let proExpiry = JSON.parse(localStorage.getItem('ledger_pro_expiry')) || null;
@@ -1119,9 +1117,7 @@
 
     function updateProStatusUI() {
       const planBadge = document.getElementById('sidebar-plan-badge');
-      const headerProTag = document.getElementById('header-pro-tag');
       const planDesc = document.getElementById('settings-plan-desc');
-      
       const headerUpgradeBtn = document.getElementById('header-upgrade-btn');
       const homeUpgradeBtn = document.getElementById('home-upgrade-btn');
       const settingsUpgradeBtn = document.getElementById('settings-upgrade-btn');
@@ -1131,31 +1127,19 @@
 
       if (isProUser && remainingDays > 0) {
         if (planBadge) planBadge.innerHTML = `<i data-lucide="crown" class="w-3.5 h-3.5 text-amber-300 inline"></i> Pro (${remainingDays}d)`;
-        if (headerProTag) {
-          headerProTag.innerText = `Pro (${remainingDays}d left)`;
-          headerProTag.className = "text-[10px] bg-amber-200 text-amber-900 font-extrabold px-2.5 py-0.5 rounded-full";
-        }
         if (planDesc) planDesc.innerText = `Pro Membership Active (${remainingDays} days remaining)`;
 
-        // HIDE ALL UPGRADE BUTTONS AUTOMATICALLY ONCE PRO IS ACTIVE
         if (headerUpgradeBtn) headerUpgradeBtn.classList.add('hidden');
         if (homeUpgradeBtn) homeUpgradeBtn.classList.add('hidden');
         if (settingsUpgradeBtn) settingsUpgradeBtn.classList.add('hidden');
-
         if (proFields) proFields.classList.remove('hidden');
       } else {
         if (planBadge) planBadge.innerHTML = `<i data-lucide="shield" class="w-3.5 h-3.5 text-amber-300 inline"></i> Free Tier`;
-        if (headerProTag) {
-          headerProTag.innerText = "Free Tier";
-          headerProTag.className = "text-[10px] bg-slate-200 text-slate-700 font-bold px-2 py-0.5 rounded-full";
-        }
         if (planDesc) planDesc.innerText = "Free Plan (Receipt & Payment only)";
 
-        // SHOW UPGRADE BUTTONS ON FREE PLAN
         if (headerUpgradeBtn) headerUpgradeBtn.classList.remove('hidden');
         if (homeUpgradeBtn) homeUpgradeBtn.classList.remove('hidden');
         if (settingsUpgradeBtn) settingsUpgradeBtn.classList.remove('hidden');
-
         if (proFields) proFields.classList.add('hidden');
       }
       lucide.createIcons();
@@ -1196,9 +1180,9 @@
       }
     }
 
-    /* GULLAK LOGIC WITH INDIVIDUAL RECORD DELETION */
-    let gullakBalance = Number(localStorage.getItem(`gullak_bal_${activeCompanyId}`)) || 0;
-    let gullakHistory = JSON.parse(localStorage.getItem(`gullak_hist_${activeCompanyId}`)) || [];
+    /* GULLAK LOGIC WITH RECORD DELETION */
+    let gullakBalance = Number(localStorage.getItem(`gullak_bal_${window.activeCompanyId}`)) || 0;
+    let gullakHistory = JSON.parse(localStorage.getItem(`gullak_hist_${window.activeCompanyId}`)) || [];
 
     function updateGullakUI() {
       const balEl = document.getElementById('gullak-balance-display');
@@ -1242,8 +1226,8 @@
       gullakBalance += amt;
       gullakHistory.unshift({ type: 'deposit', amount: amt, note: note, date: new Date().toLocaleDateString('en-GB') });
 
-      localStorage.setItem(`gullak_bal_${activeCompanyId}`, gullakBalance);
-      localStorage.setItem(`gullak_hist_${activeCompanyId}`, JSON.stringify(gullakHistory));
+      localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, gullakBalance);
+      localStorage.setItem(`gullak_hist_${window.activeCompanyId}`, JSON.stringify(gullakHistory));
       
       amtInput.value = '';
       noteInput.value = '';
@@ -1262,8 +1246,8 @@
       gullakBalance -= amt;
       gullakHistory.unshift({ type: 'withdraw', amount: amt, note: note, date: new Date().toLocaleDateString('en-GB') });
 
-      localStorage.setItem(`gullak_bal_${activeCompanyId}`, gullakBalance);
-      localStorage.setItem(`gullak_hist_${activeCompanyId}`, JSON.stringify(gullakHistory));
+      localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, gullakBalance);
+      localStorage.setItem(`gullak_hist_${window.activeCompanyId}`, JSON.stringify(gullakHistory));
       
       amtInput.value = '';
       noteInput.value = '';
@@ -1281,8 +1265,8 @@
       }
 
       gullakHistory.splice(index, 1);
-      localStorage.setItem(`gullak_bal_${activeCompanyId}`, gullakBalance);
-      localStorage.setItem(`gullak_hist_${activeCompanyId}`, JSON.stringify(gullakHistory));
+      localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, gullakBalance);
+      localStorage.setItem(`gullak_hist_${window.activeCompanyId}`, JSON.stringify(gullakHistory));
       updateGullakUI();
     }
 
@@ -1290,8 +1274,8 @@
       if (!confirm("क्या आप गुल्लक के सभी रिकॉर्ड और बैलेंस साफ़ करना चाहते हैं?")) return;
       gullakBalance = 0;
       gullakHistory = [];
-      localStorage.setItem(`gullak_bal_${activeCompanyId}`, 0);
-      localStorage.setItem(`gullak_hist_${activeCompanyId}`, JSON.stringify([]));
+      localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, 0);
+      localStorage.setItem(`gullak_hist_${window.activeCompanyId}`, JSON.stringify([]));
       updateGullakUI();
     }
 
@@ -1299,16 +1283,13 @@
     function renderCompanySelectors() {
       const desktopSel = document.getElementById('company-selector');
       const mobileSel = document.getElementById('mobile-company-selector');
-      const badge = document.getElementById('store-count-badge');
-
-      if (badge) badge.innerText = `${companies.length} Store${companies.length > 1 ? 's' : ''}`;
 
       if (desktopSel && mobileSel) {
         desktopSel.innerHTML = '';
         mobileSel.innerHTML = '';
 
-        companies.forEach(c => {
-          const selected = c.id === activeCompanyId ? 'selected' : '';
+        window.companies.forEach(c => {
+          const selected = c.id === window.activeCompanyId ? 'selected' : '';
           desktopSel.innerHTML += `<option value="${c.id}" ${selected}>${c.name}</option>`;
           mobileSel.innerHTML += `<option value="${c.id}" ${selected}>${c.name}</option>`;
         });
@@ -1334,8 +1315,8 @@
       if (!container) return;
 
       container.innerHTML = '';
-      companies.forEach(c => {
-        const isActive = c.id === activeCompanyId;
+      window.companies.forEach(c => {
+        const isActive = c.id === window.activeCompanyId;
         container.innerHTML += `
           <div onclick="selectCompanyById('${c.id}')" class="p-3 rounded-xl border transition cursor-pointer flex justify-between items-center ${isActive ? 'bg-amber-100/60 border-amber-400' : 'bg-white border-amber-200 hover:bg-amber-50'}">
             <div>
@@ -1350,31 +1331,31 @@
     }
 
     function selectCompanyById(id) {
-      activeCompanyId = id;
-      localStorage.setItem('ledger_active_company_id', activeCompanyId);
+      window.activeCompanyId = id;
+      localStorage.setItem('ledger_active_company_id', window.activeCompanyId);
       loadCompanyTransactions();
     }
 
     function getActiveCompany() {
-      return companies.find(c => c.id === activeCompanyId) || companies[0];
+      return (window.companies || []).find(c => c.id === window.activeCompanyId) || { name: 'My Shop', address: 'Delhi, India', gstin: 'N/A', phone: '' };
     }
 
     function switchActiveCompany() {
-      activeCompanyId = document.getElementById('company-selector').value;
-      localStorage.setItem('ledger_active_company_id', activeCompanyId);
+      window.activeCompanyId = document.getElementById('company-selector').value;
+      localStorage.setItem('ledger_active_company_id', window.activeCompanyId);
       loadCompanyTransactions();
     }
 
     function switchActiveCompanyMobile() {
-      activeCompanyId = document.getElementById('mobile-company-selector').value;
-      localStorage.setItem('ledger_active_company_id', activeCompanyId);
+      window.activeCompanyId = document.getElementById('mobile-company-selector').value;
+      localStorage.setItem('ledger_active_company_id', window.activeCompanyId);
       loadCompanyTransactions();
     }
 
     function loadCompanyTransactions() {
-      transactions = JSON.parse(localStorage.getItem(`ledger_tx_${activeCompanyId}`)) || [];
-      gullakBalance = Number(localStorage.getItem(`gullak_bal_${activeCompanyId}`)) || 0;
-      gullakHistory = JSON.parse(localStorage.getItem(`gullak_hist_${activeCompanyId}`)) || [];
+      window.transactions = JSON.parse(localStorage.getItem(`ledger_tx_${window.activeCompanyId}`)) || [];
+      gullakBalance = Number(localStorage.getItem(`gullak_bal_${window.activeCompanyId}`)) || 0;
+      gullakHistory = JSON.parse(localStorage.getItem(`gullak_hist_${window.activeCompanyId}`)) || [];
       renderCompanySelectors();
       updateGullakUI();
       saveAndRender();
@@ -1385,18 +1366,20 @@
 
     function createNewCompany() {
       const name = document.getElementById('new-company-name-input').value.trim();
-      if (!name) return alert("Please enter valid name!");
+      if (!name) return alert("Please enter a valid store name!");
 
       const newC = { id: `c_${Date.now()}`, name: name, address: 'Delhi, India', gstin: 'N/A', phone: '' };
-      companies.push(newC);
-      localStorage.setItem('ledger_companies', JSON.stringify(companies));
+      window.companies.push(newC);
+      localStorage.setItem('ledger_companies', JSON.stringify(window.companies));
       
-      activeCompanyId = newC.id;
-      localStorage.setItem('ledger_active_company_id', activeCompanyId);
+      window.activeCompanyId = newC.id;
+      localStorage.setItem('ledger_active_company_id', window.activeCompanyId);
 
       closeAddCompanyModal();
       document.getElementById('new-company-name-input').value = '';
       loadCompanyTransactions();
+
+      if (window.syncLedgerToCloud) window.syncLedgerToCloud();
     }
 
     function saveCompanyDetails(e) {
@@ -1407,9 +1390,11 @@
       activeComp.phone = document.getElementById('set-company-phone').value.trim();
       activeComp.address = document.getElementById('set-company-address').value.trim();
 
-      localStorage.setItem('ledger_companies', JSON.stringify(companies));
+      localStorage.setItem('ledger_companies', JSON.stringify(window.companies));
       renderCompanySelectors();
       alert(`Updated store profile: "${activeComp.name}"`);
+
+      if (window.syncLedgerToCloud) window.syncLedgerToCloud();
     }
 
     /* VIEW SWITCHER */
@@ -1427,7 +1412,7 @@
     }
 
     function saveAndRender() {
-      localStorage.setItem(`ledger_tx_${activeCompanyId}`, JSON.stringify(transactions));
+      localStorage.setItem(`ledger_tx_${window.activeCompanyId}`, JSON.stringify(window.transactions));
       renderKPIs();
       renderDashboardRecent();
       renderFullTable();
@@ -1435,11 +1420,12 @@
     }
 
     function renderKPIs() {
-      const sales = transactions.filter(t => t.type === 'sale').reduce((a, t) => a + (t.totalAmount || t.amount), 0);
-      const purchases = transactions.filter(t => t.type === 'purchase').reduce((a, t) => a + (t.totalAmount || t.amount), 0);
-      const receipts = transactions.filter(t => t.type === 'receipt').reduce((a, t) => a + (t.totalAmount || t.amount), 0);
-      const payments = transactions.filter(t => t.type === 'payment').reduce((a, t) => a + (t.totalAmount || t.amount), 0);
-      const totalGst = transactions.reduce((a, t) => a + (t.gstAmount || 0), 0);
+      const txs = window.transactions || [];
+      const sales = txs.filter(t => t.type === 'sale').reduce((a, t) => a + (t.totalAmount || t.amount), 0);
+      const purchases = txs.filter(t => t.type === 'purchase').reduce((a, t) => a + (t.totalAmount || t.amount), 0);
+      const receipts = txs.filter(t => t.type === 'receipt').reduce((a, t) => a + (t.totalAmount || t.amount), 0);
+      const payments = txs.filter(t => t.type === 'payment').reduce((a, t) => a + (t.totalAmount || t.amount), 0);
+      const totalGst = txs.reduce((a, t) => a + (t.gstAmount || 0), 0);
 
       const net = (sales + receipts) - (purchases + payments);
 
@@ -1453,11 +1439,12 @@
     function renderDashboardRecent() {
       const tbody = document.getElementById('dashboard-recent-rows');
       tbody.innerHTML = '';
-      if (transactions.length === 0) {
+      const txs = window.transactions || [];
+      if (txs.length === 0) {
         tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400 font-medium">No ledger entries saved yet. Tap "+ Add Entry" to begin.</td></tr>`;
         return;
       }
-      transactions.slice().reverse().slice(0, 5).forEach(item => {
+      txs.slice().reverse().slice(0, 5).forEach(item => {
         const tr = document.createElement('tr');
         const isPos = item.type === 'sale' || item.type === 'receipt';
         tr.innerHTML = `
@@ -1478,11 +1465,12 @@
     function renderFullTable() {
       const tbody = document.getElementById('full-transaction-rows');
       tbody.innerHTML = '';
-      if (transactions.length === 0) {
+      const txs = window.transactions || [];
+      if (txs.length === 0) {
         tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400 font-medium">No records found.</td></tr>`;
         return;
       }
-      transactions.slice().reverse().forEach(item => {
+      txs.slice().reverse().forEach(item => {
         const tr = document.createElement('tr');
         const isPos = item.type === 'sale' || item.type === 'receipt';
         tr.innerHTML = `
@@ -1503,8 +1491,9 @@
 
     function deleteTx(id) {
       if (confirm("Delete this entry from register?")) {
-        transactions = transactions.filter(t => t.id !== id);
+        window.transactions = (window.transactions || []).filter(t => t.id !== id);
         saveAndRender();
+        if (window.syncLedgerToCloud) window.syncLedgerToCloud();
       }
     }
 
@@ -1538,7 +1527,7 @@
 
     function convertExcelToPDF() {
       const input = document.getElementById('excel-file-input');
-      if (!input.files.length) return alert('Select Excel file!');
+      if (!input.files.length) return alert('Select an Excel file!');
       const reader = new FileReader();
       reader.onload = function(e) {
         const wb = XLSX.read(new Uint8Array(e.target.result), { type: 'array' });
@@ -1596,7 +1585,7 @@
     }
 
     function generateInvoicePDF(id) {
-      const item = transactions.find(t => t.id === id);
+      const item = (window.transactions || []).find(t => t.id === id);
       if (!item) return alert("Record not found!");
       const activeComp = getActiveCompany();
 
@@ -1666,7 +1655,7 @@
 
     function updateCharts() {
       const map = {};
-      transactions.forEach(t => map[t.category] = (map[t.category] || 0) + (t.totalAmount || t.amount));
+      (window.transactions || []).forEach(t => map[t.category] = (map[t.category] || 0) + (t.totalAmount || t.amount));
       doughnutChart.data.labels = Object.keys(map);
       doughnutChart.data.datasets[0].data = Object.values(map);
       doughnutChart.update();
@@ -1705,6 +1694,7 @@
       document.getElementById('summary-total').innerText = `₹${total.toFixed(2)}`;
     }
 
+    /* FORM SUBMIT EVENT WITH LOCAL & CLOUD HOOK */
     document.getElementById('transaction-form').addEventListener('submit', (e) => {
       e.preventDefault();
       const type = document.getElementById('type').value;
@@ -1718,7 +1708,7 @@
         const gstAmount = (subtotal * gstPct) / 100;
         const totalAmount = subtotal + gstAmount;
 
-        transactions.push({
+        window.transactions.push({
           id: Date.now(),
           type: type,
           partyName: document.getElementById('party-name').value.trim() || '-',
@@ -1735,7 +1725,7 @@
           date: document.getElementById('date').value
         });
       } else {
-        transactions.push({
+        window.transactions.push({
           id: Date.now(),
           type: type,
           partyName: '-',
@@ -1754,15 +1744,22 @@
       }
 
       saveAndRender();
+      
+      // Fire cloud sync immediately
+      if (window.syncLedgerToCloud) {
+        window.syncLedgerToCloud();
+      }
+
       closeModal();
       e.target.reset();
       document.getElementById('date').value = new Date().toISOString().split('T')[0];
     });
 
     function exportData() {
-      if (!transactions.length) return alert("No transactions to export!");
+      const txs = window.transactions || [];
+      if (!txs.length) return alert("No transactions to export!");
       let csv = "Date,Type,Party,Description,Amount\n";
-      transactions.forEach(t => csv += `${t.date},${t.type},"${t.partyName || ''}","${t.description}",${t.totalAmount || t.amount}\n`);
+      txs.forEach(t => csv += `${t.date},${t.type},"${t.partyName || ''}","${t.description}",${t.totalAmount || t.amount}\n`);
       const a = document.createElement('a');
       a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;' }));
       a.download = `Khata_Statement_${getActiveCompany().name}.csv`;
@@ -1778,7 +1775,8 @@
     updateGullakUI();
     saveAndRender();
   </script>
-                 <!-- FIREBASE AUTH & PERSISTENT LOGIN MODULE -->
+
+  <!-- FIREBASE AUTH & TWO-WAY FIRESTORE SYNC MODULE -->
   <script type="module">
     import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { 
@@ -1812,7 +1810,6 @@
     let activeUid = null;
     let isSyncingFromCloud = false;
 
-    // Force browser local storage persistence
     setPersistence(auth, browserLocalPersistence).catch(console.error);
 
     function applyUserData(user) {
@@ -1852,22 +1849,40 @@
           location.reload();
         };
       }
-
-      const welcome = document.getElementById('welcome-heading');
-      if (welcome) welcome.innerText = `Welcome, ${window.currentUser.name} 🌸`;
     }
 
-    // Core Sign-In function exposed directly to window
+    // Cloud Save Sync
+    window.syncLedgerToCloud = async function() {
+      if (!activeUid || isSyncingFromCloud) return;
+      try {
+        const activeCompId = window.activeCompanyId || localStorage.getItem('ledger_active_company_id') || 'c_default';
+        const allTransactions = {};
+        
+        (window.companies || []).forEach(c => {
+          allTransactions[c.id] = JSON.parse(localStorage.getItem(`ledger_tx_${c.id}`)) || [];
+        });
+
+        if (window.transactions) {
+          allTransactions[activeCompId] = window.transactions;
+        }
+
+        await setDoc(doc(db, "users", activeUid), {
+          companies: window.companies || [],
+          activeCompanyId: activeCompId,
+          transactionsMap: allTransactions,
+          updatedAt: new Date().toISOString()
+        }, { merge: true });
+      } catch (err) {
+        console.error("Cloud sync save error:", err);
+      }
+    };
+
     window.handleGoogleSignIn = async function(e) {
       if (e) e.preventDefault();
       try {
-        // Use popup by default; if blocked on mobile, fall back to redirect
         const res = await signInWithPopup(auth, provider);
-        if (res && res.user) {
-          applyUserData(res.user);
-        }
+        if (res && res.user) applyUserData(res.user);
       } catch (err) {
-        console.warn("Popup blocked or failed, attempting redirect fallback:", err.message);
         try {
           await signInWithRedirect(auth, provider);
         } catch (redirectErr) {
@@ -1876,37 +1891,29 @@
       }
     };
 
-    // Attach listeners directly to DOM elements so clicks always fire
     function attachAuthListeners() {
       const headerBtn = document.getElementById('auth-action-btn');
       const settingsBtn = document.getElementById('auth-action-btn-settings');
-
-      if (headerBtn) {
-        headerBtn.onclick = window.handleGoogleSignIn;
-      }
+      if (headerBtn) headerBtn.onclick = window.handleGoogleSignIn;
       if (settingsBtn && settingsBtn.innerText !== "Logout") {
         settingsBtn.onclick = window.handleGoogleSignIn;
       }
     }
 
-    // Check redirect result on load
     getRedirectResult(auth)
-      .then((res) => {
-        if (res && res.user) {
-          applyUserData(res.user);
-        }
-      })
+      .then((res) => { if (res && res.user) applyUserData(res.user); })
       .catch(console.error);
 
-    // Monitor persistent authentication state
     onAuthStateChanged(auth, (user) => {
       if (user) {
         applyUserData(user);
 
+        // Firestore real-time listener without wiping fresh local entries
         onSnapshot(doc(db, "users", user.uid), (snap) => {
           if (snap.exists()) {
             const data = snap.data();
             isSyncingFromCloud = true;
+
             if (data.companies && data.companies.length > 0) {
               window.companies = data.companies;
               localStorage.setItem('ledger_companies', JSON.stringify(window.companies));
@@ -1917,48 +1924,36 @@
             }
             if (data.transactionsMap) {
               Object.entries(data.transactionsMap).forEach(([id, txs]) => {
-                localStorage.setItem(`ledger_tx_${id}`, JSON.stringify(txs));
+                const localTxs = JSON.parse(localStorage.getItem(`ledger_tx_${id}`)) || [];
+                if (txs.length > 0 || localTxs.length === 0) {
+                  localStorage.setItem(`ledger_tx_${id}`, JSON.stringify(txs));
+                }
               });
             }
+
             if (typeof loadCompanyTransactions === 'function') {
               loadCompanyTransactions();
+            } else if (typeof saveAndRender === 'function') {
+              saveAndRender();
             }
+
             setTimeout(() => { isSyncingFromCloud = false; }, 300);
+          } else {
+            window.syncLedgerToCloud();
           }
         }, (error) => {
-          console.warn("Firestore sync status:", error.message);
+          console.warn("Firestore snapshot error:", error.message);
         });
       } else {
         attachAuthListeners();
       }
     });
 
-    // Cloud sync helper
-    window.syncLedgerToCloud = async function() {
-      if (!activeUid || isSyncingFromCloud) return;
-      try {
-        const allTransactions = {};
-        (window.companies || []).forEach(c => {
-          allTransactions[c.id] = JSON.parse(localStorage.getItem(`ledger_tx_${c.id}`)) || [];
-        });
-
-        await setDoc(doc(db, "users", activeUid), {
-          companies: window.companies,
-          activeCompanyId: window.activeCompanyId,
-          transactionsMap: allTransactions,
-          updatedAt: new Date().toISOString()
-        });
-      } catch (err) {
-        console.error("Cloud sync save error:", err);
-      }
-    };
-
-    // Run DOM listener attachment on page load
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', attachAuthListeners);
     } else {
       attachAuthListeners();
     }
-  </script> 
+  </script>
 </body>
 </html>
