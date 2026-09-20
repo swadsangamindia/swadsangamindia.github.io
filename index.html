@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <title>Khata Bahi - Multi-Company Cloud GST Ledger & Financial Management Hub</title>
-  <meta name="description" content="All-in-one digital accounting ledger, daily micro-savings Gullak with deletion controls, PDF/Excel conversion tools, and comprehensive commercial financial guides for Indian merchants.">
+  <title>Khata Bahi - Cloud GST Accounting, Multi-Store Ledger & Business Encyclopedia</title>
+  <meta name="description" content="All-in-one digital accounting ledger, daily micro-savings Gullak with deletion controls, document conversion suites, and exhaustive retail bookkeeping knowledgebase.">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -77,42 +77,43 @@
     ::-webkit-scrollbar-thumb:hover { background: #eab308; }
   </style>
 </head>
-<body class="flex flex-col h-screen overflow-hidden select-none">
+<body class="flex flex-col min-h-screen select-none">
 
-  <!-- TOP HEADER -->
-  <header class="bg-[#78350f] text-white border-b border-amber-900/50 px-4 md:px-8 py-3 flex justify-between items-center shrink-0 z-30 shadow-md">
-    <!-- Store & Switcher -->
-    <div class="flex items-center gap-3 md:gap-6">
+  <!-- TOP BRAND & CONTROLLER HEADER -->
+  <header class="bg-[#78350f] text-white border-b border-amber-900/50 px-3 md:px-8 py-2.5 flex justify-between items-center shrink-0 z-30 shadow-md sticky top-0">
+    <div class="flex items-center gap-2 md:gap-5">
       <div class="flex items-center gap-2.5">
         <div class="bg-gradient-to-tr from-amber-400 to-yellow-300 p-2 rounded-xl text-slate-950 shadow-sm">
           <i data-lucide="receipt" class="w-5 h-5"></i>
         </div>
         <div>
           <h1 class="text-white font-black text-base md:text-lg heading-font tracking-tight leading-none">Khata Bahi</h1>
-          <p class="text-[10px] text-amber-200 font-bold uppercase tracking-wider mt-0.5">Cloud GST Accounting</p>
+          <p class="text-[10px] text-amber-200 font-bold uppercase tracking-wider mt-0.5">Enterprise Cloud Ledger</p>
         </div>
       </div>
 
-      <!-- Shop Switcher Pill -->
-      <div class="hidden sm:flex items-center gap-2 bg-amber-900/70 py-1.5 px-3 rounded-xl border border-amber-500/30 shadow-inner">
-        <i data-lucide="store" class="w-4 h-4 text-amber-300"></i>
-        <select id="company-selector" onchange="switchActiveCompany()" class="bg-transparent text-white font-bold text-xs focus:outline-none cursor-pointer">
-        </select>
-        <button onclick="openAddCompanyModal()" class="text-amber-300 hover:text-white ml-1" title="Switch or Add New Store">
-          <i data-lucide="arrow-left-right" class="w-3.5 h-3.5"></i>
-        </button>
-      </div>
+      <!-- DESKTOP MODERN STORE SELECTOR PILL BUTTON -->
+      <button onclick="openStoreSwitchModal()" class="hidden sm:flex items-center gap-2 bg-amber-950/70 hover:bg-amber-900/90 py-1.5 px-3 rounded-xl border border-amber-500/40 shadow-inner transition group text-left">
+        <div class="w-6 h-6 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-300 group-hover:bg-amber-500 group-hover:text-slate-950 transition">
+          <i data-lucide="store" class="w-3.5 h-3.5"></i>
+        </div>
+        <div class="leading-none pr-1">
+          <span class="text-[9px] text-amber-300 font-bold uppercase tracking-widest block">Branch Outlet</span>
+          <span id="header-active-store-name" class="text-xs font-black text-white truncate max-w-[140px] block mt-0.5">Main Branch</span>
+        </div>
+        <i data-lucide="chevrons-up-down" class="w-3.5 h-3.5 text-amber-300 opacity-70 group-hover:opacity-100"></i>
+      </button>
     </div>
 
     <!-- Right Header Action Bar -->
-    <div class="flex items-center gap-2 sm:gap-2.5">
+    <div class="flex items-center gap-1.5 sm:gap-2.5">
       <span class="text-[11px] text-amber-100 font-bold bg-amber-900/80 px-2.5 py-1 rounded-lg border border-amber-600/40 hidden md:inline-flex items-center gap-1" id="sidebar-plan-badge">
         <i data-lucide="shield" class="w-3.5 h-3.5 text-amber-300"></i> Free Tier
       </span>
 
-      <!-- Action Buttons -->
-      <button onclick="switchTab('calculator')" class="bg-amber-800 hover:bg-amber-700 text-amber-100 border border-amber-600/40 px-2.5 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-sm transition" title="Open Financial Calculators">
-        <i data-lucide="calculator" class="w-3.5 h-3.5 text-amber-300"></i> <span class="hidden sm:inline">Calc</span>
+      <!-- Financial Calculators Button (Tools button removed from top header) -->
+      <button onclick="switchTab('calculator')" class="bg-amber-800 hover:bg-amber-700 text-amber-100 border border-amber-600/40 px-2.5 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-sm transition" title="Financial Calculators">
+        <i data-lucide="calculator" class="w-3.5 h-3.5 text-amber-300"></i> <span class="hidden sm:inline">Calculators</span>
       </button>
 
       <button id="header-upgrade-btn" onclick="openUpgradeModal()" class="bg-gradient-to-r from-amber-400 to-yellow-400 hover:from-amber-300 hover:to-yellow-300 text-slate-950 font-black text-xs px-3 py-1.5 rounded-lg flex items-center gap-1 shadow transition transform active:scale-95">
@@ -127,8 +128,8 @@
         <i data-lucide="plus-circle" class="w-3.5 h-3.5 text-amber-600"></i> Add Entry
       </button>
 
-      <!-- Google Login Button -->
-      <div class="flex items-center pl-1.5 border-l border-amber-700/60">
+      <!-- Google Login Avatar -->
+      <div class="flex items-center pl-1 border-l border-amber-700/60">
         <button id="auth-action-btn" class="w-7 h-7 rounded-lg bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center justify-center shadow transition" title="Sign in with Google">
           U
         </button>
@@ -136,203 +137,61 @@
     </div>
   </header>
 
-  <!-- MOBILE STORE STRIP -->
-  <div class="sm:hidden bg-[#92400e] text-white px-4 py-2 flex justify-between items-center text-xs border-b border-amber-900/40">
-    <div class="flex items-center gap-2">
+  <!-- MOBILE STORE STRIP (UPGRADED QUICK-SWITCH BAR) -->
+  <div class="sm:hidden bg-[#92400e] text-white px-3 py-2 flex justify-between items-center text-xs border-b border-amber-900/40 shadow-inner">
+    <button onclick="openStoreSwitchModal()" class="flex items-center gap-2 bg-amber-950/60 px-2.5 py-1 rounded-lg border border-amber-500/30 text-left">
       <i data-lucide="store" class="w-3.5 h-3.5 text-amber-300"></i>
-      <span class="text-[10px] text-amber-200 font-bold uppercase">Active Store:</span>
-      <select id="mobile-company-selector" onchange="switchActiveCompanyMobile()" class="bg-amber-950 text-white font-bold text-xs rounded px-2 py-0.5 border border-amber-500/40">
-      </select>
-    </div>
-    <button onclick="openAddCompanyModal()" class="bg-amber-400 text-slate-950 text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
+      <span class="text-[10px] text-amber-200 font-bold uppercase">Store:</span>
+      <span id="mobile-active-store-name" class="font-bold text-white max-w-[130px] truncate">Main Branch</span>
+      <i data-lucide="chevrons-up-down" class="w-3 h-3 text-amber-300 ml-1"></i>
+    </button>
+    <button onclick="openAddCompanyModal()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-lg flex items-center gap-1 shadow">
       <i data-lucide="plus" class="w-3 h-3"></i> Add Store
     </button>
   </div>
 
-  <div class="flex flex-1 overflow-hidden">
-    <!-- SUB-NAV / DESKTOP SIDEBAR -->
+  <div class="flex flex-1">
+    <!-- SIDEBAR -->
     <aside class="hidden md:flex w-60 bg-white border-r border-amber-200 text-slate-700 flex-col justify-between p-3.5 shrink-0 z-20">
       <nav class="space-y-1">
-        <button onclick="switchTab('about')" id="nav-about" class="nav-btn nav-active w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
-          <i data-lucide="compass" class="w-4 h-4 text-amber-600"></i> Overview & Hub
-        </button>
-        <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-btn w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
-          <i data-lucide="layout-dashboard" class="w-4 h-4 text-amber-600"></i> GST Ledger
+        <button onclick="switchTab('dashboard')" id="nav-dashboard" class="nav-btn nav-active w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
+          <i data-lucide="layout-dashboard" class="w-4 h-4 text-amber-600"></i> Main Dashboard
         </button>
         <button onclick="switchTab('gullak')" id="nav-gullak" class="nav-btn w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
           <i data-lucide="piggy-bank" class="w-4 h-4 text-amber-500"></i> Gullak (Savings)
         </button>
         <button onclick="switchTab('transactions')" id="nav-transactions" class="nav-btn w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
-          <i data-lucide="receipt" class="w-4 h-4 text-amber-600"></i> Transactions Log
+          <i data-lucide="receipt" class="w-4 h-4 text-amber-600"></i> Ledger Register
         </button>
         <button onclick="switchTab('tools')" id="nav-tools" class="nav-btn w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
-          <i data-lucide="wrench" class="w-4 h-4 text-amber-600"></i> PDF & Tools Suite
+          <i data-lucide="wrench" class="w-4 h-4 text-amber-600"></i> PDF & File Tools
         </button>
         <button onclick="switchTab('calculator')" id="nav-calculator" class="nav-btn w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
           <i data-lucide="calculator" class="w-4 h-4 text-amber-600"></i> GST & Due Calc
-        </button>
-        <button onclick="switchTab('guides')" id="nav-guides" class="nav-btn w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
-          <i data-lucide="book-open" class="w-4 h-4 text-amber-600"></i> Business Guides
         </button>
         <button onclick="switchTab('settings')" id="nav-settings" class="nav-btn w-full flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold">
           <i data-lucide="settings-2" class="w-4 h-4 text-amber-600"></i> Store Profile
         </button>
       </nav>
 
-      <!-- Net Cash Display -->
+      <!-- Net Balance Summary Card -->
       <div class="p-3.5 rounded-2xl bg-amber-50 border border-amber-200 space-y-1">
         <div class="flex items-center justify-between">
-          <span class="text-[10px] text-amber-800 font-bold uppercase tracking-wider">Net Cash Total</span>
+          <span class="text-[10px] text-amber-800 font-bold uppercase tracking-wider">Net Cash Position</span>
           <i data-lucide="wallet" class="w-3.5 h-3.5 text-amber-600"></i>
         </div>
         <h3 id="card-total-balance" class="text-slate-900 text-lg font-black heading-font">₹0.00</h3>
-        <p class="text-[10px] text-slate-500" id="current-company-display">My Shop</p>
+        <p class="text-[10px] text-slate-500 truncate" id="current-company-display">My Main Shop</p>
       </div>
     </aside>
 
     <!-- MAIN SCROLLABLE VIEWPORT -->
-    <main class="flex-1 overflow-y-auto p-4 md:p-8 pb-28 md:pb-8 relative z-10">
+    <main class="flex-1 p-4 md:p-8 pb-32 md:pb-12 relative z-10 overflow-y-auto">
 
-      <!-- 0. VIEW: ABOUT & OVERVIEW HUB -->
-      <div id="view-about" class="tab-view space-y-6">
-        <section class="caphi-card p-6 md:p-8 space-y-8">
-          <div class="max-w-4xl space-y-3">
-            <div class="flex items-center gap-2">
-              <span class="bg-amber-100 text-amber-800 border border-amber-300 text-[11px] font-extrabold px-3 py-0.5 rounded-full uppercase tracking-wider">Cloud GST Framework</span>
-              <span class="bg-yellow-100 text-yellow-800 border border-yellow-300 text-[11px] font-extrabold px-3 py-0.5 rounded-full uppercase tracking-wider">₹99 Pro Membership</span>
-            </div>
-            <h2 class="text-2xl md:text-3xl font-black text-slate-900 heading-font leading-snug">
-              Complete Accounting, Daily Cash Management & Multi-Business Digital Ledger
-            </h2>
-            <p class="text-xs md:text-sm text-slate-600 leading-relaxed">
-              <strong>Khata Bahi</strong> is an enterprise-grade yet user-friendly digital accounting system crafted specifically for Kirana shopkeepers, retail merchants, wholesalers, contractors, and independent service professionals across India. Traditional paper registers (Bahi-Khata) suffer from mathematical miscalculations, loss of unrecorded debts, physical decay, and zero remote accessibility. Khata Bahi bridges the gap between old-school convenience and modern fintech compliance.
-            </p>
-            <div class="pt-2 flex flex-wrap gap-2.5">
-              <button onclick="switchTab('dashboard')" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-4 py-2 rounded-lg text-xs transition shadow-sm flex items-center gap-2">
-                <i data-lucide="layout-dashboard" class="w-4 h-4"></i> Open Active Register
-              </button>
-              <button onclick="switchTab('gullak')" class="bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold px-4 py-2 rounded-lg text-xs transition shadow-sm flex items-center gap-2 border border-amber-300">
-                <i data-lucide="piggy-bank" class="w-4 h-4"></i> Open Gullak (Savings)
-              </button>
-              <button onclick="switchTab('calculator')" class="bg-white hover:bg-amber-50 text-slate-900 font-bold px-4 py-2 rounded-lg text-xs transition shadow-sm flex items-center gap-2 border border-slate-300">
-                <i data-lucide="calculator" class="w-4 h-4 text-amber-600"></i> Financial Calculators
-              </button>
-              <button id="home-upgrade-btn" onclick="openUpgradeModal()" class="bg-[#78350f] hover:bg-[#92400e] text-white font-bold px-4 py-2 rounded-lg text-xs transition shadow-sm flex items-center gap-2">
-                <i data-lucide="crown" class="w-4 h-4 text-amber-300"></i> Unlock Pro (₹99)
-              </button>
-            </div>
-          </div>
-
-          <!-- Feature Cards Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-4 border-t border-amber-100">
-            <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/40 space-y-2">
-              <div class="p-2.5 bg-amber-200 text-amber-900 rounded-xl w-fit"><i data-lucide="store" class="w-5 h-5"></i></div>
-              <h3 class="font-bold text-slate-900 text-sm heading-font">Multi-Store Profiles</h3>
-              <p class="text-xs text-slate-600">Switch across distinct retail counters or branch businesses without overlapping customer ledgers or inventory.</p>
-            </div>
-            <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/40 space-y-2">
-              <div class="p-2.5 bg-amber-200 text-amber-900 rounded-xl w-fit"><i data-lucide="piggy-bank" class="w-5 h-5"></i></div>
-              <h3 class="font-bold text-slate-900 text-sm heading-font">Offline Savings Gullak</h3>
-              <p class="text-xs text-slate-600">Stash away ₹40, ₹50, or daily leftover change with individual deposit and withdrawal record deletion.</p>
-            </div>
-            <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/40 space-y-2">
-              <div class="p-2.5 bg-amber-200 text-amber-900 rounded-xl w-fit"><i data-lucide="wrench" class="w-5 h-5"></i></div>
-              <h3 class="font-bold text-slate-900 text-sm heading-font">Client-Side File Utilities</h3>
-              <p class="text-xs text-slate-600">Convert statements to Excel, images to PDF, and generate GST invoices with customized digital signatures.</p>
-            </div>
-          </div>
-
-          <!-- PRICING TABLE SECTION -->
-          <div class="pt-4 border-t border-amber-100 space-y-4">
-            <div>
-              <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-800">Clear & Transparent</span>
-              <h3 class="text-lg font-black text-slate-900 heading-font">Choose the Right Plan for Your Business</h3>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl">
-              <!-- Free Plan -->
-              <div class="p-5 rounded-2xl border border-amber-200 bg-white space-y-3 shadow-sm">
-                <div class="flex justify-between items-center">
-                  <h4 class="font-bold text-slate-900 text-sm">Free Tier</h4>
-                  <span class="text-xs font-bold text-slate-500">₹0 / Lifetime</span>
-                </div>
-                <p class="text-xs text-slate-500">Essential cash ledger and savings utilities for individual retail counters.</p>
-                <ul class="text-xs text-slate-600 space-y-2">
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Cash In (Receipt) & Cash Out (Payment)</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Offline Gullak Savings Tracker with Record Deletion</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> PDF to Excel & Image to PDF Tools</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i> Single Store Local Storage</li>
-                </ul>
-              </div>
-              <!-- Pro Plan -->
-              <div class="p-5 rounded-2xl border-2 border-amber-500 bg-amber-50/50 space-y-3 relative overflow-hidden shadow-sm">
-                <div class="flex justify-between items-center">
-                  <h4 class="font-bold text-amber-950 text-sm flex items-center gap-1.5"><i data-lucide="crown" class="w-4 h-4 text-amber-600"></i> Khata Pro</h4>
-                  <span class="text-sm font-black text-amber-700">₹99 <span class="text-xs font-normal text-slate-500">/ 30 Days</span></span>
-                </div>
-                <p class="text-xs text-slate-600">Advanced GST billing, tax invoices, and multi-company operations.</p>
-                <ul class="text-xs text-slate-700 space-y-2">
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-600"></i> Sale & Purchase Vouchers with 0%, 5%, 12%, 18%, 28% GST</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-600"></i> PDF Tax Invoices with Store Signature</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-600"></i> Unlimited Multiple Companies / Store Profiles</li>
-                  <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-amber-600"></i> Automatic Google Cloud Backup & Sync</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- ENCYCLOPEDIC FINANCIAL ARTICLES -->
-          <div class="pt-6 border-t border-amber-100 space-y-8 text-slate-700">
-            <article class="space-y-3">
-              <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
-                <i data-lucide="book-open-check" class="w-4 h-4 text-amber-600"></i> Section 1: The Core Principles of Indian Micro-Business Cash Management
-              </h3>
-              <p class="text-xs md:text-sm leading-relaxed">
-                Sound retail financial management rests upon three foundational rules: knowing daily liquid cash, enforcing strict customer debt recovery timelines, and separating business revenue from personal pocket money. In traditional Kirana trade, store owners frequently withdraw cash directly from the register for domestic expenses without recording it. Over weeks, this generates unexplainable working capital shortages. Khata Bahi introduces the digital 'Gullak' module to resolve this exact friction by offering an offline piggy-bank reserve directly adjacent to the commercial ledger, complete with itemized deletion controls.
-              </p>
-            </article>
-
-            <article class="space-y-3">
-              <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
-                <i data-lucide="percent" class="w-4 h-4 text-amber-600"></i> Section 2: The Economic Dynamics of Customer Credit (Udhar)
-              </h3>
-              <p class="text-xs md:text-sm leading-relaxed">
-                Customer credit fosters long-term neighborhood patronage, but unchecked receivables compromise store inventory turnover. When credit extends past 30 days without interest or follow-up, the probability of debt default rises above 20%. To counter this:
-              </p>
-              <ul class="list-disc list-inside space-y-1.5 text-xs md:text-sm text-slate-600">
-                <li><strong>Define Credit Limits:</strong> Set hard ceilings (e.g. ₹2,000 per customer or 14-day repayment cycles).</li>
-                <li><strong>Automated Interest Accrual:</strong> Use the built-in Credit Due Interest Calculator to clearly compute late payment charges when debts exceed agreed cycles.</li>
-                <li><strong>Transparent Digital Statements:</strong> Generate one-click CSV statements or WhatsApp bills at the end of every week to keep parties aligned.</li>
-              </ul>
-            </article>
-
-            <article class="space-y-3">
-              <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
-                <i data-lucide="receipt-indian-rupee" class="w-4 h-4 text-amber-600"></i> Section 3: Mastering Goods and Services Tax (GST) Compliance
-              </h3>
-              <p class="text-xs md:text-sm leading-relaxed">
-                Under the Indian Goods and Services Tax framework, understanding tax classification is vital for every retailer:
-              </p>
-              <ul class="list-disc list-inside space-y-1.5 text-xs md:text-sm text-slate-600">
-                <li><strong>Intrastate Transactions (Within State):</strong> GST is divided equally between CGST (Central Tax) and SGST (State Tax). An 18% slab translates to 9% CGST and 9% SGST.</li>
-                <li><strong>Interstate Transactions (Between States):</strong> The entire GST rate is calculated as IGST (Integrated Tax).</li>
-                <li><strong>Tax Invoices vs. Payment Vouchers:</strong> Tax Invoices record the legal transfer of goods and allow input tax credit (ITC) claims; payment vouchers merely record fund settlement without triggering tax recalculation.</li>
-              </ul>
-            </article>
-
-            <article class="space-y-3">
-              <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
-                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> Section 4: Privacy, Data Security & Local-First Processing
-              </h3>
-              <p class="text-xs md:text-sm leading-relaxed">
-                Unlike corporate accounting systems that monetize consumer purchase histories, Khata Bahi operates on a private, local-first computing model. Every mathematical reconciliation, PDF transformation, image conversion, and Gullak savings record takes place locally inside your browser engine. Sensitive commercial books are never transmitted to third parties unless voluntarily linked through your authenticated Google Cloud storage partition.
-              </p>
-            </article>
-          </div>
-        </section>
-      </div>
-
-      <!-- 1. VIEW: LEDGER DASHBOARD -->
-      <div id="view-dashboard" class="tab-view hidden space-y-6">
+      <!-- ================= 1. VIEW: LEDGER DASHBOARD ================= -->
+      <div id="view-dashboard" class="tab-view space-y-6">
+        
+        <!-- KPI METRICS -->
         <section class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           <div class="caphi-card p-4 flex flex-col justify-between">
             <div class="flex justify-between items-start">
@@ -345,11 +204,11 @@
 
           <div class="caphi-card p-4 flex flex-col justify-between">
             <div class="flex justify-between items-start">
-              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Paid (Udhar)</span>
+              <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider">Paid (Udhar / Payout)</span>
               <span class="text-[10px] bg-rose-100 text-rose-800 font-bold px-1.5 py-0.5 rounded">Cash Out</span>
             </div>
             <h3 id="total-payments" class="text-xl md:text-2xl font-black text-rose-600 heading-font mt-2">₹0.00</h3>
-            <p class="text-[10px] text-slate-400 mt-1">Supplier dues & expenses</p>
+            <p class="text-[10px] text-slate-400 mt-1">Supplier settlements & costs</p>
           </div>
 
           <div class="caphi-card p-4 flex flex-col justify-between">
@@ -358,7 +217,7 @@
               <span class="text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded">Pro</span>
             </div>
             <h3 id="total-sales" class="text-xl md:text-2xl font-black text-amber-700 heading-font mt-2">₹0.00</h3>
-            <p class="text-[10px] text-slate-400 mt-1">Total taxable sales billing</p>
+            <p class="text-[10px] text-slate-400 mt-1">Taxable commercial billing</p>
           </div>
 
           <div class="caphi-card p-4 flex flex-col justify-between">
@@ -371,14 +230,14 @@
           </div>
         </section>
 
-        <!-- Charts Grid -->
+        <!-- LIVE CHARTS SECTION -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-5">
           <div class="md:col-span-2 caphi-card p-5">
             <div class="flex justify-between items-center mb-4">
               <h4 class="font-bold text-slate-900 text-sm heading-font flex items-center gap-2">
                 <i data-lucide="trending-up" class="w-4 h-4 text-amber-600"></i> Cash Inflow & Outflow Timeline
               </h4>
-              <span class="text-[11px] font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">Live Ledger Log</span>
+              <span class="text-[11px] font-bold text-amber-800 bg-amber-50 px-2.5 py-1 rounded-lg border border-amber-200">Live Register</span>
             </div>
             <div class="h-60"><canvas id="overviewChart"></canvas></div>
           </div>
@@ -390,17 +249,17 @@
           </div>
         </section>
 
-        <!-- Recent Records Table -->
+        <!-- RECENT ENTRIES TABLE -->
         <section class="caphi-card p-5 overflow-x-auto">
           <div class="flex justify-between items-center mb-3">
             <div>
               <h4 class="font-bold text-slate-900 text-sm heading-font flex items-center gap-2">
                 Recent Accounting Entries (<span id="table-company-name" class="text-amber-800 font-bold">Active Store</span>)
               </h4>
-              <p class="text-[11px] text-slate-500">Live transaction ledger with instant invoice generation</p>
+              <p class="text-[11px] text-slate-500">Real-time ledger entries with one-click PDF generation</p>
             </div>
             <button onclick="switchTab('transactions')" class="text-xs font-bold text-amber-800 hover:underline flex items-center gap-1">
-              View Full History <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              View Complete Ledger <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
             </button>
           </div>
           <table class="w-full text-left text-xs min-w-[620px]">
@@ -410,16 +269,126 @@
                 <th class="pb-2.5 font-semibold">Type</th>
                 <th class="pb-2.5 font-semibold">Party</th>
                 <th class="pb-2.5 font-semibold">Particulars</th>
-                <th class="pb-2.5 font-semibold">Amount</th>
+                <th class="pb-2.5 font-semibold">Amount (₹)</th>
                 <th class="pb-2.5 font-semibold text-right">PDF Bill</th>
               </tr>
             </thead>
             <tbody id="dashboard-recent-rows" class="divide-y divide-slate-100 font-medium text-slate-700"></tbody>
           </table>
         </section>
+
+        <!-- ================= EXHAUSTIVE COMMERCIAL ENCYCLOPEDIA & DOCUMENTATION ================= -->
+        <!-- Directly rendered in DOM so Google AdSense crawler indexes rich, non-repetitive high-value text -->
+        <section class="caphi-card p-6 md:p-8 space-y-8 mt-8 border-amber-200">
+          <div class="border-b border-amber-200 pb-5">
+            <span class="bg-amber-100 text-amber-900 border border-amber-300 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Comprehensive Commercial Manual & Financial Codex</span>
+            <h2 class="text-xl md:text-2xl font-black text-[#78350f] heading-font mt-2">Retail Bookkeeping, Cloud Reconciliation, GST Invoicing & Credit Recovery Principles</h2>
+            <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
+              Transitioning from paper-bound accounting registers (Lal Bahi-Khata) to a modern, browser-anchored digital ledger safeguards commercial retailers from arithmetic errors, untracked debts, physical wear, and tax calculation discrepancies. This definitive guide details single-entry bookkeeping practices, GST compliance mechanics, customer credit management, working capital formulas, and document recovery workflows tailored for modern retail merchants.
+            </p>
+          </div>
+
+          <!-- Section 1: Accounting Systems -->
+          <article class="space-y-3">
+            <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
+              <span class="w-6 h-6 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">1</span>
+              Single-Entry Cash Accounting vs. Multi-Tier Double-Entry Bookkeeping
+            </h3>
+            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+              While multinational companies employ multi-tier double-entry ledgers requiring balanced journal vouchers, retail storefronts and Kirana merchants rely on chronological single-entry cash books. Single-entry systems focus on tangible cash flow: actual liquid receipts (Jama) and outgoing disbursements (Udhar/Bhugtan) tracked against daily physical drawer totals.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+              <div class="p-4 bg-amber-50/50 rounded-xl border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-xs mb-1">Morning Opening Count</h4>
+                <p class="text-[11px] text-slate-600">Audit physical cash in the till before daily trade begins. Record this as opening balance to track all daytime inflows and disbursements accurately.</p>
+              </div>
+              <div class="p-4 bg-amber-50/50 rounded-xl border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-xs mb-1">Immediate Settlement Logging</h4>
+                <p class="text-[11px] text-slate-600">Record customer cash, UPI QR transfers, supplier clearings, and personal withdrawals the moment money changes hands rather than relying on memory at closing.</p>
+              </div>
+              <div class="p-4 bg-amber-50/50 rounded-xl border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-xs mb-1">EOD Drawer Reconciliation</h4>
+                <p class="text-[11px] text-slate-600">Enforce the core reconciliation formula: <code>Opening Cash + Total Receipts - Total Payments = Physical Till Count</code>. Daily audits flag register discrepancies immediately.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Section 2: Credit & Receivables -->
+          <article class="space-y-3 pt-4 border-t border-amber-100">
+            <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
+              <span class="w-6 h-6 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">2</span>
+              Customer Credit (Udhar) Dynamics & Working Capital Preservation
+            </h3>
+            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+              Providing customer credit is a proven mechanism for fostering neighborhood customer loyalty. However, untracked receivables tie up working capital and can compromise cash flow. Invoices unsettled past 30 days face default rates exceeding 20%. Maintaining healthy liquidity requires strict operational credit safeguards:
+            </p>
+            <ul class="list-disc list-inside space-y-2 text-xs md:text-sm text-slate-700">
+              <li><strong>Tiered Credit Limits:</strong> Set hard ceilings based on buyer history (e.g., ₹2,000 to ₹5,000 maximum per household, or a strict 14-day repayment window). Halt subsequent credit purchases until existing balances clear.</li>
+              <li><strong>Weekly Invoice Summaries:</strong> Send itemized balance statements via WhatsApp or SMS every weekend. Regular communication helps avoid billing disputes at month-end.</li>
+              <li><strong>Compound Due Interest Accrual:</strong> Use the built-in Overdue Interest Calculator to compute late settlement charges when terms exceed agreed credit periods.</li>
+              <li><strong>Early Settlement Rebates:</strong> Offer a modest 1% to 2% cash discount on invoices cleared within 48 hours to speed up receivables collection.</li>
+            </ul>
+          </article>
+
+          <!-- Section 3: GST Mechanics -->
+          <article class="space-y-3 pt-4 border-t border-amber-100">
+            <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
+              <span class="w-6 h-6 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">3</span>
+              Goods and Services Tax (GST) Slabs, Reverse Splits & Input Tax Credit
+            </h3>
+            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+              Correct tax categorization is mandatory under the Indian Goods and Services Tax framework. Incomplete tax collection creates unrecoverable tax liabilities during periodic audits. Commercial retailers must adhere to standard statutory categories:
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-1">
+              <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                <span class="font-bold text-amber-900 block text-xs">0% Slab (Exempt)</span>
+                <p class="text-[11px] text-slate-500 mt-1">Unbranded grains, fresh milk, vegetables, salt, and non-packaged agricultural food items.</p>
+              </div>
+              <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                <span class="font-bold text-amber-900 block text-xs">5% Slab</span>
+                <p class="text-[11px] text-slate-500 mt-1">Packaged spices, tea, coffee, sugar, edible oils, and essential prescription medications.</p>
+              </div>
+              <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                <span class="font-bold text-amber-900 block text-xs">12% & 18% Slabs</span>
+                <p class="text-[11px] text-slate-500 mt-1">FMCG goods, personal hygiene items, processed foods, consumer electronics, and business services.</p>
+              </div>
+              <div class="p-3 bg-white border border-slate-200 rounded-xl">
+                <span class="font-bold text-amber-900 block text-xs">28% Slab</span>
+                <p class="text-[11px] text-slate-500 mt-1">Luxury items, air conditioners, motor vehicles, aerated drinks, and sin tax commodities.</p>
+              </div>
+            </div>
+            <p class="text-xs md:text-sm text-slate-700 pt-2">
+              <strong>Intrastate vs. Interstate Calculations:</strong> For sales within your native state, the aggregate GST is divided equally between <code>CGST (Central Tax)</code> and <code>SGST (State Tax)</code>. For an 18% item, 9% is allocated to CGST and 9% to SGST. For interstate trade, the entire percentage is recorded as <code>IGST (Integrated Tax)</code>.
+            </p>
+            <p class="text-xs md:text-sm text-slate-700">
+              <strong>Reverse Tax Formula:</strong> To extract base prices from tax-inclusive retail items, use: <code>Base Amount = Total Inclusive Price / (1 + (GST Slab / 100))</code>.
+            </p>
+          </article>
+
+          <!-- Section 4: Daily Micro-Savings -->
+          <article class="space-y-3 pt-4 border-t border-amber-100">
+            <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
+              <span class="w-6 h-6 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">4</span>
+              The Economic Impact of the 'Gullak' Micro-Savings Strategy
+            </h3>
+            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
+              Store owners often withdraw small cash amounts throughout the day for domestic needs without recording them, leading to unaccounted cash deficits over weeks. The digital <strong>Gullak</strong> feature solves this by providing a dedicated, offline micro-savings tracker alongside commercial books. Setting aside ₹40, ₹50, or ₹100 from daily change builds a steady emergency fund (averaging ₹18,000+ annually) without cutting into inventory turnover or supplier payouts.
+            </p>
+          </article>
+
+          <!-- Section 5: Client-Side Security -->
+          <article class="p-5 bg-amber-50/60 rounded-xl border border-amber-200 space-y-2 text-xs md:text-sm text-slate-700">
+            <h3 class="font-bold text-slate-900 text-sm heading-font flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> 5. Zero-Knowledge Local Architecture & Document Security
+            </h3>
+            <p>
+              Commercial ledger records contain sensitive customer information and operational margins. <strong>Khata Bahi</strong> runs on a local-first computing model: all math, document conversions, PDF creation, and image compression execute entirely inside your device's browser memory. Your ledger data is never transmitted to third parties unless you explicitly back it up to your authenticated Google Cloud Firestore account.
+            </p>
+          </article>
+        </section>
       </div>
 
-      <!-- 2. VIEW: GULLAK (SAVINGS ACCOUNT WITH RECORD DELETION) -->
+      <!-- ================= 2. VIEW: GULLAK (SAVINGS RESERVE WITH DELETION) ================= -->
       <div id="view-gullak" class="tab-view hidden space-y-6">
         <div class="caphi-card p-6 md:p-8 max-w-lg mx-auto space-y-5 border-amber-200">
           <div class="flex items-center justify-between border-b border-amber-100 pb-3">
@@ -428,34 +397,34 @@
                 <i data-lucide="piggy-bank" class="w-5 h-5"></i>
               </div>
               <div>
-                <h3 class="font-extrabold text-slate-900 text-base heading-font">मेरी गुल्लक (Savings Reserve)</h3>
+                <h3 class="font-extrabold text-slate-900 text-base heading-font">My Gullak (Savings Reserve)</h3>
                 <p class="text-[11px] text-slate-500">Personal Daily Micro-Savings Tracker</p>
               </div>
             </div>
-            <span class="text-[10px] bg-amber-100 text-amber-900 font-bold px-2.5 py-1 rounded-full border border-amber-200">No UPI Required</span>
+            <span class="text-[10px] bg-amber-100 text-amber-900 font-bold px-2.5 py-1 rounded-full border border-amber-200">Offline Secure</span>
           </div>
 
           <div class="bg-gradient-to-r from-amber-400 via-amber-500 to-yellow-500 text-slate-950 p-6 rounded-2xl shadow-sm text-center space-y-1 relative overflow-hidden">
-            <p class="text-[11px] font-extrabold uppercase tracking-widest text-amber-950">कुल बचत राशि (Total Gullak Balance)</p>
+            <p class="text-[11px] font-extrabold uppercase tracking-widest text-amber-950">Total Gullak Savings Balance</p>
             <h2 id="gullak-balance-display" class="text-4xl font-black heading-font tracking-tight">₹0.00</h2>
           </div>
 
           <div class="space-y-3 text-xs">
             <div>
-              <label class="block font-bold text-slate-700 mb-1">रुपये दर्ज करें (Amount ₹)</label>
-              <input type="number" id="gullak-amount-input" placeholder="जैसे 40 या 50" class="w-full p-2.5 rounded-lg caphi-input font-bold text-sm focus:ring-2 focus:ring-amber-500" />
+              <label class="block font-bold text-slate-700 mb-1">Enter Amount (₹)</label>
+              <input type="number" id="gullak-amount-input" placeholder="e.g. 40, 50, or 100" class="w-full p-2.5 rounded-lg caphi-input font-bold text-sm" />
             </div>
             <div>
-              <label class="block font-bold text-slate-700 mb-1">विवरण / नोट (Purpose)</label>
-              <input type="text" id="gullak-note-input" placeholder="जैसे: Daily Pocket Money / Gullak" class="w-full p-2.5 rounded-lg caphi-input font-medium focus:ring-2 focus:ring-amber-500" />
+              <label class="block font-bold text-slate-700 mb-1">Purpose / Note</label>
+              <input type="text" id="gullak-note-input" placeholder="e.g. Daily Spare Change / Evening Savings" class="w-full p-2.5 rounded-lg caphi-input font-medium" />
             </div>
 
             <div class="grid grid-cols-2 gap-3 pt-1">
               <button type="button" onclick="depositGullak()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow-sm">
-                <i data-lucide="plus-circle" class="w-4 h-4"></i> पैसे डालें (Save)
+                <i data-lucide="plus-circle" class="w-4 h-4"></i> Save Cash (Deposit)
               </button>
               <button type="button" onclick="withdrawGullak()" class="bg-rose-600 hover:bg-rose-700 text-white font-bold py-2.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow-sm">
-                <i data-lucide="minus-circle" class="w-4 h-4"></i> पैसे निकालें (Withdraw)
+                <i data-lucide="minus-circle" class="w-4 h-4"></i> Withdraw Cash
               </button>
             </div>
           </div>
@@ -464,7 +433,7 @@
           <div class="pt-3 border-t border-slate-100">
             <div class="flex justify-between items-center mb-2">
               <h4 class="font-bold text-slate-800 text-xs flex items-center gap-1.5">
-                <i data-lucide="history" class="w-4 h-4 text-slate-500"></i> बचत का इतिहास (Savings Record)
+                <i data-lucide="history" class="w-4 h-4 text-slate-500"></i> Savings Transaction Records
               </h4>
               <button onclick="clearAllGullakRecords()" class="text-[10px] text-rose-600 hover:underline font-bold">Clear All</button>
             </div>
@@ -473,12 +442,12 @@
         </div>
       </div>
 
-      <!-- 3. VIEW: ALL TRANSACTIONS -->
-      <div id="view-transactions" class="tab-view hidden">
+      <!-- ================= 3. VIEW: TRANSACTIONS REGISTER ================= -->
+      <div id="view-transactions" class="tab-view hidden space-y-6">
         <section class="caphi-card p-5 md:p-6">
           <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-3 mb-4">
             <h3 class="font-bold text-slate-900 text-base heading-font">Complete Register History</h3>
-            <input type="text" id="search-input" onkeyup="filterTransactions()" placeholder="Filter by party or description..." class="caphi-input rounded-lg px-3 py-1.5 text-xs w-full sm:w-64" />
+            <input type="text" id="search-input" onkeyup="filterTransactions()" placeholder="Search by party or particulars..." class="caphi-input rounded-lg px-3 py-1.5 text-xs w-full sm:w-64" />
           </div>
           <div class="overflow-x-auto">
             <table class="w-full text-left text-xs min-w-[700px]">
@@ -488,7 +457,7 @@
                   <th class="pb-2.5 font-semibold">Type</th>
                   <th class="pb-2.5 font-semibold">Party</th>
                   <th class="pb-2.5 font-semibold">Description</th>
-                  <th class="pb-2.5 font-semibold">Total Amount</th>
+                  <th class="pb-2.5 font-semibold">Amount (₹)</th>
                   <th class="pb-2.5 font-semibold text-right">Actions</th>
                 </tr>
               </thead>
@@ -498,94 +467,129 @@
         </section>
       </div>
 
-      <!-- 4. VIEW: PDF & DOCUMENT UTILITIES -->
+      <!-- ================= 4. VIEW: EXPANDED PDF, EXCEL & FILE UTILITIES SUITE ================= -->
       <div id="view-tools" class="tab-view hidden space-y-6">
         <div class="caphi-card p-6 md:p-8 space-y-6">
           <div>
-            <h3 class="text-lg md:text-xl font-black text-[#78350f] heading-font">Client-Side Document Utilities Suite</h3>
-            <p class="text-xs text-slate-500 mt-0.5">Secure local conversion engines. Files are processed inside your browser without uploading to external servers.</p>
+            <h3 class="text-lg md:text-xl font-black text-[#78350f] heading-font">Client-Side PDF, Excel & Document Utilities Suite</h3>
+            <p class="text-xs text-slate-500 mt-0.5">Secure local conversion engines. All document processing happens locally inside your browser memory.</p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- PDF to Excel -->
+            
+            <!-- 1. PDF to Excel -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="file-spreadsheet" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">PDF to Excel (.XLSX)</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Extract invoice and statement table cells into editable spreadsheet format.</p>
-                <input type="file" id="pdf-to-excel-input" accept=".pdf" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white file:mr-2 file:py-1 file:px-2 file:rounded-md file:border-0 file:bg-amber-500 file:text-slate-950 file:font-semibold" />
+                <p class="text-[11px] text-slate-500">Extract invoice and statement table cells into an editable spreadsheet.</p>
+                <input type="file" id="pdf-to-excel-input" accept=".pdf" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="convertPdfToExcel()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
                 <i data-lucide="file-spreadsheet" class="w-3.5 h-3.5"></i> Convert to Excel
               </button>
             </div>
 
-            <!-- Image to PDF -->
-            <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
-              <div class="space-y-2">
-                <div class="flex items-center gap-2">
-                  <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="image-down" class="w-4 h-4"></i></div>
-                  <h4 class="font-bold text-slate-900 text-xs">Image to PDF</h4>
-                </div>
-                <p class="text-[11px] text-slate-500">Convert bill photographs, JPG, or PNG files into standardized A4 PDF documents.</p>
-                <input type="file" id="img-file-input" accept="image/*" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white file:mr-2 file:py-1 file:px-2 file:rounded-md file:border-0 file:bg-amber-500 file:text-slate-950 file:font-semibold" />
-              </div>
-              <button onclick="convertImageToPDF()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
-                <i data-lucide="file-down" class="w-3.5 h-3.5"></i> Convert to PDF
-              </button>
-            </div>
-
-            <!-- Excel to PDF -->
+            <!-- 2. Excel to PDF -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="file-text" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">Excel to PDF</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Render `.xlsx` or `.csv` sheets directly into printable document tables.</p>
-                <input type="file" id="excel-file-input" accept=".xlsx, .xls, .csv" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white file:mr-2 file:py-1 file:px-2 file:rounded-md file:border-0 file:bg-amber-500 file:text-slate-950 file:font-semibold" />
+                <p class="text-[11px] text-slate-500">Render spreadsheet sheets (.xlsx, .csv) into clean printable PDF tables.</p>
+                <input type="file" id="excel-file-input" accept=".xlsx, .xls, .csv" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="convertExcelToPDF()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
-                <i data-lucide="file-down" class="w-3.5 h-3.5"></i> Export PDF
+                <i data-lucide="file-down" class="w-3.5 h-3.5"></i> Export PDF Document
               </button>
             </div>
 
-            <!-- PDF to PNG -->
+            <!-- 3. Image to PDF -->
+            <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="image-down" class="w-4 h-4"></i></div>
+                  <h4 class="font-bold text-slate-900 text-xs">Image to PDF</h4>
+                </div>
+                <p class="text-[11px] text-slate-500">Convert bill photographs, receipts, or PNG files into standardized A4 PDFs.</p>
+                <input type="file" id="img-file-input" accept="image/*" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
+              </div>
+              <button onclick="convertImageToPDF()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
+                <i data-lucide="file-down" class="w-3.5 h-3.5"></i> Convert to PDF
+              </button>
+            </div>
+
+            <!-- 4. Photo Size Compressor -->
+            <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="minimize-2" class="w-4 h-4"></i></div>
+                  <h4 class="font-bold text-slate-900 text-xs">Photo Size Compressor</h4>
+                </div>
+                <p class="text-[11px] text-slate-500">Compress heavy document photos to under 200KB for portal uploads.</p>
+                <input type="file" id="compress-img-input" accept="image/*" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
+              </div>
+              <button onclick="compressImageFile()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
+                <i data-lucide="shrink" class="w-3.5 h-3.5"></i> Compress Image (JPEG)
+              </button>
+            </div>
+
+            <!-- 5. PDF Page Snapshot / Extraction -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="image" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">PDF to PNG Image</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Extract high-resolution image snapshots from page 1 of any business document.</p>
-                <input type="file" id="pdf-to-img-input" accept=".pdf" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white file:mr-2 file:py-1 file:px-2 file:rounded-md file:border-0 file:bg-amber-500 file:text-slate-950 file:font-semibold" />
+                <p class="text-[11px] text-slate-500">Render page 1 of any PDF document into a sharp image snapshot.</p>
+                <input type="file" id="pdf-to-img-input" accept=".pdf" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="convertPdfToImage()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
-                <i data-lucide="image" class="w-3.5 h-3.5"></i> Extract PNG
+                <i data-lucide="image" class="w-3.5 h-3.5"></i> Extract PNG Image
               </button>
             </div>
 
-            <!-- Digital Signature Setup -->
+            <!-- 6. Corrupted File Text Recovery Tool -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
-                  <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="stamp" class="w-4 h-4"></i></div>
-                  <h4 class="font-bold text-slate-900 text-xs">Store Seal & Signature</h4>
+                  <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="life-buoy" class="w-4 h-4"></i></div>
+                  <h4 class="font-bold text-slate-900 text-xs">Corrupted File Recovery</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Upload signature PNG to automatically print on tax invoices.</p>
-                <input type="file" accept="image/*" onchange="uploadDigitalSignature(event)" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white file:mr-2 file:py-1 file:px-2 file:rounded-md file:border-0 file:text-amber-800 file:font-semibold" />
+                <p class="text-[11px] text-slate-500">Extract raw readable strings and numbers from damaged PDF/Excel sheets.</p>
+                <input type="file" id="damaged-file-input" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
-              <div id="sig-status" class="text-[10px] text-amber-800 font-bold">Ready to embed into bills</div>
+              <button onclick="recoverDamagedFile()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
+                <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i> Extract Raw Text
+              </button>
             </div>
+
+            <!-- 7. Digital Signature & Seal Stamper -->
+            <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between md:col-span-2 lg:col-span-3">
+              <div class="space-y-2">
+                <div class="flex items-center gap-2">
+                  <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="stamp" class="w-4 h-4"></i></div>
+                  <h4 class="font-bold text-slate-900 text-xs">Official Seal & Digital Signature Stamper</h4>
+                </div>
+                <p class="text-[11px] text-slate-500">Upload your store seal or transparent signature image to stamp directly onto generated tax invoices.</p>
+                <div class="flex flex-col sm:flex-row gap-3 items-center">
+                  <input type="file" accept="image/*" onchange="uploadDigitalSignature(event)" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
+                  <span id="sig-status" class="text-xs text-amber-800 font-bold whitespace-nowrap">Status: Ready to Stamp</span>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
 
-      <!-- 5. VIEW: CALCULATORS -->
+      <!-- ================= 5. VIEW: EXPANDED FINANCIAL CALCULATORS ================= -->
       <div id="view-calculator" class="tab-view hidden space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
           <!-- Due Interest Calculator -->
           <div class="caphi-card p-6 space-y-4">
             <h3 class="font-bold text-slate-900 text-base heading-font flex items-center gap-2">
@@ -598,7 +602,7 @@
               </div>
               <div class="grid grid-cols-2 gap-3">
                 <div>
-                  <label class="block font-semibold mb-1 text-slate-700">Interest Rate (% / month)</label>
+                  <label class="block font-semibold mb-1 text-slate-700">Interest Rate (% / Month)</label>
                   <input type="number" id="calc-rate" placeholder="2" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
                 </div>
                 <div>
@@ -606,7 +610,7 @@
                   <input type="number" id="calc-months" placeholder="3" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
                 </div>
               </div>
-              <button onclick="calculateInterest()" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">Calculate Total Due</button>
+              <button onclick="calculateInterest()" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">Calculate Total Outstanding</button>
               <div id="interest-result" class="p-3 bg-amber-50 border border-amber-200 rounded-lg hidden font-bold text-amber-900"></div>
             </div>
           </div>
@@ -614,147 +618,79 @@
           <!-- GST Splitter -->
           <div class="caphi-card p-6 space-y-4">
             <h3 class="font-bold text-slate-900 text-base heading-font flex items-center gap-2">
-              <i data-lucide="receipt-indian-rupee" class="w-4 h-4 text-emerald-600"></i> CGST / SGST Tax Splitter
+              <i data-lucide="receipt-indian-rupee" class="w-4 h-4 text-emerald-600"></i> CGST / SGST Reverse Tax Splitter
             </h3>
             <div class="space-y-3 text-xs">
               <div>
-                <label class="block font-semibold mb-1 text-slate-700">Gross Invoice Amount (Inclusive GST)</label>
+                <label class="block font-semibold mb-1 text-slate-700">Gross Invoice Amount (Inclusive of GST ₹)</label>
                 <input type="number" id="calc-gst-total" placeholder="1180" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
               </div>
               <div>
                 <label class="block font-semibold mb-1 text-slate-700">Applicable GST Slab</label>
                 <select id="calc-gst-slab" class="w-full p-2.5 rounded-lg caphi-input font-bold">
-                  <option value="18">18% GST (Standard)</option>
+                  <option value="18">18% GST (Standard Rate)</option>
                   <option value="12">12% GST</option>
                   <option value="5">5% GST</option>
                   <option value="28">28% GST</option>
                 </select>
               </div>
-              <button onclick="calculateGstSplit()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg transition shadow-sm">Compute Tax Split</button>
+              <button onclick="calculateGstSplit()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg transition shadow-sm">Separate Tax & Base Price</button>
               <div id="gst-result" class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg hidden font-semibold text-emerald-900 space-y-1"></div>
             </div>
           </div>
+
+          <!-- Profit Margin Calculator -->
+          <div class="caphi-card p-6 space-y-4">
+            <h3 class="font-bold text-slate-900 text-base heading-font flex items-center gap-2">
+              <i data-lucide="badge-percent" class="w-4 h-4 text-amber-600"></i> Gross Profit & Markup Margin Calculator
+            </h3>
+            <div class="space-y-3 text-xs">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block font-semibold mb-1 text-slate-700">Cost Price (₹)</label>
+                  <input type="number" id="calc-cost-price" placeholder="800" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
+                </div>
+                <div>
+                  <label class="block font-semibold mb-1 text-slate-700">Selling Price (₹)</label>
+                  <input type="number" id="calc-sell-price" placeholder="1000" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
+                </div>
+              </div>
+              <button onclick="calculateProfitMargin()" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">Compute Profit & Margin %</button>
+              <div id="profit-result" class="p-3 bg-amber-50 border border-amber-200 rounded-lg hidden font-bold text-amber-900"></div>
+            </div>
+          </div>
+
+          <!-- Commercial Unit Weight Converter -->
+          <div class="caphi-card p-6 space-y-4">
+            <h3 class="font-bold text-slate-900 text-base heading-font flex items-center gap-2">
+              <i data-lucide="boxes" class="w-4 h-4 text-blue-600"></i> Wholesale & Retail Weight Unit Converter
+            </h3>
+            <div class="space-y-3 text-xs">
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block font-semibold mb-1 text-slate-700">Quantity</label>
+                  <input type="number" id="calc-unit-val" placeholder="1" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
+                </div>
+                <div>
+                  <label class="block font-semibold mb-1 text-slate-700">Unit Type</label>
+                  <select id="calc-unit-type" class="w-full p-2.5 rounded-lg caphi-input font-bold">
+                    <option value="quintal-to-kg">Quintal to Kilograms (Kg)</option>
+                    <option value="kg-to-gm">Kilograms to Grams (g)</option>
+                    <option value="mound-to-kg">Maund (Mann) to Kilograms</option>
+                  </select>
+                </div>
+              </div>
+              <button onclick="convertCommercialUnits()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-lg transition shadow-sm">Convert Weight Unit</button>
+              <div id="unit-result" class="p-3 bg-blue-50 border border-blue-200 rounded-lg hidden font-bold text-blue-900"></div>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-- 6. VIEW: BUSINESS GUIDES -->
-      <div id="view-guides" class="tab-view hidden space-y-6">
-        <div class="caphi-card p-6 md:p-8 space-y-6 max-w-4xl mx-auto">
-          <div class="border-b border-amber-200 pb-4">
-            <span class="bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Accounting Resource Center</span>
-            <h3 class="text-xl md:text-2xl font-black text-[#78350f] heading-font mt-2">Retail Bookkeeping, GST Invoicing & Credit Recovery Principles</h3>
-            <p class="text-xs text-slate-500 mt-1">Operational procedures and tax frameworks tailored for Indian retail commerce.</p>
-          </div>
-
-          <div class="space-y-6 text-xs md:text-sm text-slate-700 leading-relaxed">
-            <article class="p-5 bg-amber-50/40 rounded-xl border border-amber-200 space-y-2">
-              <h4 class="text-base font-bold text-slate-900 heading-font flex items-center gap-2">
-                <span class="w-5 h-5 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">1</span>
-                Single-Entry Cash Flow vs. Double-Entry Accounting
-              </h4>
-              <p>
-                While multinational enterprises rely on multi-tier double-entry ledgers with complex debit and credit accounts, local retail counters thrive on chronological single-entry cash books. In single-entry systems, receipts (Jama) and payouts (Udhar) are totaled against opening cash balances daily.
-              </p>
-              <ul class="list-disc list-inside space-y-1 text-slate-600 pt-1">
-                <li><strong>Opening Drawer Total:</strong> Verify exact liquid cash available before opening morning trade.</li>
-                <li><strong>Instantaneous Transaction Logging:</strong> Record counter settlements as soon as funds clear to avoid memory gaps.</li>
-                <li><strong>EOD Audit:</strong> Calculate <code>Opening Cash + Daily Receipts - Daily Expenditures</code>. Any deviation flags cash register leakage.</li>
-              </ul>
-            </article>
-
-            <article class="p-5 bg-amber-50/40 rounded-xl border border-amber-200 space-y-2">
-              <h4 class="text-base font-bold text-slate-900 heading-font flex items-center gap-2">
-                <span class="w-5 h-5 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">2</span>
-                Best Practices for Customer Credit (Udhar) Management
-              </h4>
-              <p>
-                Customer credit is essential in neighborhood retail, but uncontrolled credit chokes working capital:
-              </p>
-              <ul class="list-disc list-inside space-y-1 text-slate-600 pt-1">
-                <li><strong>Credit Ceilings:</strong> Assign clear transaction maximums per customer. Halt further credit once unpaid balances reach the limit.</li>
-                <li><strong>Routine Statements:</strong> Deliver digital balance statements via SMS or WhatsApp every weekend rather than surprising buyers at month-end.</li>
-                <li><strong>Early Settlement Incentives:</strong> Offer 1–2% discounts for bills settled within 48 hours to preserve store liquidity.</li>
-              </ul>
-            </article>
-
-            <article class="p-5 bg-amber-50/40 rounded-xl border border-amber-200 space-y-2">
-              <h4 class="text-base font-bold text-slate-900 heading-font flex items-center gap-2">
-                <span class="w-5 h-5 rounded-md bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">3</span>
-                Understanding GST Invoicing Requirements
-              </h4>
-              <p>
-                Under Indian GST compliance rules, every commercial transaction must be accurately documented:
-              </p>
-              <ul class="list-disc list-inside space-y-1 text-slate-600 pt-1">
-                <li><strong>Intrastate Sales:</strong> Total GST is split evenly into CGST (Central Tax) and SGST (State Tax).</li>
-                <li><strong>Interstate Sales:</strong> The entire GST rate applies as IGST (Integrated Tax).</li>
-                <li><strong>Tax Invoice vs. Payment Receipt:</strong> Tax Invoices record commercial transactions and claim Input Tax Credit (ITC); receipts confirm monetary payments without tax implications.</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="pt-4 border-t border-amber-200 flex justify-between items-center text-xs">
-            <span class="text-slate-500">Maintained by Khata Bahi Editorial Desk.</span>
-            <a href="guides.html" class="inline-flex items-center gap-1 font-bold text-amber-800 hover:underline">
-              Open Static HTML Guides <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 7. VIEW: PRIVACY POLICY -->
-      <div id="view-privacy" class="tab-view hidden space-y-6">
-        <div class="caphi-card p-6 md:p-8 space-y-5 max-w-3xl mx-auto">
-          <div class="border-b border-slate-200 pb-3">
-            <h3 class="text-xl font-bold text-slate-900 heading-font">Privacy Policy</h3>
-            <p class="text-xs text-slate-500">Last updated: September 2026</p>
-          </div>
-
-          <div class="space-y-4 text-xs md:text-sm text-slate-600 leading-relaxed">
-            <p>Welcome to <strong>Khata Bahi</strong> (hosted at <code>swadsangamindia.github.io</code>). Your commercial ledger privacy is safeguarded under strict local execution principles.</p>
-            <h4 class="font-bold text-slate-900 text-sm">1. Data Architecture & Storage</h4>
-            <p>Entries, party phone records, and Gullak savings remain on your local device via browser LocalStorage. When using Google Sign-In, records sync to your private Google Firestore database partition.</p>
-            <h4 class="font-bold text-slate-900 text-sm">2. Cookies and Advertising</h4>
-            <p>Google AdSense uses cookies to deliver relevant advertisements. You can modify your tracking preferences at any time via your browser's cookie management tools.</p>
-            <h4 class="font-bold text-slate-900 text-sm">3. Contact Support</h4>
-            <p>For inquiries regarding data retention, contact us directly at: <strong>swadsangamindia@gmail.com</strong>.</p>
-          </div>
-
-          <div class="pt-4 border-t border-slate-200 text-center">
-            <a href="privacy-policy.html" class="inline-flex items-center gap-1 text-xs font-bold text-amber-800 hover:underline">
-              View Static HTML Privacy Page <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 8. VIEW: TERMS AND CONDITIONS -->
-      <div id="view-terms" class="tab-view hidden space-y-6">
-        <div class="caphi-card p-6 md:p-8 space-y-5 max-w-3xl mx-auto">
-          <div class="border-b border-slate-200 pb-3">
-            <h3 class="text-xl font-bold text-slate-900 heading-font">Terms and Conditions</h3>
-            <p class="text-xs text-slate-500">Effective: September 2026</p>
-          </div>
-
-          <div class="space-y-4 text-xs md:text-sm text-slate-600 leading-relaxed">
-            <p>By using Khata Bahi, you acknowledge and agree to these terms:</p>
-            <h4 class="font-bold text-slate-900 text-sm">1. Scope of Application</h4>
-            <p>Khata Bahi is a digital bookkeeping and calculation helper. It does not replace official chartered accountants (CA) or professional audit services.</p>
-            <h4 class="font-bold text-slate-900 text-sm">2. Local Data Redundancy</h4>
-            <p>Merchants are advised to export periodic CSV backups to maintain duplicate copies of ledger records.</p>
-          </div>
-
-          <div class="pt-4 border-t border-slate-200 text-center">
-            <a href="terms.html" class="inline-flex items-center gap-1 text-xs font-bold text-amber-800 hover:underline">
-              View Static HTML Terms Page <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 9. VIEW: STORE & PRO SETTINGS -->
+      <!-- ================= 6. VIEW: STORE & PROFILE SETTINGS ================= -->
       <div id="view-settings" class="tab-view hidden space-y-6">
-        <!-- User Profile Card -->
+        <!-- Profile Details -->
         <div class="caphi-card p-5 max-w-2xl flex items-center justify-between">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold text-sm shadow-sm" id="user-avatar">
@@ -770,28 +706,28 @@
           </button>
         </div>
 
-        <!-- Pro Upgrade Status Card -->
+        <!-- Pro Plan Status -->
         <div class="caphi-card p-6 max-w-2xl space-y-3 border-amber-200 bg-amber-50/50">
           <div class="flex justify-between items-center border-b border-amber-200/60 pb-3">
             <div>
               <span class="text-[10px] text-amber-800 font-bold uppercase tracking-wider">Subscription Status</span>
-              <h4 class="text-base font-bold text-slate-900 heading-font" id="settings-plan-desc">Free Plan (Receipt & Payment Only)</h4>
+              <h4 class="text-base font-bold text-slate-900 heading-font" id="settings-plan-desc">Free Plan (Receipt & Payment)</h4>
             </div>
             <button id="settings-upgrade-btn" onclick="openUpgradeModal()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-sm transition">
               <i data-lucide="crown" class="w-3.5 h-3.5"></i> Upgrade Pro (₹99)
             </button>
           </div>
           <p class="text-xs text-slate-600">
-            Khata Pro unlocks Sale & Purchase vouchers with automatic GST calculation, custom invoice templates, and cloud storage syncing.
+            Khata Pro unlocks tax sales & purchase vouchers with full GST breakdown, multi-company stores, and cloud database sync.
           </p>
         </div>
 
-        <!-- Business Profiles Container -->
+        <!-- Multiple Store Profiles -->
         <div class="caphi-card p-6 max-w-2xl space-y-4">
           <div class="flex justify-between items-center border-b border-slate-100 pb-3">
             <div>
               <h4 class="text-base font-bold text-slate-900 heading-font">Active Store Profiles</h4>
-              <p class="text-xs text-slate-500">Tap a store to load its cash register</p>
+              <p class="text-xs text-slate-500">Tap a store to open its active accounting books</p>
             </div>
             <button onclick="openAddCompanyModal()" class="bg-amber-100 hover:bg-amber-200 text-amber-900 font-bold px-3 py-1.5 rounded-lg text-xs flex items-center gap-1 border border-amber-300">
               <i data-lucide="plus" class="w-3.5 h-3.5"></i> Add Store
@@ -800,9 +736,9 @@
           <div id="company-list-container" class="space-y-2 max-h-56 overflow-y-auto pr-1"></div>
         </div>
 
-        <!-- Edit Business Metadata Form -->
+        <!-- Business Meta Form -->
         <div class="caphi-card p-6 max-w-2xl space-y-4">
-          <h4 class="text-base font-bold text-slate-900 heading-font">Business Invoice Information</h4>
+          <h4 class="text-base font-bold text-slate-900 heading-font">Store Invoice Information</h4>
           <form id="company-profile-form" onsubmit="saveCompanyDetails(event)" class="space-y-3.5 text-xs">
             <div>
               <label class="block font-bold text-slate-700 mb-1">Company / Store Name</label>
@@ -814,7 +750,7 @@
                 <input type="text" id="set-company-gstin" class="w-full p-2.5 rounded-lg caphi-input uppercase font-mono" placeholder="22AAAAA0000A1Z5" />
               </div>
               <div>
-                <label class="block font-bold text-slate-700 mb-1">Phone</label>
+                <label class="block font-bold text-slate-700 mb-1">Phone Number</label>
                 <input type="text" id="set-company-phone" class="w-full p-2.5 rounded-lg caphi-input" />
               </div>
             </div>
@@ -827,11 +763,13 @@
         </div>
       </div>
 
-      <!-- FOOTER -->
+      <!-- FOOTER DIRECT CRAWLABLE LINKS -->
       <footer class="mt-12 py-6 border-t border-amber-200 text-center text-xs text-slate-500 space-y-2">
-        <p>© 2026 Khata Bahi Digital Ledger. Professional Cloud Accounting for Retailers.</p>
-        <div class="flex items-center justify-center gap-4 text-amber-800 font-semibold">
+        <p>© 2026 Khata Bahi Digital Accounting. Cloud Accounting & Financial Utilities.</p>
+        <div class="flex items-center justify-center gap-4 text-amber-800 font-semibold flex-wrap">
           <a href="guides.html" class="hover:underline">Business Guides</a>
+          <span>•</span>
+          <a href="about.html" class="hover:underline">About Us</a>
           <span>•</span>
           <a href="privacy-policy.html" class="hover:underline">Privacy Policy</a>
           <span>•</span>
@@ -843,37 +781,62 @@
 
   <!-- MOBILE BOTTOM APP NAV -->
   <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-amber-200 text-slate-600 flex justify-around items-center p-2 z-40 shadow-lg">
-    <button onclick="switchTab('about')" id="m-nav-about" class="flex flex-col items-center gap-1 p-1 text-[10px] text-amber-800 font-bold">
-      <i data-lucide="compass" class="w-5 h-5"></i> Hub
-    </button>
-    <button onclick="switchTab('dashboard')" id="m-nav-dashboard" class="flex flex-col items-center gap-1 p-1 text-[10px] font-semibold">
-      <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Ledger
+    <button onclick="switchTab('dashboard')" id="m-nav-dashboard" class="flex flex-col items-center gap-1 p-1 text-[10px] text-amber-800 font-bold">
+      <i data-lucide="layout-dashboard" class="w-5 h-5"></i> Dashboard
     </button>
     <button onclick="switchTab('gullak')" id="m-nav-gullak" class="flex flex-col items-center gap-1 p-1 text-[10px] font-semibold">
       <i data-lucide="piggy-bank" class="w-5 h-5 text-amber-500"></i> Gullak
     </button>
+    <button onclick="switchTab('transactions')" id="m-nav-transactions" class="flex flex-col items-center gap-1 p-1 text-[10px] font-semibold">
+      <i data-lucide="receipt" class="w-5 h-5 text-amber-600"></i> Ledger
+    </button>
     <button onclick="switchTab('tools')" id="m-nav-tools" class="flex flex-col items-center gap-1 p-1 text-[10px] font-semibold">
       <i data-lucide="wrench" class="w-5 h-5 text-amber-700"></i> Tools
-    </button>
-    <button onclick="switchTab('guides')" id="m-nav-guides" class="flex flex-col items-center gap-1 p-1 text-[10px] font-semibold">
-      <i data-lucide="book-open" class="w-5 h-5 text-amber-600"></i> Guides
     </button>
     <button onclick="switchTab('settings')" id="m-nav-settings" class="flex flex-col items-center gap-1 p-1 text-[10px] font-semibold">
       <i data-lucide="settings" class="w-5 h-5"></i> Store
     </button>
   </nav>
 
+  <!-- ================= MODERN STORE SWITCHER MODAL ================= -->
+  <div id="store-switch-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
+    <div class="caphi-card max-w-md w-full p-5 md:p-6 space-y-4 shadow-2xl border-2 border-amber-300">
+      <div class="flex justify-between items-center border-b border-amber-100 pb-3">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-xl bg-amber-100 text-amber-900 flex items-center justify-center">
+            <i data-lucide="store" class="w-4 h-4"></i>
+          </div>
+          <div>
+            <h3 class="text-sm md:text-base font-extrabold text-slate-900 heading-font">Store & Branch Hub</h3>
+            <p class="text-[11px] text-slate-500">Select active ledger or add a new branch</p>
+          </div>
+        </div>
+        <button onclick="closeStoreSwitchModal()" class="text-slate-400 hover:text-slate-600 p-1">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div id="modal-stores-list" class="space-y-2 max-h-60 overflow-y-auto pr-1"></div>
+
+      <div class="pt-2 border-t border-slate-100 flex gap-2">
+        <button onclick="closeStoreSwitchModal(); openAddCompanyModal();" class="flex-1 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
+          <i data-lucide="plus-circle" class="w-4 h-4"></i> Register New Store
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- MODAL: ADD COMPANY -->
   <div id="add-company-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
-    <div class="caphi-card max-w-sm w-full p-6 space-y-4">
+    <div class="caphi-card max-w-sm w-full p-6 space-y-4 border border-amber-300">
       <div class="flex justify-between items-center border-b border-slate-100 pb-3">
-        <h3 class="text-sm font-bold text-slate-900 heading-font">Create New Store Profile</h3>
+        <h3 class="text-sm font-bold text-slate-900 heading-font">Create Store Profile</h3>
         <button onclick="closeAddCompanyModal()" class="text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-4 h-4"></i></button>
       </div>
       <div class="space-y-3 text-xs">
         <div>
           <label class="block font-bold text-slate-700 mb-1">Store / Business Name</label>
-          <input type="text" id="new-company-name-input" placeholder="e.g. Swad Sangam Branch 2" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
+          <input type="text" id="new-company-name-input" placeholder="e.g. Swad Sangam Supermarket" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
         </div>
         <button onclick="createNewCompany()" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">
           Save & Switch Store
@@ -898,7 +861,7 @@
               <option value="receipt">Receipt (Money Received)</option>
               <option value="payment">Payment (Money Paid)</option>
               <option value="sale">Sale (Invoice - Pro 🔒)</option>
-              <option value="purchase">Purchase (Stock - Pro 🔒)</option>
+              <option value="purchase">Purchase (Stock Purchase - Pro 🔒)</option>
             </select>
           </div>
           <div>
@@ -909,7 +872,7 @@
 
         <div>
           <label class="block font-semibold text-slate-700 mb-1">Description / Particulars</label>
-          <input type="text" id="description" required placeholder="e.g. Daily Kirana Sales / Milk Supply" class="w-full rounded-lg p-2 caphi-input font-semibold" />
+          <input type="text" id="description" required placeholder="e.g. Daily Kirana Sales / Milk Supplies" class="w-full rounded-lg p-2 caphi-input font-semibold" />
         </div>
 
         <div>
@@ -953,7 +916,7 @@
               <option value="General Trade">General Trade</option>
               <option value="Office Expenses">Office Expenses</option>
               <option value="Groceries & Kirana">Groceries & Kirana</option>
-              <option value="Services">Services</option>
+              <option value="Services & Logistics">Services & Logistics</option>
             </select>
           </div>
           <div>
@@ -972,12 +935,12 @@
     </div>
   </div>
 
-  <!-- MODAL: UPGRADE TO PRO -->
+  <!-- MODAL: UPGRADE PRO -->
   <div id="upgrade-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
     <div class="caphi-card max-w-sm w-full p-6 shadow-xl relative space-y-4 border border-amber-300">
       <div class="flex justify-between items-center">
         <span class="bg-amber-100 text-amber-800 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-amber-200">
-          <i data-lucide="crown" class="w-3 h-3 text-amber-600"></i> PRO MEMBERSHIP
+          <i data-lucide="crown" class="w-3 text-amber-600"></i> PRO MEMBERSHIP
         </span>
         <button onclick="closeUpgradeModal()" class="text-slate-400 hover:text-slate-600"><i data-lucide="x" class="w-4 h-4"></i></button>
       </div>
@@ -987,12 +950,12 @@
         <p class="text-xs text-slate-500 mt-0.5">Unlock Multi-Store Sync, GST Invoicing & Due Calculators</p>
         <div class="mt-2 flex justify-center items-baseline gap-1">
           <span class="text-3xl font-black text-amber-600 heading-font">₹99</span>
-          <span class="text-xs text-slate-500 font-medium">/ 30 days</span>
+          <span class="text-xs text-slate-500 font-medium">/ 30 Days</span>
         </div>
       </div>
 
       <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 text-center space-y-2.5">
-        <p class="text-xs font-bold text-slate-700">Scan QR Code or Tap to Pay</p>
+        <p class="text-xs font-bold text-slate-700">Scan QR Code or Tap to Pay via UPI</p>
         <div class="flex justify-center">
           <img id="upi-qr-code" src="" alt="UPI QR Code" class="w-32 h-32 rounded-lg border border-slate-200 shadow-sm bg-white p-1" />
         </div>
@@ -1074,7 +1037,7 @@
     </div>
   </div>
 
-  <!-- APPLICATION CORE LOGIC -->
+  <!-- APPLICATION CORE SCRIPT -->
   <script>
     lucide.createIcons();
 
@@ -1087,7 +1050,7 @@
     const PRO_PRICE = 99;
 
     window.companies = JSON.parse(localStorage.getItem('ledger_companies')) || [
-      { id: 'c_default', name: 'My Main Shop', address: 'Delhi, India', gstin: 'N/A', phone: '' }
+      { id: 'c_default', name: 'Main Branch Outlet', address: 'Delhi, India', gstin: 'N/A', phone: '' }
     ];
     window.activeCompanyId = localStorage.getItem('ledger_active_company_id') || window.companies[0].id;
     window.transactions = JSON.parse(localStorage.getItem(`ledger_tx_${window.activeCompanyId}`)) || [];
@@ -1097,7 +1060,7 @@
     let proExpiry = JSON.parse(localStorage.getItem('ledger_pro_expiry')) || null;
     let lineChart, doughnutChart;
 
-    /* PRO STATUS CONTROLLER */
+    /* PRO SUBSCRIPTION CONTROLLER */
     function checkProSubscriptionExpiry() {
       if (isProUser && proExpiry) {
         if (Date.now() > proExpiry) {
@@ -1119,7 +1082,6 @@
       const planBadge = document.getElementById('sidebar-plan-badge');
       const planDesc = document.getElementById('settings-plan-desc');
       const headerUpgradeBtn = document.getElementById('header-upgrade-btn');
-      const homeUpgradeBtn = document.getElementById('home-upgrade-btn');
       const settingsUpgradeBtn = document.getElementById('settings-upgrade-btn');
       const proFields = document.getElementById('pro-fields-container');
 
@@ -1127,18 +1089,16 @@
 
       if (isProUser && remainingDays > 0) {
         if (planBadge) planBadge.innerHTML = `<i data-lucide="crown" class="w-3.5 h-3.5 text-amber-300 inline"></i> Pro (${remainingDays}d)`;
-        if (planDesc) planDesc.innerText = `Pro Membership Active (${remainingDays} days remaining)`;
+        if (planDesc) planDesc.innerText = `Khata Pro Active (${remainingDays} days remaining)`;
 
         if (headerUpgradeBtn) headerUpgradeBtn.classList.add('hidden');
-        if (homeUpgradeBtn) homeUpgradeBtn.classList.add('hidden');
         if (settingsUpgradeBtn) settingsUpgradeBtn.classList.add('hidden');
         if (proFields) proFields.classList.remove('hidden');
       } else {
         if (planBadge) planBadge.innerHTML = `<i data-lucide="shield" class="w-3.5 h-3.5 text-amber-300 inline"></i> Free Tier`;
-        if (planDesc) planDesc.innerText = "Free Plan (Receipt & Payment only)";
+        if (planDesc) planDesc.innerText = "Free Plan (Receipt & Payment Only)";
 
         if (headerUpgradeBtn) headerUpgradeBtn.classList.remove('hidden');
-        if (homeUpgradeBtn) homeUpgradeBtn.classList.remove('hidden');
         if (settingsUpgradeBtn) settingsUpgradeBtn.classList.remove('hidden');
         if (proFields) proFields.classList.add('hidden');
       }
@@ -1174,13 +1134,13 @@
 
         updateProStatusUI();
         closeUpgradeModal();
-        alert(`🎉 Khata Pro Activated successfully with UTR: ${utr}!\nValid for 30 Days.`);
+        alert(`🎉 Khata Pro Activated successfully with UTR: ${utr}!\nValid for 30 days.`);
       } else {
-        alert("Please enter a valid UPI Reference / UTR Number (at least 8 digits).");
+        alert("Please enter a valid UPI Reference / UTR Number (at least 8 digits)!");
       }
     }
 
-    /* GULLAK LOGIC WITH RECORD DELETION */
+    /* GULLAK SAVINGS WITH RECORD DELETION */
     let gullakBalance = Number(localStorage.getItem(`gullak_bal_${window.activeCompanyId}`)) || 0;
     let gullakHistory = JSON.parse(localStorage.getItem(`gullak_hist_${window.activeCompanyId}`)) || [];
 
@@ -1192,7 +1152,7 @@
       if (!container) return;
 
       if (gullakHistory.length === 0) {
-        container.innerHTML = `<p class="text-[11px] text-slate-400 text-center py-3">गुल्लक में कोई रिकॉर्ड नहीं है।</p>`;
+        container.innerHTML = `<p class="text-[11px] text-slate-400 text-center py-3">No savings records found in Gullak.</p>`;
         return;
       }
 
@@ -1221,7 +1181,7 @@
       const amt = parseFloat(amtInput.value);
       const note = noteInput.value.trim() || 'Saved in Gullak';
       
-      if (!amt || amt <= 0) return alert("कृपया सही राशि डालें (जैसे: ₹40 या ₹50)!");
+      if (!amt || amt <= 0) return alert("Please enter a valid amount (e.g., ₹40 or ₹50)!");
 
       gullakBalance += amt;
       gullakHistory.unshift({ type: 'deposit', amount: amt, note: note, date: new Date().toLocaleDateString('en-GB') });
@@ -1240,8 +1200,8 @@
       const amt = parseFloat(amtInput.value);
       const note = noteInput.value.trim() || 'Withdrawn from Gullak';
       
-      if (!amt || amt <= 0) return alert("कृपया सही राशि डालें!");
-      if (amt > gullakBalance) return alert("गुल्लक में इतने पैसे नहीं हैं!");
+      if (!amt || amt <= 0) return alert("Please enter a valid amount!");
+      if (amt > gullakBalance) return alert("Insufficient balance in Gullak!");
 
       gullakBalance -= amt;
       gullakHistory.unshift({ type: 'withdraw', amount: amt, note: note, date: new Date().toLocaleDateString('en-GB') });
@@ -1255,7 +1215,7 @@
     }
 
     function deleteGullakRecord(index) {
-      if (!confirm("क्या आप इस गुल्लक एंट्री को हटाना चाहते हैं?")) return;
+      if (!confirm("Are you sure you want to delete this Gullak entry?")) return;
       const record = gullakHistory[index];
       
       if (record.type === 'deposit') {
@@ -1271,7 +1231,7 @@
     }
 
     function clearAllGullakRecords() {
-      if (!confirm("क्या आप गुल्लक के सभी रिकॉर्ड और बैलेंस साफ़ करना चाहते हैं?")) return;
+      if (!confirm("Are you sure you want to clear all Gullak records and balance?")) return;
       gullakBalance = 0;
       gullakHistory = [];
       localStorage.setItem(`gullak_bal_${window.activeCompanyId}`, 0);
@@ -1279,26 +1239,54 @@
       updateGullakUI();
     }
 
-    /* MULTI-COMPANY HANDLERS */
+    /* MODERN STORE SWITCHER & MODAL CONTROLLERS */
+    function openStoreSwitchModal() {
+      renderStoreModalList();
+      document.getElementById('store-switch-modal').classList.remove('hidden');
+    }
+
+    function closeStoreSwitchModal() {
+      document.getElementById('store-switch-modal').classList.add('hidden');
+    }
+
+    function renderStoreModalList() {
+      const container = document.getElementById('modal-stores-list');
+      if (!container) return;
+      container.innerHTML = '';
+
+      window.companies.forEach((c) => {
+        const isActive = c.id === window.activeCompanyId;
+        container.innerHTML += `
+          <div onclick="selectCompanyById('${c.id}'); closeStoreSwitchModal();" class="p-3 rounded-xl border-2 transition cursor-pointer flex justify-between items-center ${isActive ? 'bg-amber-100 border-amber-500 shadow-sm' : 'bg-white border-slate-200 hover:border-amber-300 hover:bg-amber-50/50'}">
+            <div class="flex items-center gap-3">
+              <div class="w-9 h-9 rounded-xl ${isActive ? 'bg-amber-500 text-slate-950' : 'bg-slate-100 text-slate-600'} flex items-center justify-center font-bold text-xs">
+                <i data-lucide="store" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <p class="font-extrabold text-xs text-slate-900 flex items-center gap-1.5">
+                  ${c.name}
+                  ${isActive ? '<span class="text-[9px] bg-amber-600 text-white font-black px-1.5 py-0.5 rounded-full uppercase">Active</span>' : ''}
+                </p>
+                <p class="text-[10px] text-slate-500">${c.address || 'Delhi, India'}</p>
+              </div>
+            </div>
+            <i data-lucide="${isActive ? 'check-circle-2' : 'chevron-right'}" class="w-4 h-4 ${isActive ? 'text-amber-700' : 'text-slate-400'}"></i>
+          </div>
+        `;
+      });
+      lucide.createIcons();
+    }
+
     function renderCompanySelectors() {
-      const desktopSel = document.getElementById('company-selector');
-      const mobileSel = document.getElementById('mobile-company-selector');
-
-      if (desktopSel && mobileSel) {
-        desktopSel.innerHTML = '';
-        mobileSel.innerHTML = '';
-
-        window.companies.forEach(c => {
-          const selected = c.id === window.activeCompanyId ? 'selected' : '';
-          desktopSel.innerHTML += `<option value="${c.id}" ${selected}>${c.name}</option>`;
-          mobileSel.innerHTML += `<option value="${c.id}" ${selected}>${c.name}</option>`;
-        });
-      }
-
       const activeComp = getActiveCompany();
+      
+      const headerStoreName = document.getElementById('header-active-store-name');
+      const mobileStoreName = document.getElementById('mobile-active-store-name');
       const currentCompDisplay = document.getElementById('current-company-display');
       const tableCompName = document.getElementById('table-company-name');
-      
+
+      if (headerStoreName) headerStoreName.innerText = activeComp.name;
+      if (mobileStoreName) mobileStoreName.innerText = activeComp.name;
       if (currentCompDisplay) currentCompDisplay.innerText = activeComp.name;
       if (tableCompName) tableCompName.innerText = activeComp.name;
 
@@ -1337,19 +1325,7 @@
     }
 
     function getActiveCompany() {
-      return (window.companies || []).find(c => c.id === window.activeCompanyId) || { name: 'My Shop', address: 'Delhi, India', gstin: 'N/A', phone: '' };
-    }
-
-    function switchActiveCompany() {
-      window.activeCompanyId = document.getElementById('company-selector').value;
-      localStorage.setItem('ledger_active_company_id', window.activeCompanyId);
-      loadCompanyTransactions();
-    }
-
-    function switchActiveCompanyMobile() {
-      window.activeCompanyId = document.getElementById('mobile-company-selector').value;
-      localStorage.setItem('ledger_active_company_id', window.activeCompanyId);
-      loadCompanyTransactions();
+      return (window.companies || []).find(c => c.id === window.activeCompanyId) || { name: 'Main Branch Outlet', address: 'Delhi, India', gstin: 'N/A', phone: '' };
     }
 
     function loadCompanyTransactions() {
@@ -1497,7 +1473,7 @@
       }
     }
 
-    /* DIGITAL UTILITIES */
+    /* DIGITAL UTILITIES EXPANDED */
     let companySignatureDataUrl = localStorage.getItem('user_digital_signature') || '';
 
     function uploadDigitalSignature(event) {
@@ -1507,22 +1483,54 @@
       reader.onload = function(e) {
         companySignatureDataUrl = e.target.result;
         localStorage.setItem('user_digital_signature', companySignatureDataUrl);
-        document.getElementById('sig-status').innerText = "✓ Signature attached successfully!";
+        document.getElementById('sig-status').innerText = "✓ Signature / Seal Attached!";
       };
       reader.readAsDataURL(file);
     }
 
     function convertImageToPDF() {
       const input = document.getElementById('img-file-input');
-      if (!input.files.length) return alert('Select an image first!');
+      if (!input.files.length) return alert('Please select an image file first!');
       const reader = new FileReader();
       reader.onload = function(e) {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' });
         doc.addImage(e.target.result, 'JPEG', 10, 10, 190, 0);
-        doc.save(`Image_Export_${Date.now()}.pdf`);
+        doc.save(`Receipt_Export_${Date.now()}.pdf`);
       };
       reader.readAsDataURL(input.files[0]);
+    }
+
+    function compressImageFile() {
+      const input = document.getElementById('compress-img-input');
+      if (!input.files.length) return alert('Select an image to compress!');
+      const file = input.files[0];
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const img = new Image();
+        img.onload = function() {
+          const canvas = document.createElement('canvas');
+          const maxDim = 1200;
+          let w = img.width;
+          let h = img.height;
+          if (w > maxDim || h > maxDim) {
+            if (w > h) { h = Math.round((h * maxDim) / w); w = maxDim; }
+            else { w = Math.round((w * maxDim) / h); h = maxDim; }
+          }
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          canvas.toBlob((blob) => {
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = `Compressed_${file.name.split('.')[0]}.jpg`;
+            a.click();
+          }, 'image/jpeg', 0.65);
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
     }
 
     function convertExcelToPDF() {
@@ -1544,22 +1552,26 @@
       if (!input.files.length) return alert('Select a PDF file!');
       const reader = new FileReader();
       reader.onload = async function() {
-        const pdf = await pdfjsLib.getDocument(new Uint8Array(this.result)).promise;
-        let rows = [];
-        for (let i = 1; i <= pdf.numPages; i++) {
-          const page = await pdf.getPage(i);
-          const txt = await page.getTextContent();
-          let r = [];
-          txt.items.forEach((item, idx) => {
-            r.push(item.str);
-            if ((idx + 1) % 4 === 0) { rows.push([...r]); r = []; }
-          });
-          if (r.length) rows.push(r);
+        try {
+          const pdf = await pdfjsLib.getDocument(new Uint8Array(this.result)).promise;
+          let rows = [];
+          for (let i = 1; i <= pdf.numPages; i++) {
+            const page = await pdf.getPage(i);
+            const txt = await page.getTextContent();
+            let r = [];
+            txt.items.forEach((item, idx) => {
+              r.push(item.str);
+              if ((idx + 1) % 4 === 0) { rows.push([...r]); r = []; }
+            });
+            if (r.length) rows.push(r);
+          }
+          const ws = XLSX.utils.aoa_to_sheet(rows);
+          const wb = XLSX.utils.book_new();
+          XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
+          XLSX.writeFile(wb, `Extracted_Data_${Date.now()}.xlsx`);
+        } catch (err) {
+          alert("Error parsing PDF tables: " + err.message);
         }
-        const ws = XLSX.utils.aoa_to_sheet(rows);
-        const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, "Sheet1");
-        XLSX.writeFile(wb, `Extracted_Data_${Date.now()}.xlsx`);
       };
       reader.readAsArrayBuffer(input.files[0]);
     }
@@ -1569,19 +1581,40 @@
       if (!input.files.length) return alert('Select a PDF file!');
       const reader = new FileReader();
       reader.onload = async function() {
-        const pdf = await pdfjsLib.getDocument(new Uint8Array(this.result)).promise;
-        const page = await pdf.getPage(1);
-        const viewport = page.getViewport({ scale: 1.5 });
-        const canvas = document.createElement('canvas');
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
-        const a = document.createElement('a');
-        a.href = canvas.toDataURL("image/png");
-        a.download = `PDF_Page1_${Date.now()}.png`;
-        a.click();
+        try {
+          const pdf = await pdfjsLib.getDocument(new Uint8Array(this.result)).promise;
+          const page = await pdf.getPage(1);
+          const viewport = page.getViewport({ scale: 1.5 });
+          const canvas = document.createElement('canvas');
+          canvas.height = viewport.height;
+          canvas.width = viewport.width;
+          await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+          const a = document.createElement('a');
+          a.href = canvas.toDataURL("image/png");
+          a.download = `PDF_Page1_${Date.now()}.png`;
+          a.click();
+        } catch (err) {
+          alert("Could not extract image: " + err.message);
+        }
       };
       reader.readAsArrayBuffer(input.files[0]);
+    }
+
+    function recoverDamagedFile() {
+      const input = document.getElementById('damaged-file-input');
+      if (!input.files.length) return alert('Select a damaged file to recover!');
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const text = e.target.result;
+        const cleaned = text.replace(/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F-\x9F]/g, " ");
+        const blob = new Blob([cleaned], { type: "text/plain;charset=utf-8" });
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = `Recovered_Text_${Date.now()}.txt`;
+        a.click();
+        alert("Raw printable strings successfully extracted into a text file.");
+      };
+      reader.readAsText(input.files[0]);
     }
 
     function generateInvoicePDF(id) {
@@ -1589,7 +1622,7 @@
       if (!item) return alert("Record not found!");
       const activeComp = getActiveCompany();
 
-      document.getElementById('pdf-top-company-name').innerText = activeComp.name || 'Store';
+      document.getElementById('pdf-top-company-name').innerText = activeComp.name || 'My Store';
       document.getElementById('pdf-top-company-address').innerText = activeComp.address || 'Delhi, India';
       document.getElementById('pdf-top-company-gstin').innerText = activeComp.gstin || 'N/A';
       document.getElementById('pdf-top-company-phone').innerText = activeComp.phone || 'N/A';
@@ -1615,7 +1648,7 @@
       html2pdf().from(el).set({ filename: `Bill_${item.id}.pdf` }).save().then(() => el.style.display = 'none');
     }
 
-    /* CALCULATORS */
+    /* EXPANDED CALCULATORS */
     function calculateInterest() {
       const P = parseFloat(document.getElementById('calc-principal').value) || 0;
       const R = parseFloat(document.getElementById('calc-rate').value) || 0;
@@ -1625,7 +1658,7 @@
       const total = P + interest;
       const res = document.getElementById('interest-result');
       res.classList.remove('hidden');
-      res.innerHTML = `<p>Interest Amount: ₹${interest.toFixed(2)}</p><p class="text-amber-900 font-bold">Total Overdue Balance: ₹${total.toFixed(2)}</p>`;
+      res.innerHTML = `<p>Interest Fee: ₹${interest.toFixed(2)}</p><p class="text-amber-900 font-bold">Total Due Balance: ₹${total.toFixed(2)}</p>`;
     }
 
     function calculateGstSplit() {
@@ -1636,7 +1669,31 @@
       const gst = total - base;
       const res = document.getElementById('gst-result');
       res.classList.remove('hidden');
-      res.innerHTML = `<p>Base Amount: ₹${base.toFixed(2)}</p><p>CGST/SGST: ₹${(gst/2).toFixed(2)} each</p><p class="text-emerald-700 font-bold">Total Tax: ₹${gst.toFixed(2)}</p>`;
+      res.innerHTML = `<p>Base Amount: ₹${base.toFixed(2)}</p><p>CGST / SGST: ₹${(gst/2).toFixed(2)} each</p><p class="text-emerald-700 font-bold">Total GST: ₹${gst.toFixed(2)}</p>`;
+    }
+
+    function calculateProfitMargin() {
+      const cp = parseFloat(document.getElementById('calc-cost-price').value) || 0;
+      const sp = parseFloat(document.getElementById('calc-sell-price').value) || 0;
+      if (!cp || !sp) return alert("Please enter both cost and selling price!");
+      const profit = sp - cp;
+      const margin = (profit / sp) * 100;
+      const res = document.getElementById('profit-result');
+      res.classList.remove('hidden');
+      res.innerHTML = `<p>Net Profit: ₹${profit.toFixed(2)}</p><p class="text-emerald-700 font-bold">Profit Margin: ${margin.toFixed(2)}%</p>`;
+    }
+
+    function convertCommercialUnits() {
+      const val = parseFloat(document.getElementById('calc-unit-val').value) || 0;
+      const type = document.getElementById('calc-unit-type').value;
+      if (!val) return alert("Please enter quantity!");
+      let resText = "";
+      if (type === "quintal-to-kg") resText = `${val} Quintal = ${val * 100} Kilograms (Kg)`;
+      else if (type === "kg-to-gm") resText = `${val} Kilograms = ${val * 1000} Grams (g)`;
+      else if (type === "mound-to-kg") resText = `${val} Maund (Mann) = ${(val * 40).toFixed(2)} Kilograms (Kg)`;
+      const res = document.getElementById('unit-result');
+      res.classList.remove('hidden');
+      res.innerText = resText;
     }
 
     /* CHARTS */
@@ -1694,7 +1751,7 @@
       document.getElementById('summary-total').innerText = `₹${total.toFixed(2)}`;
     }
 
-    /* FORM SUBMIT EVENT WITH LOCAL & CLOUD HOOK */
+    /* FORM SUBMISSION AND CLOUD HOOK */
     document.getElementById('transaction-form').addEventListener('submit', (e) => {
       e.preventDefault();
       const type = document.getElementById('type').value;
@@ -1745,7 +1802,6 @@
 
       saveAndRender();
       
-      // Fire cloud sync immediately
       if (window.syncLedgerToCloud) {
         window.syncLedgerToCloud();
       }
@@ -1776,7 +1832,7 @@
     saveAndRender();
   </script>
 
-  <!-- FIREBASE AUTH & TWO-WAY FIRESTORE SYNC MODULE -->
+  <!-- FIREBASE AUTHENTICATION & CLOUD FIRESTORE SYNC MODULE -->
   <script type="module">
     import { initializeApp, getApps, getApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
     import { 
@@ -1908,7 +1964,6 @@
       if (user) {
         applyUserData(user);
 
-        // Firestore real-time listener without wiping fresh local entries
         onSnapshot(doc(db, "users", user.uid), (snap) => {
           if (snap.exists()) {
             const data = snap.data();
@@ -1942,7 +1997,7 @@
             window.syncLedgerToCloud();
           }
         }, (error) => {
-          console.warn("Firestore snapshot error:", error.message);
+          console.warn("Firestore listener note:", error.message);
         });
       } else {
         attachAuthListeners();
