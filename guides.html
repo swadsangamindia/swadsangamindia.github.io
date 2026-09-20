@@ -1,37 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Small Business Bookkeeping Guides - Khata Bahi</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Complete User Guide - Khata Bahi</title>
+  <meta name="description" content="Complete documentation and operational user manual for Khata Bahi ledger management, calculations, and business tools.">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8403484408535539" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fffdf7;
+      color: #1e293b;
+    }
+    .heading-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .caphi-card {
+      background: #ffffff;
+      border: 1px solid #fef08a;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px -2px rgba(217, 119, 6, 0.06), 0 12px 28px -6px rgba(245, 158, 11, 0.05);
+    }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 p-6 md:p-12 max-w-4xl mx-auto">
-  <header class="mb-8 border-b pb-4">
-    <a href="index.html" class="text-indigo-600 font-bold text-sm">← Back to Ledger App</a>
-    <h1 class="text-3xl font-extrabold mt-2">Small Business Accounting & GST Guides</h1>
-    <p class="text-sm text-slate-500">Essential financial record-keeping guides for Indian retail merchants and traders.</p>
+<body class="min-h-screen flex flex-col justify-between">
+
+  <!-- HEADER -->
+  <header class="bg-[#78350f] text-white border-b border-amber-900/50 px-4 md:px-8 py-3 flex justify-between items-center sticky top-0 z-30 shadow-md">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <div class="bg-gradient-to-tr from-amber-400 to-yellow-300 p-2 rounded-xl text-slate-950 shadow-sm">
+          <i data-lucide="receipt" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <h1 class="text-white font-black text-base md:text-lg heading-font tracking-tight leading-none">Khata Bahi</h1>
+          <p class="text-[10px] text-amber-200 font-bold uppercase tracking-wider mt-0.5">Cloud GST Ledger</p>
+        </div>
+      </a>
+    </div>
+    <nav class="flex items-center gap-4 text-xs font-bold text-amber-100">
+      <a href="index.html" class="hover:text-white transition flex items-center gap-1"><i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to App</a>
+    </nav>
   </header>
-  
-  <article class="space-y-6 text-sm leading-relaxed">
-    <section class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-      <h2 class="text-xl font-bold text-slate-900">How to Maintain a Daily Cash Book (Khata Bahi)</h2>
-      <p>A daily cash book tracks all incoming payments (cash-in / Jama) and outgoing expenses (cash-out / Udhar). For Kirana shops and retail businesses, keeping real-time records prevents payment defaults and maintains accurate working capital balances.</p>
-    </section>
 
-    <section class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-      <h2 class="text-xl font-bold text-slate-900">Understanding CGST, SGST, and IGST Slabs</h2>
-      <p>Under the Goods and Services Tax (GST) framework in India, intrastate transactions split the applicable tax evenly between CGST (Central GST) and SGST (State GST). For example, an 18% GST invoice is split into 9% CGST and 9% SGST on taxable goods.</p>
-    </section>
+  <!-- CONTENT -->
+  <main class="flex-1 max-w-4xl w-full mx-auto p-4 md:p-8 space-y-6">
+    <div class="caphi-card p-6 md:p-10 space-y-6">
+      <div class="border-b border-amber-100 pb-4">
+        <span class="bg-amber-100 text-amber-800 text-[10px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider border border-amber-200">Documentation & Manual</span>
+        <h1 class="text-2xl md:text-3xl font-black text-slate-900 heading-font mt-2">Khata Bahi — Complete User Guide</h1>
+        <p class="text-xs text-slate-500 mt-1 font-medium">Standard Operating Procedures & Feature Instructions</p>
+      </div>
 
-    <section class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-2">
-      <h2 class="text-xl font-bold text-slate-900">Difference Between a Tax Invoice and a Payment Voucher</h2>
-      <p>A Tax Invoice is issued upon the sale or delivery of goods and contains item tax breakdowns, HSN codes, and GST rates. A Payment Voucher or Cash Receipt records simple fund transfers between parties without creating additional tax liability.</p>
-    </section>
-  </article>
+      <div class="prose prose-slate max-w-none text-xs md:text-sm text-slate-700 leading-relaxed space-y-5">
+        <p>Welcome to Khata Bahi</p>
+        <p>Khata Bahi is a digital bookkeeping and business utility platform designed to help users maintain business records, manage transactions, calculate amounts and work with common business documents.</p>
+        <p>The website provides a dashboard with ledger management, transaction entry, company profiles, document utilities, calculators, account functionality and support information.</p>
+        <p>This guide explains how to use the major features.</p>
 
-  <footer class="mt-12 pt-6 border-t text-xs text-slate-400 text-center">
-    © 2026 Khata Bahi Digital Ledger.
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">1. Getting Started</h2>
+        <p>Open the Khata Bahi website in a supported modern browser.</p>
+        <p>The home screen provides access to the main areas of the application.</p>
+        <p>Depending on the current version, the navigation may include:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Home</li>
+          <li>Features</li>
+          <li>Ledger</li>
+          <li>Dashboard</li>
+          <li>Add Entry</li>
+          <li>All Entries</li>
+          <li>PDF & Business Tools</li>
+          <li>Interest & Tax Calculator</li>
+          <li>Company Profile</li>
+        </ul>
+        <p>Begin by reviewing the dashboard.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">2. Understanding the Dashboard</h2>
+        <p>The dashboard is the central area where you can review your business records.</p>
+        <p>It may display information such as:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Net balance</li>
+          <li>Total receipts</li>
+          <li>Total payments</li>
+          <li>Total sales</li>
+          <li>GST liability</li>
+          <li>Recent transactions</li>
+          <li>Cash-flow information</li>
+          <li>Category information</li>
+        </ul>
+        <p>The values displayed depend on the transactions entered into the active company.</p>
+        <p>If there are no transactions, the dashboard may show zero values.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">3. Create a Company</h2>
+        <p>If you are using Khata Bahi for a business, create a company or business profile.</p>
+        <p>Enter information such as:</p>
+        <p><strong>Company/Business Name:</strong> Enter the name under which you want the business records maintained.</p>
+        <p><strong>GSTIN:</strong> If applicable, enter the business GSTIN.</p>
+        <p><strong>Phone Number:</strong> Enter the appropriate business contact number.</p>
+        <p><strong>Business Address:</strong> Enter the business address that should appear on supported documents.</p>
+        <p>Review the information before saving.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">4. Multiple Companies</h2>
+        <p>If your plan supports multiple companies, you can create separate business profiles.</p>
+        <p>For example:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Main Shop</li>
+          <li>Second Shop</li>
+          <li>Wholesale Business</li>
+          <li>Freelance Business</li>
+          <li>Family Business</li>
+        </ul>
+        <p>Before recording a transaction, always check which company is currently active.</p>
+        <p>This helps prevent transactions from being entered under the wrong business.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">5. Add a Transaction</h2>
+        <p>To record a transaction, open Add Entry.</p>
+        <p>Depending on the available version, you may be asked for:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Entry type</li>
+          <li>Date</li>
+          <li>Description</li>
+          <li>Amount</li>
+          <li>Party name</li>
+          <li>Quantity</li>
+          <li>GST rate</li>
+          <li>Category</li>
+          <li>Payment mode</li>
+        </ul>
+        <p>Enter the information carefully.</p>
+        <p>For example:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Party: Rahul</li>
+          <li>Description: Grocery purchase</li>
+          <li>Quantity: 10</li>
+          <li>Amount: ₹5,000</li>
+          <li>GST: Applicable rate</li>
+          <li>Payment Mode: UPI</li>
+        </ul>
+        <p>Review the calculated subtotal, GST amount and total before saving.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">6. Jama and Udhar</h2>
+        <p>Traditional Indian bookkeeping often uses terms such as Jama and Udhar.</p>
+        <p>Khata Bahi can be used to record money coming into and going out of the business according to the available transaction options.</p>
+        <p>Users should choose the correct entry type for each transaction.</p>
+        <p>If you are uncertain about the accounting treatment of a transaction, consult an accountant.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">7. Party Names</h2>
+        <p>Party names help you identify customers, suppliers and other transaction parties.</p>
+        <p>Use consistent names.</p>
+        <p>For example, avoid entering the same person as:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Rahul</li>
+          <li>Rahul Kumar</li>
+          <li>R. Kumar</li>
+          <li>Rahul K.</li>
+        </ul>
+        <p>unless these are genuinely different parties.</p>
+        <p>Consistent naming makes searches and record management easier.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">8. Search Transactions</h2>
+        <p>The transaction-history section allows users to review previously entered records.</p>
+        <p>Search using relevant information such as:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Party name</li>
+          <li>Description</li>
+          <li>Transaction information</li>
+        </ul>
+        <p>This can be useful when trying to locate a particular transaction.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">9. Reviewing Transactions</h2>
+        <p>Regularly review your entries.</p>
+        <p>Check:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Date</li>
+          <li>Amount</li>
+          <li>Party</li>
+          <li>Description</li>
+          <li>GST</li>
+          <li>Category</li>
+          <li>Payment method</li>
+        </ul>
+        <p>Correct mistakes as soon as possible.</p>
+        <p>Do not rely on an automatically calculated result without checking the underlying transaction.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">10. Exporting Records</h2>
+        <p>Khata Bahi may provide CSV export functionality.</p>
+        <p>Exported data can be useful for:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Backup</li>
+          <li>Spreadsheet analysis</li>
+          <li>Sharing with an accountant</li>
+          <li>Business reporting</li>
+          <li>Record keeping</li>
+        </ul>
+        <p>After exporting, open the resulting file and check that the information has been transferred correctly.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">11. PDF to Excel</h2>
+        <p>The PDF-to-Excel tool is designed to extract tables from supported PDF documents into spreadsheet format.</p>
+        <p>To use it:</p>
+        <ol class="list-decimal list-inside space-y-1 pl-2">
+          <li>Open PDF & Business Tools.</li>
+          <li>Select PDF-to-Excel.</li>
+          <li>Choose the PDF.</li>
+          <li>Start conversion.</li>
+          <li>Wait for processing.</li>
+          <li>Download/save the resulting spreadsheet.</li>
+          <li>Review the output.</li>
+        </ol>
+        <p>Complex PDFs may not convert perfectly.</p>
+        <p>Always check important financial documents manually.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">12. Image to PDF</h2>
+        <p>The Image-to-PDF feature can convert JPG or PNG images into PDF documents.</p>
+        <p>This may be useful for:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Receipts</li>
+          <li>Bills</li>
+          <li>Scanned documents</li>
+          <li>Photographs of documents</li>
+          <li>Records</li>
+        </ul>
+        <p>Select the image and start the conversion.</p>
+        <p>Review the generated PDF before sharing it.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">13. Excel to PDF</h2>
+        <p>The Excel-to-PDF tool can convert supported spreadsheet files into PDF format.</p>
+        <p>This may be useful when a spreadsheet needs to be printed or shared as a fixed document.</p>
+        <p>After conversion, review:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Page breaks</li>
+          <li>Tables</li>
+          <li>Text</li>
+          <li>Numbers</li>
+          <li>Column alignment</li>
+        </ul>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">14. PDF to PNG</h2>
+        <p>The platform may provide a PDF-to-PNG utility for rendering a PDF page as an image.</p>
+        <p>This can be useful when you need an image version of a document page.</p>
+        <p>Review the output resolution before using it for printing.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">15. Interest Calculator</h2>
+        <p>Khata Bahi provides a credit-due interest calculator.</p>
+        <p>Enter:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Principal amount</li>
+          <li>Interest rate per month</li>
+          <li>Number of months</li>
+        </ul>
+        <p>For example, if a user enters a principal of ₹10,000, a monthly rate of 2% and a duration of 3 months, the calculator can provide the corresponding computational result.</p>
+        <p>The exact calculation method displayed by the application should be checked before using it for a contractual or legal purpose.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">16. GST Calculator</h2>
+        <p>Khata Bahi provides GST-related calculation functionality.</p>
+        <p>The user may enter:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Total bill amount</li>
+          <li>GST slab</li>
+        </ul>
+        <p>The tool can calculate the applicable tax breakdown.</p>
+        <p>Users should remember that a calculator does not determine whether the chosen GST rate is legally applicable to a particular transaction.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">17. CGST and SGST</h2>
+        <p>For an applicable intra-state transaction, GST may involve CGST and SGST components.</p>
+        <p>A GST splitter can help calculate the components from a GST-inclusive amount.</p>
+        <p>Users should independently verify the applicable tax treatment.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">18. Creating Invoice Information</h2>
+        <p>The company profile may contain information used when generating invoice-style documents.</p>
+        <p>Keep the following information accurate:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Business name</li>
+          <li>GSTIN</li>
+          <li>Phone number</li>
+          <li>Address</li>
+        </ul>
+        <p>Incorrect company information may result in incorrect documents.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">19. Customer Information</h2>
+        <p>When entering customer information, use accurate information where appropriate.</p>
+        <p>Do not enter unnecessary personal information.</p>
+        <p>Users should also follow applicable privacy and data-protection requirements when maintaining customer records.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">20. Using Google Login</h2>
+        <p>Where Google Login is available, select the login option and follow the authentication process.</p>
+        <p>Never provide your Google password directly to Khata Bahi.</p>
+        <p>Authentication should occur through the appropriate Google authentication interface.</p>
+        <p>After signing in, verify that the correct account is being used.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">21. Synchronization</h2>
+        <p>If synchronization is enabled for your account, ledger information may be synchronized through supported cloud infrastructure.</p>
+        <p>Synchronization can make account-based data management more convenient.</p>
+        <p>Nevertheless, users should maintain independent backups of important financial records.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">22. Free Plan and Pro Plan</h2>
+        <p>Khata Bahi may offer both free and paid functionality.</p>
+        <p>The current website displays:</p>
+        <p>Free Plan and a Pro option displayed at: ₹99 / 30 days.</p>
+        <p>Available features may change.</p>
+        <p>Always check the current application before purchasing.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">23. UPI Payment</h2>
+        <p>If purchasing Pro functionality through UPI:</p>
+        <ol class="list-decimal list-inside space-y-1 pl-2">
+          <li>Open the Pro membership section.</li>
+          <li>Review the displayed amount.</li>
+          <li>Complete the payment through your UPI application.</li>
+          <li>Keep the transaction reference/UTR.</li>
+          <li>Enter the requested reference if the application asks for it.</li>
+          <li>Submit the information.</li>
+          <li>Wait for verification.</li>
+        </ol>
+        <p>Do not disclose your UPI PIN to Khata Bahi or to anyone claiming to be support.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">24. Protecting Your Data</h2>
+        <p>Good bookkeeping requires good security practices.</p>
+        <p>Users should:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Use a secure Google account</li>
+          <li>Enable two-factor authentication where available</li>
+          <li>Lock their phone/computer</li>
+          <li>Avoid using shared devices for sensitive information</li>
+          <li>Keep backups</li>
+          <li>Check account activity</li>
+          <li>Avoid sharing passwords</li>
+          <li>Keep exported records secure</li>
+        </ul>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">25. Correcting Errors</h2>
+        <p>If you notice an incorrect transaction, review the relevant entry and correct it using the functionality available in the current version.</p>
+        <p>If the application does not provide the required correction facility, retain the original information and contact support.</p>
+        <p>Never intentionally alter records to create misleading financial information.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">26. Regular Backups</h2>
+        <p>A bookkeeping system should never be your only copy of important financial records.</p>
+        <p>Consider periodically exporting important information.</p>
+        <p>Store backups securely.</p>
+        <p>For especially important records, consider maintaining more than one backup location.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">27. Using Khata Bahi with an Accountant</h2>
+        <p>Khata Bahi can be used as a source of organized transaction information for discussion with an accountant.</p>
+        <p>You may export relevant records and provide them to your accountant.</p>
+        <p>Your accountant can then review the information and determine the appropriate accounting and tax treatment.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">28. What Khata Bahi Does Not Replace</h2>
+        <p>Khata Bahi does not replace:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>A Chartered Accountant</li>
+          <li>A tax professional</li>
+          <li>A lawyer</li>
+          <li>A statutory auditor</li>
+          <li>Professional financial advice</li>
+          <li>Official government filing portals</li>
+        </ul>
+        <p>Use the application as a digital business utility.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">29. Troubleshooting</h2>
+        <p>If the application does not behave as expected:</p>
+        <p>First check your internet connection.</p>
+        <p>Then:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Refresh the page.</li>
+          <li>Confirm that you are using a modern browser.</li>
+          <li>Confirm that you are signed into the correct account.</li>
+          <li>Check the active company.</li>
+          <li>Try the operation again.</li>
+          <li>Check whether the issue is limited to a particular file.</li>
+          <li>Keep a copy of any error message.</li>
+          <li>Contact support if the problem continues.</li>
+        </ul>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">30. Contact and Support</h2>
+        <p>For questions, technical problems, privacy questions, feedback or other enquiries:</p>
+        <p class="font-bold">Email: aditya.care97@gmail.com</p>
+        <p>When contacting support, explain the problem clearly and include relevant non-sensitive information such as:</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>Feature being used</li>
+          <li>Approximate time of problem</li>
+          <li>Browser/device</li>
+          <li>Error message</li>
+          <li>Steps that caused the problem</li>
+        </ul>
+        <p>Never send passwords, UPI PINs or other unnecessary confidential authentication information.</p>
+
+        <h2 class="text-base font-bold text-slate-900 heading-font pt-2">31. Final Best Practices</h2>
+        <p>For reliable use of Khata Bahi:</p>
+        <ul class="list-disc list-inside space-y-2 pl-2">
+          <li><strong>Enter records regularly:</strong> Do not allow transactions to accumulate for months before recording them.</li>
+          <li><strong>Check every amount:</strong> A single incorrect amount can affect totals.</li>
+          <li><strong>Check the active company:</strong> This is particularly important if you use multiple businesses.</li>
+          <li><strong>Back up important information:</strong> Do not depend on one digital copy.</li>
+          <li><strong>Verify GST:</strong> Use the calculator as a calculation aid and confirm the applicable tax treatment.</li>
+          <li><strong>Review invoices:</strong> Check business details before issuing documents.</li>
+          <li><strong>Protect your account:</strong> Use strong account-security practices.</li>
+          <li><strong>Keep professional advice separate:</strong> Use Khata Bahi for bookkeeping assistance, while relying on qualified professionals for matters requiring professional accounting, tax or legal judgment.</li>
+        </ul>
+
+        <div class="p-4 bg-amber-50/60 rounded-xl border border-amber-200 mt-6 space-y-1 text-xs">
+          <p class="font-bold text-amber-950">Contact Information</p>
+          <p>Khata Bahi — Digital Bookkeeping & Business Utility Platform</p>
+          <p>Website: <a href="https://swadsangamindia.github.io" class="text-amber-800 underline">swadsangamindia.github.io</a></p>
+          <p>Support Email: aditya.care97@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-6 border-t border-amber-200 text-center text-xs text-slate-500 space-y-2 bg-white/60">
+    <p>© 2026 Khata Bahi Digital Accounting. Professional Cloud Accounting & Utilities.</p>
+    <div class="flex items-center justify-center gap-4 text-amber-800 font-semibold">
+      <a href="about.html" class="hover:underline">About Us</a>
+      <span>•</span>
+      <a href="guides.html" class="hover:underline text-amber-950 font-bold">User Guide</a>
+      <span>•</span>
+      <a href="privacy-policy.html" class="hover:underline">Privacy Policy</a>
+      <span>•</span>
+      <a href="terms.html" class="hover:underline">Terms & Conditions</a>
+    </div>
   </footer>
+
+  <script>lucide.createIcons();</script>
 </body>
 </html>
