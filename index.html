@@ -99,12 +99,12 @@
         </div>
         <div class="leading-none pr-1">
           <span class="text-[9px] text-amber-300 font-bold uppercase tracking-widest block">Branch Outlet</span>
-          <span id="header-active-store-name" class="text-xs font-black text-white truncate max-w-[140px] block mt-0.5">Main Branch</span>
+          <span id="header-active-store-name" class="text-xs font-black text-white truncate max-w-[140px] block mt-0.5">Santosh Jain</span>
         </div>
         <i data-lucide="chevrons-up-down" class="w-3.5 h-3.5 text-amber-300 opacity-70 group-hover:opacity-100"></i>
       </button>
 
-      <!-- TOP NAV LINKS (DIRECT CRAWLER ACCESS FOR ADSENSE) -->
+      <!-- TOP NAV LINKS (DIRECT ACCESS FOR ADSENSE CRAWLER) -->
       <nav class="hidden lg:flex items-center gap-3 text-xs pl-2 border-l border-amber-800">
         <a href="about.html" class="text-amber-200 hover:text-white font-bold transition">About</a>
         <a href="guides.html" class="text-amber-200 hover:text-white font-bold transition">User Guide</a>
@@ -119,7 +119,7 @@
         <i data-lucide="shield" class="w-3.5 h-3.5 text-amber-300"></i> Free Tier
       </span>
 
-      <!-- Financial Calculators Button (Tools button removed from here) -->
+      <!-- Financial Calculators Button -->
       <button onclick="switchTab('calculator')" class="bg-amber-800 hover:bg-amber-700 text-amber-100 border border-amber-600/40 px-2.5 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 shadow-sm transition" title="Financial Calculators">
         <i data-lucide="calculator" class="w-3.5 h-3.5 text-amber-300"></i> <span class="hidden sm:inline">Calculators</span>
       </button>
@@ -145,12 +145,12 @@
     </div>
   </header>
 
-  <!-- MOBILE STORE STRIP (QUICK-SWITCH BAR) -->
+  <!-- MOBILE STORE STRIP -->
   <div class="sm:hidden bg-[#92400e] text-white px-3 py-2 flex justify-between items-center text-xs border-b border-amber-900/40 shadow-inner">
     <button onclick="openStoreSwitchModal()" class="flex items-center gap-2 bg-amber-950/60 px-2.5 py-1 rounded-lg border border-amber-500/30 text-left">
       <i data-lucide="store" class="w-3.5 h-3.5 text-amber-300"></i>
       <span class="text-[10px] text-amber-200 font-bold uppercase">Store:</span>
-      <span id="mobile-active-store-name" class="font-bold text-white max-w-[130px] truncate">Main Branch</span>
+      <span id="mobile-active-store-name" class="font-bold text-white max-w-[130px] truncate">Santosh Jain</span>
       <i data-lucide="chevrons-up-down" class="w-3 h-3 text-amber-300 ml-1"></i>
     </button>
     <button onclick="openAddCompanyModal()" class="bg-amber-400 hover:bg-amber-300 text-slate-950 text-[10px] font-black px-2.5 py-1 rounded-lg flex items-center gap-1 shadow">
@@ -189,7 +189,7 @@
           <i data-lucide="wallet" class="w-3.5 h-3.5 text-amber-600"></i>
         </div>
         <h3 id="card-total-balance" class="text-slate-900 text-lg font-black heading-font">₹0.00</h3>
-        <p class="text-[10px] text-slate-500 truncate" id="current-company-display">My Main Shop</p>
+        <p class="text-[10px] text-slate-500 truncate" id="current-company-display">Santosh Jain</p>
       </div>
     </aside>
 
@@ -274,6 +274,7 @@
             <thead>
               <tr class="text-slate-400 border-b border-slate-200">
                 <th class="pb-2.5 font-semibold">Date</th>
+                <th class="pb-2.5 font-semibold">Inv No.</th>
                 <th class="pb-2.5 font-semibold">Type</th>
                 <th class="pb-2.5 font-semibold">Party</th>
                 <th class="pb-2.5 font-semibold">Particulars</th>
@@ -285,18 +286,16 @@
           </table>
         </section>
 
-        <!-- ================= EXHAUSTIVE COMMERCIAL ENCYCLOPEDIA & DOCUMENTATION ================= -->
-        <!-- Static editorial text directly in the DOM for search bots and Google AdSense compliance -->
+        <!-- ================= EXHAUSTIVE COMMERCIAL ENCYCLOPEDIA ================= -->
         <section class="caphi-card p-6 md:p-8 space-y-8 mt-8 border-amber-200">
           <div class="border-b border-amber-200 pb-5">
             <span class="bg-amber-100 text-amber-900 border border-amber-300 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">Comprehensive Commercial Manual & Financial Codex</span>
             <h2 class="text-xl md:text-2xl font-black text-[#78350f] heading-font mt-2">Retail Bookkeeping, Cloud Reconciliation, GST Invoicing & Credit Recovery Principles</h2>
             <p class="text-xs md:text-sm text-slate-600 mt-1 leading-relaxed">
-              Transitioning from paper-bound accounting registers (Lal Bahi-Khata) to a modern, browser-anchored digital ledger safeguards commercial retailers from arithmetic errors, untracked debts, physical wear, and tax calculation discrepancies. This definitive guide details single-entry bookkeeping practices, GST compliance mechanics, customer credit management, working capital formulas, and document recovery workflows tailored for modern retail merchants.
+              Transitioning from paper-bound accounting registers to a modern, browser-anchored digital ledger safeguards commercial retailers from arithmetic errors, untracked debts, physical wear, and tax calculation discrepancies. This definitive guide details single-entry bookkeeping practices, GST compliance mechanics, customer credit management, working capital formulas, and document recovery workflows tailored for modern retail merchants.
             </p>
           </div>
 
-          <!-- Section 1: Accounting Systems -->
           <article class="space-y-3">
             <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
               <span class="w-6 h-6 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">1</span>
@@ -305,98 +304,21 @@
             <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
               While multinational companies employ multi-tier double-entry ledgers requiring balanced journal vouchers, retail storefronts and Kirana merchants rely on chronological single-entry cash books. Single-entry systems focus on tangible cash flow: actual liquid receipts (Jama) and outgoing disbursements (Udhar/Bhugtan) tracked against daily physical drawer totals.
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-              <div class="p-4 bg-amber-50/50 rounded-xl border border-amber-200">
-                <h4 class="font-bold text-slate-900 text-xs mb-1">Morning Opening Count</h4>
-                <p class="text-[11px] text-slate-600">Audit physical cash in the till before daily trade begins. Record this as opening balance to track all daytime inflows and disbursements accurately.</p>
-              </div>
-              <div class="p-4 bg-amber-50/50 rounded-xl border border-amber-200">
-                <h4 class="font-bold text-slate-900 text-xs mb-1">Immediate Settlement Logging</h4>
-                <p class="text-[11px] text-slate-600">Record customer cash, UPI QR transfers, supplier clearings, and personal withdrawals the moment money changes hands rather than relying on memory at closing.</p>
-              </div>
-              <div class="p-4 bg-amber-50/50 rounded-xl border border-amber-200">
-                <h4 class="font-bold text-slate-900 text-xs mb-1">EOD Drawer Reconciliation</h4>
-                <p class="text-[11px] text-slate-600">Enforce the core reconciliation formula: <code>Opening Cash + Total Receipts - Total Payments = Physical Till Count</code>. Daily audits flag register discrepancies immediately.</p>
-              </div>
-            </div>
           </article>
 
-          <!-- Section 2: Credit & Receivables -->
           <article class="space-y-3 pt-4 border-t border-amber-100">
             <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
               <span class="w-6 h-6 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">2</span>
-              Customer Credit (Udhar) Dynamics & Working Capital Preservation
+              Tax Invoice vs. Service Invoice Compliance
             </h3>
             <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
-              Providing customer credit is a proven mechanism for fostering neighborhood customer loyalty. However, untracked receivables tie up working capital and can compromise cash flow. Invoices unsettled past 30 days face default rates exceeding 20%. Maintaining healthy liquidity requires strict operational credit safeguards:
-            </p>
-            <ul class="list-disc list-inside space-y-2 text-xs md:text-sm text-slate-700">
-              <li><strong>Tiered Credit Limits:</strong> Set hard ceilings based on buyer history (e.g., ₹2,000 to ₹5,000 maximum per household, or a strict 14-day repayment window). Halt subsequent credit purchases until existing balances clear.</li>
-              <li><strong>Weekly Invoice Summaries:</strong> Send itemized balance statements via WhatsApp or SMS every weekend. Regular communication helps avoid billing disputes at month-end.</li>
-              <li><strong>Compound Due Interest Accrual:</strong> Use the built-in Overdue Interest Calculator to compute late settlement charges when terms exceed agreed credit periods.</li>
-              <li><strong>Early Settlement Rebates:</strong> Offer a modest 1% to 2% cash discount on invoices cleared within 48 hours to speed up receivables collection.</li>
-            </ul>
-          </article>
-
-          <!-- Section 3: GST Mechanics -->
-          <article class="space-y-3 pt-4 border-t border-amber-100">
-            <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
-              <span class="w-6 h-6 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">3</span>
-              Goods and Services Tax (GST) Slabs, Reverse Splits & Input Tax Credit
-            </h3>
-            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
-              Correct tax categorization is mandatory under the Indian Goods and Services Tax framework. Incomplete tax collection creates unrecoverable tax liabilities during periodic audits. Commercial retailers must adhere to standard statutory categories:
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 pt-1">
-              <div class="p-3 bg-white border border-slate-200 rounded-xl">
-                <span class="font-bold text-amber-900 block text-xs">0% Slab (Exempt)</span>
-                <p class="text-[11px] text-slate-500 mt-1">Unbranded grains, fresh milk, vegetables, salt, and non-packaged agricultural food items.</p>
-              </div>
-              <div class="p-3 bg-white border border-slate-200 rounded-xl">
-                <span class="font-bold text-amber-900 block text-xs">5% Slab</span>
-                <p class="text-[11px] text-slate-500 mt-1">Packaged spices, tea, coffee, sugar, edible oils, and essential prescription medications.</p>
-              </div>
-              <div class="p-3 bg-white border border-slate-200 rounded-xl">
-                <span class="font-bold text-amber-900 block text-xs">12% & 18% Slabs</span>
-                <p class="text-[11px] text-slate-500 mt-1">FMCG goods, personal hygiene items, processed foods, consumer electronics, and business services.</p>
-              </div>
-              <div class="p-3 bg-white border border-slate-200 rounded-xl">
-                <span class="font-bold text-amber-900 block text-xs">28% Slab</span>
-                <p class="text-[11px] text-slate-500 mt-1">Luxury items, air conditioners, motor vehicles, aerated drinks, and sin tax commodities.</p>
-              </div>
-            </div>
-            <p class="text-xs md:text-sm text-slate-700 pt-2">
-              <strong>Intrastate vs. Interstate Calculations:</strong> For sales within your native state, the aggregate GST is divided equally between <code>CGST (Central Tax)</code> and <code>SGST (State Tax)</code>. For an 18% item, 9% is allocated to CGST and 9% to SGST. For interstate trade, the entire percentage is recorded as <code>IGST (Integrated Tax)</code>.
-            </p>
-            <p class="text-xs md:text-sm text-slate-700">
-              <strong>Reverse Tax Formula:</strong> To extract base prices from tax-inclusive retail items, use: <code>Base Amount = Total Inclusive Price / (1 + (GST Slab / 100))</code>.
-            </p>
-          </article>
-
-          <!-- Section 4: Daily Micro-Savings -->
-          <article class="space-y-3 pt-4 border-t border-amber-100">
-            <h3 class="text-base md:text-lg font-bold text-slate-900 heading-font flex items-center gap-2">
-              <span class="w-6 h-6 rounded-md bg-amber-200 text-amber-900 flex items-center justify-center text-xs font-bold">4</span>
-              The Economic Impact of the 'Gullak' Micro-Savings Strategy
-            </h3>
-            <p class="text-xs md:text-sm text-slate-700 leading-relaxed">
-              Store owners often withdraw small cash amounts throughout the day for domestic needs without recording them, leading to unaccounted cash deficits over weeks. The digital <strong>Gullak</strong> feature solves this by providing a dedicated, offline micro-savings tracker alongside commercial books. Setting aside ₹40, ₹50, or ₹100 from daily change builds a steady emergency fund (averaging ₹18,000+ annually) without cutting into inventory turnover or supplier payouts.
-            </p>
-          </article>
-
-          <!-- Section 5: Client-Side Security -->
-          <article class="p-5 bg-amber-50/60 rounded-xl border border-amber-200 space-y-2 text-xs md:text-sm text-slate-700">
-            <h3 class="font-bold text-slate-900 text-sm heading-font flex items-center gap-2">
-              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> 5. Zero-Knowledge Local Architecture & Document Security
-            </h3>
-            <p>
-              Commercial ledger records contain sensitive customer information and operational margins. <strong>Khata Bahi</strong> runs on a local-first computing model: all math, document conversions, PDF creation, and image compression execute entirely inside your device's browser memory. Your ledger data is never transmitted to third parties unless you explicitly back it up to your authenticated Google Cloud Firestore account.
+              A <strong>Tax Invoice</strong> is issued for physical supply of goods under standard GST rules, detailing HSN codes, quantity, and tax splits. A <strong>Service Invoice</strong> is utilized by contractors, job-work units, and service providers (such as die-stripping, packing, logistics, or freelance consulting) indicating Service Accounting Codes (SAC) without requiring complex warehouse inventory fields[span_11](start_span)[span_11](end_span).
             </p>
           </article>
         </section>
       </div>
 
-      <!-- ================= 2. VIEW: GULLAK (SAVINGS RESERVE WITH DELETION) ================= -->
+      <!-- ================= 2. VIEW: GULLAK (SAVINGS RESERVE) ================= -->
       <div id="view-gullak" class="tab-view hidden space-y-6">
         <div class="caphi-card p-6 md:p-8 max-w-lg mx-auto space-y-5 border-amber-200">
           <div class="flex items-center justify-between border-b border-amber-100 pb-3">
@@ -437,7 +359,6 @@
             </div>
           </div>
 
-          <!-- Gullak History List with Individual Deletion Buttons -->
           <div class="pt-3 border-t border-slate-100">
             <div class="flex justify-between items-center mb-2">
               <h4 class="font-bold text-slate-800 text-xs flex items-center gap-1.5">
@@ -462,6 +383,7 @@
               <thead>
                 <tr class="text-slate-400 border-b border-slate-200">
                   <th class="pb-2.5 font-semibold">Date</th>
+                  <th class="pb-2.5 font-semibold">Inv No.</th>
                   <th class="pb-2.5 font-semibold">Type</th>
                   <th class="pb-2.5 font-semibold">Party</th>
                   <th class="pb-2.5 font-semibold">Description</th>
@@ -475,7 +397,7 @@
         </section>
       </div>
 
-      <!-- ================= 4. VIEW: EXPANDED PDF, EXCEL & FILE UTILITIES SUITE ================= -->
+      <!-- ================= 4. VIEW: PDF, EXCEL & FILE UTILITIES ================= -->
       <div id="view-tools" class="tab-view hidden space-y-6">
         <div class="caphi-card p-6 md:p-8 space-y-6">
           <div>
@@ -484,15 +406,13 @@
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            
-            <!-- 1. PDF to Excel -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="file-spreadsheet" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">PDF to Excel (.XLSX)</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Extract invoice and statement table cells into an editable spreadsheet.</p>
+                <p class="text-[11px] text-slate-500">Extract invoice tables into editable spreadsheets.</p>
                 <input type="file" id="pdf-to-excel-input" accept=".pdf" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="convertPdfToExcel()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
@@ -500,14 +420,13 @@
               </button>
             </div>
 
-            <!-- 2. Excel to PDF -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="file-text" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">Excel to PDF</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Render spreadsheet sheets (.xlsx, .csv) into clean printable PDF tables.</p>
+                <p class="text-[11px] text-slate-500">Render spreadsheets (.xlsx, .csv) into clean PDF tables.</p>
                 <input type="file" id="excel-file-input" accept=".xlsx, .xls, .csv" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="convertExcelToPDF()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
@@ -515,14 +434,13 @@
               </button>
             </div>
 
-            <!-- 3. Image to PDF -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="image-down" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">Image to PDF</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Convert bill photographs, receipts, or PNG files into standardized A4 PDFs.</p>
+                <p class="text-[11px] text-slate-500">Convert bill photographs or JPG/PNG files into standard PDFs.</p>
                 <input type="file" id="img-file-input" accept="image/*" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="convertImageToPDF()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
@@ -530,14 +448,13 @@
               </button>
             </div>
 
-            <!-- 4. Photo Size Compressor -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="minimize-2" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">Photo Size Compressor</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Compress heavy document photos to under 200KB for portal uploads.</p>
+                <p class="text-[11px] text-slate-500">Compress heavy receipts under 200KB for portal uploads.</p>
                 <input type="file" id="compress-img-input" accept="image/*" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="compressImageFile()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
@@ -545,29 +462,13 @@
               </button>
             </div>
 
-            <!-- 5. PDF Page Snapshot / Extraction -->
-            <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
-              <div class="space-y-2">
-                <div class="flex items-center gap-2">
-                  <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="image" class="w-4 h-4"></i></div>
-                  <h4 class="font-bold text-slate-900 text-xs">PDF to PNG Image</h4>
-                </div>
-                <p class="text-[11px] text-slate-500">Render page 1 of any PDF document into a sharp image snapshot.</p>
-                <input type="file" id="pdf-to-img-input" accept=".pdf" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
-              </div>
-              <button onclick="convertPdfToImage()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
-                <i data-lucide="image" class="w-3.5 h-3.5"></i> Extract PNG Image
-              </button>
-            </div>
-
-            <!-- 6. Corrupted File Text Recovery Tool -->
             <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="life-buoy" class="w-4 h-4"></i></div>
                   <h4 class="font-bold text-slate-900 text-xs">Corrupted File Recovery</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Extract raw readable strings and numbers from damaged PDF/Excel sheets.</p>
+                <p class="text-[11px] text-slate-500">Extract raw readable strings from damaged PDF/Excel sheets.</p>
                 <input type="file" id="damaged-file-input" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
               <button onclick="recoverDamagedFile()" class="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
@@ -575,30 +476,24 @@
               </button>
             </div>
 
-            <!-- 7. Digital Signature & Seal Stamper -->
-            <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between md:col-span-2 lg:col-span-3">
+            <div class="bg-amber-50/50 p-4 rounded-xl border border-amber-200 space-y-3 flex flex-col justify-between md:col-span-2 lg:col-span-1">
               <div class="space-y-2">
                 <div class="flex items-center gap-2">
                   <div class="bg-amber-200 text-amber-900 p-2 rounded-lg"><i data-lucide="stamp" class="w-4 h-4"></i></div>
-                  <h4 class="font-bold text-slate-900 text-xs">Official Seal & Digital Signature Stamper</h4>
+                  <h4 class="font-bold text-slate-900 text-xs">Official Seal & Signature Stamper</h4>
                 </div>
-                <p class="text-[11px] text-slate-500">Upload your store seal or transparent signature image to stamp directly onto generated tax invoices.</p>
-                <div class="flex flex-col sm:flex-row gap-3 items-center">
-                  <input type="file" accept="image/*" onchange="uploadDigitalSignature(event)" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
-                  <span id="sig-status" class="text-xs text-amber-800 font-bold whitespace-nowrap">Status: Ready to Stamp</span>
-                </div>
+                <p class="text-[11px] text-slate-500">Upload signature PNG to stamp automatically onto tax invoices.</p>
+                <input type="file" accept="image/*" onchange="uploadDigitalSignature(event)" class="w-full text-[11px] border border-slate-300 rounded-lg p-1.5 bg-white" />
               </div>
+              <div id="sig-status" class="text-xs text-amber-800 font-bold">Ready to Stamp</div>
             </div>
-
           </div>
         </div>
       </div>
 
-      <!-- ================= 5. VIEW: EXPANDED FINANCIAL CALCULATORS ================= -->
+      <!-- ================= 5. VIEW: CALCULATORS ================= -->
       <div id="view-calculator" class="tab-view hidden space-y-6">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <!-- Due Interest Calculator -->
           <div class="caphi-card p-6 space-y-4">
             <h3 class="font-bold text-slate-900 text-base heading-font flex items-center gap-2">
               <i data-lucide="scale" class="w-4 h-4 text-amber-600"></i> Overdue Balance Interest Calculator
@@ -623,7 +518,6 @@
             </div>
           </div>
 
-          <!-- GST Splitter -->
           <div class="caphi-card p-6 space-y-4">
             <h3 class="font-bold text-slate-900 text-base heading-font flex items-center gap-2">
               <i data-lucide="receipt-indian-rupee" class="w-4 h-4 text-emerald-600"></i> CGST / SGST Reverse Tax Splitter
@@ -646,59 +540,11 @@
               <div id="gst-result" class="p-3 bg-emerald-50 border border-emerald-200 rounded-lg hidden font-semibold text-emerald-900 space-y-1"></div>
             </div>
           </div>
-
-          <!-- Profit Margin Calculator -->
-          <div class="caphi-card p-6 space-y-4">
-            <h3 class="font-bold text-slate-900 text-base heading-font flex items-center gap-2">
-              <i data-lucide="badge-percent" class="w-4 h-4 text-amber-600"></i> Gross Profit & Markup Margin Calculator
-            </h3>
-            <div class="space-y-3 text-xs">
-              <div class="grid grid-cols-2 gap-3">
-                <div>
-                  <label class="block font-semibold mb-1 text-slate-700">Cost Price (₹)</label>
-                  <input type="number" id="calc-cost-price" placeholder="800" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
-                </div>
-                <div>
-                  <label class="block font-semibold mb-1 text-slate-700">Selling Price (₹)</label>
-                  <input type="number" id="calc-sell-price" placeholder="1000" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
-                </div>
-              </div>
-              <button onclick="calculateProfitMargin()" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">Compute Profit & Margin %</button>
-              <div id="profit-result" class="p-3 bg-amber-50 border border-amber-200 rounded-lg hidden font-bold text-amber-900"></div>
-            </div>
-          </div>
-
-          <!-- Commercial Unit Weight Converter -->
-          <div class="caphi-card p-6 space-y-4">
-            <h3 class="font-bold text-slate-900 text-base heading-font flex items-center gap-2">
-              <i data-lucide="boxes" class="w-4 h-4 text-blue-600"></i> Wholesale & Retail Weight Unit Converter
-            </h3>
-            <div class="space-y-3 text-xs">
-              <div class="grid grid-cols-2 gap-3">
-                <div>
-                  <label class="block font-semibold mb-1 text-slate-700">Quantity</label>
-                  <input type="number" id="calc-unit-val" placeholder="1" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
-                </div>
-                <div>
-                  <label class="block font-semibold mb-1 text-slate-700">Unit Type</label>
-                  <select id="calc-unit-type" class="w-full p-2.5 rounded-lg caphi-input font-bold">
-                    <option value="quintal-to-kg">Quintal to Kilograms (Kg)</option>
-                    <option value="kg-to-gm">Kilograms to Grams (g)</option>
-                    <option value="mound-to-kg">Maund (Mann) to Kilograms</option>
-                  </select>
-                </div>
-              </div>
-              <button onclick="convertCommercialUnits()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 rounded-lg transition shadow-sm">Convert Weight Unit</button>
-              <div id="unit-result" class="p-3 bg-blue-50 border border-blue-200 rounded-lg hidden font-bold text-blue-900"></div>
-            </div>
-          </div>
-
         </div>
       </div>
 
       <!-- ================= 6. VIEW: STORE & PROFILE SETTINGS ================= -->
       <div id="view-settings" class="tab-view hidden space-y-6">
-        <!-- Profile Details -->
         <div class="caphi-card p-5 max-w-2xl flex items-center justify-between">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold text-sm shadow-sm" id="user-avatar">
@@ -714,23 +560,6 @@
           </button>
         </div>
 
-        <!-- Pro Plan Status -->
-        <div class="caphi-card p-6 max-w-2xl space-y-3 border-amber-200 bg-amber-50/50">
-          <div class="flex justify-between items-center border-b border-amber-200/60 pb-3">
-            <div>
-              <span class="text-[10px] text-amber-800 font-bold uppercase tracking-wider">Subscription Status</span>
-              <h4 class="text-base font-bold text-slate-900 heading-font" id="settings-plan-desc">Free Plan (Receipt & Payment)</h4>
-            </div>
-            <button id="settings-upgrade-btn" onclick="openUpgradeModal()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3.5 py-1.5 rounded-lg text-xs flex items-center gap-1 shadow-sm transition">
-              <i data-lucide="crown" class="w-3.5 h-3.5"></i> Upgrade Pro (₹99)
-            </button>
-          </div>
-          <p class="text-xs text-slate-600">
-            Khata Pro unlocks tax sales & purchase vouchers with full GST breakdown, multi-company stores, and cloud database sync.
-          </p>
-        </div>
-
-        <!-- Multiple Store Profiles -->
         <div class="caphi-card p-6 max-w-2xl space-y-4">
           <div class="flex justify-between items-center border-b border-slate-100 pb-3">
             <div>
@@ -744,7 +573,7 @@
           <div id="company-list-container" class="space-y-2 max-h-56 overflow-y-auto pr-1"></div>
         </div>
 
-        <!-- Business Meta Form -->
+        <!-- Business Meta Form with Company PAN -->
         <div class="caphi-card p-6 max-w-2xl space-y-4">
           <h4 class="text-base font-bold text-slate-900 heading-font">Store Invoice Information</h4>
           <form id="company-profile-form" onsubmit="saveCompanyDetails(event)" class="space-y-3.5 text-xs">
@@ -752,19 +581,23 @@
               <label class="block font-bold text-slate-700 mb-1">Company / Store Name</label>
               <input type="text" id="set-company-name" required class="w-full p-2.5 rounded-lg caphi-input font-bold" />
             </div>
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div>
                 <label class="block font-bold text-slate-700 mb-1">GSTIN Number (Optional)</label>
                 <input type="text" id="set-company-gstin" class="w-full p-2.5 rounded-lg caphi-input uppercase font-mono" placeholder="22AAAAA0000A1Z5" />
               </div>
               <div>
-                <label class="block font-bold text-slate-700 mb-1">Phone Number</label>
+                <label class="block font-bold text-slate-700 mb-1">Company PAN (Optional)</label>
+                <input type="text" id="set-company-pan" maxlength="10" class="w-full p-2.5 rounded-lg caphi-input uppercase font-mono" placeholder="AAEPJ0862H" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">Phone Number (Optional)</label>
                 <input type="text" id="set-company-phone" class="w-full p-2.5 rounded-lg caphi-input" />
               </div>
             </div>
             <div>
               <label class="block font-bold text-slate-700 mb-1">Business Address</label>
-              <textarea id="set-company-address" rows="2" class="w-full p-2.5 rounded-lg caphi-input"></textarea>
+              <textarea id="set-company-address" rows="2" class="w-full p-2.5 rounded-lg caphi-input" placeholder="U-68A, SHAKARPUR, DELHI-110092"></textarea>
             </div>
             <button type="submit" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">Save Store Details</button>
           </form>
@@ -806,7 +639,7 @@
     </button>
   </nav>
 
-  <!-- ================= MODERN STORE SWITCHER MODAL ================= -->
+  <!-- STORE SWITCHER MODAL -->
   <div id="store-switch-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
     <div class="caphi-card max-w-md w-full p-5 md:p-6 space-y-4 shadow-2xl border-2 border-amber-300">
       <div class="flex justify-between items-center border-b border-amber-100 pb-3">
@@ -820,7 +653,7 @@
           </div>
         </div>
         <button onclick="closeStoreSwitchModal()" class="text-slate-400 hover:text-slate-600 p-1">
-          <i data-lucide="x" class="w-5 h-5"></i>
+          <i data-lucide="x" class="w-4 h-4"></i>
         </button>
       </div>
 
@@ -834,7 +667,7 @@
     </div>
   </div>
 
-  <!-- MODAL: ADD COMPANY -->
+  <!-- ADD COMPANY MODAL -->
   <div id="add-company-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
     <div class="caphi-card max-w-sm w-full p-6 space-y-4 border border-amber-300">
       <div class="flex justify-between items-center border-b border-slate-100 pb-3">
@@ -844,7 +677,7 @@
       <div class="space-y-3 text-xs">
         <div>
           <label class="block font-bold text-slate-700 mb-1">Store / Business Name</label>
-          <input type="text" id="new-company-name-input" placeholder="e.g. Swad Sangam Supermarket" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
+          <input type="text" id="new-company-name-input" placeholder="e.g. Santosh Jain" class="w-full p-2.5 rounded-lg caphi-input font-bold" />
         </div>
         <button onclick="createNewCompany()" class="w-full bg-[#78350f] hover:bg-[#92400e] text-white font-bold py-2.5 rounded-lg transition shadow-sm">
           Save & Switch Store
@@ -853,7 +686,7 @@
     </div>
   </div>
 
-  <!-- MODAL: ADD ENTRY WITH FULL PARTY & GST FIELDS -->
+  <!-- ADD ENTRY MODAL (WITH INVOICE TITLE, INVOICE NO, & UNIT SELECTION) -->
   <div id="modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
     <div class="caphi-card max-w-lg w-full p-5 md:p-6 shadow-xl max-h-[90vh] overflow-y-auto">
       <div class="flex justify-between items-center mb-4 pb-2 border-b border-slate-100">
@@ -878,70 +711,84 @@
           </div>
         </div>
 
-        <div>
-          <label class="block font-semibold text-slate-700 mb-1">Description / Particulars</label>
-          <input type="text" id="description" required placeholder="e.g. Daily Kirana Sales / Milk Supplies" class="w-full rounded-lg p-2 caphi-input font-semibold" />
-        </div>
-
-        <div>
-          <label class="block font-semibold text-slate-700 mb-1">Amount (₹)</label>
-          <input type="number" step="0.01" id="rate" required placeholder="500.00" oninput="calculateAmounts()" class="w-full rounded-lg p-2 caphi-input font-bold text-sm" />
-        </div>
-
-        <!-- PRO GST & COMPREHENSIVE PARTY DETAILS -->
+        <!-- PRO COMMERCIAL FIELDS -->
         <div id="pro-fields-container" class="space-y-3 border border-amber-200 bg-amber-50/70 p-3.5 rounded-xl hidden">
-          <div class="border-b border-amber-200/60 pb-2">
-            <span class="text-[10px] font-black text-amber-800 uppercase tracking-wider">Party / Customer Details</span>
-          </div>
-
-          <!-- Party Name & Phone -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+          <div class="grid grid-cols-2 gap-2.5">
             <div>
-              <label class="block font-semibold text-amber-900 mb-1">Party / Business Name</label>
-              <input type="text" id="party-name" placeholder="e.g. Rahul Sharma / ABC Traders" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
+              <label class="block font-semibold text-amber-900 mb-1">Invoice Document Type</label>
+              <select id="invoice-doc-type" class="w-full rounded-lg p-2 caphi-input font-bold bg-white">
+                <option value="SERVICE INVOICE">SERVICE INVOICE</option>
+                <option value="TAX INVOICE">TAX INVOICE</option>
+              </select>
             </div>
             <div>
-              <label class="block font-semibold text-amber-900 mb-1">Party Phone Number</label>
+              <label class="block font-semibold text-amber-900 mb-1">Invoice No.</label>
+              <input type="text" id="invoice-no-input" placeholder="e.g. SJ-1/26-27" class="w-full rounded-lg p-2 caphi-input font-bold font-mono bg-white" />
+            </div>
+          </div>
+
+          <div class="border-b border-amber-200/60 pb-1 pt-1">
+            <span class="text-[10px] font-black text-amber-800 uppercase tracking-wider">Party / Customer Information</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div>
+              <label class="block font-semibold text-amber-900 mb-1">Party Name</label>
+              <input type="text" id="party-name" placeholder="e.g. NAKODA PRINT & PACK" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
+            </div>
+            <div>
+              <label class="block font-semibold text-amber-900 mb-1">Party Phone (Optional)</label>
               <input type="tel" id="party-phone" placeholder="e.g. +91 9876543210" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
             </div>
           </div>
 
-          <!-- Party GSTIN & Address -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <div>
-              <label class="block font-semibold text-amber-900 mb-1">Party GSTIN (Optional)</label>
-              <input type="text" id="party-gstin" placeholder="e.g. 07AAAAA0000A1Z5" class="w-full rounded-lg p-2 caphi-input uppercase font-mono bg-white" />
+              <label class="block font-semibold text-amber-900 mb-1">Party GSTIN</label>
+              <input type="text" id="party-gstin" placeholder="e.g. 09AGVPJ9178P1ZZ" class="w-full rounded-lg p-2 caphi-input uppercase font-mono bg-white" />
             </div>
             <div>
-              <label class="block font-semibold text-amber-900 mb-1">Billing / Shipping Address</label>
-              <input type="text" id="party-address" placeholder="e.g. Shop 4, Chandni Chowk, Delhi" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
+              <label class="block font-semibold text-amber-900 mb-1">Party Address</label>
+              <input type="text" id="party-address" placeholder="C-20, SECTOR-63, NOIDA, U.P." class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
             </div>
           </div>
+        </div>
 
-          <!-- Quantity & GST Rate -->
-          <div class="grid grid-cols-2 gap-2.5 pt-1">
-            <div>
-              <label class="block font-semibold text-amber-900 mb-1">Quantity</label>
-              <input type="number" step="1" id="quantity" value="1" min="1" oninput="calculateAmounts()" class="w-full rounded-lg p-2 caphi-input font-semibold bg-white" />
-            </div>
-            <div>
-              <label class="block font-semibold text-amber-900 mb-1">GST Rate (%)</label>
-              <select id="gst-rate" onchange="calculateAmounts()" class="w-full rounded-lg p-2 caphi-input font-bold bg-white">
-                <option value="0">0% (Exempt)</option>
-                <option value="5">5%</option>
-                <option value="12">12%</option>
-                <option value="18" selected>18%</option>
-                <option value="28">28%</option>
-              </select>
-            </div>
-          </div>
+        <div>
+          <label class="block font-semibold text-slate-700 mb-1">Description of Goods / Services</label>
+          <input type="text" id="description" required placeholder="e.g. JOB WORK CHARGES-DIE STRIPPING & PACKING" class="w-full rounded-lg p-2 caphi-input font-semibold" />
+        </div>
 
-          <!-- Summary Box -->
-          <div class="bg-white border border-amber-200 rounded-lg p-2.5 text-xs space-y-1 font-medium text-slate-700">
-            <div class="flex justify-between"><span>Subtotal:</span><span id="summary-subtotal">₹0.00</span></div>
-            <div class="flex justify-between"><span>GST Amount:</span><span id="summary-gst" class="text-amber-600 font-bold">+₹0.00</span></div>
-            <div class="flex justify-between font-bold text-slate-900 border-t border-slate-200 pt-1 text-sm"><span>Total Bill:</span><span id="summary-total" class="text-emerald-600 font-black">₹0.00</span></div>
+        <div class="grid grid-cols-3 gap-2.5">
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Quantity</label>
+            <input type="number" step="any" id="quantity" value="1" min="0" oninput="calculateAmounts()" class="w-full rounded-lg p-2 caphi-input font-semibold" />
           </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Unit</label>
+            <input type="text" id="item-unit" value="Pcs." placeholder="Pcs., Kg, Hrs" class="w-full rounded-lg p-2 caphi-input font-semibold" />
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-700 mb-1">Price / Rate (₹)</label>
+            <input type="number" step="any" id="rate" required placeholder="0.10" oninput="calculateAmounts()" class="w-full rounded-lg p-2 caphi-input font-bold" />
+          </div>
+        </div>
+
+        <div id="pro-gst-box" class="hidden">
+          <label class="block font-semibold text-amber-900 mb-1">GST Rate (%)</label>
+          <select id="gst-rate" onchange="calculateAmounts()" class="w-full rounded-lg p-2 caphi-input font-bold bg-white">
+            <option value="0" selected>0% (None / Exempt)</option>
+            <option value="5">5%</option>
+            <option value="12">12%</option>
+            <option value="18">18%</option>
+            <option value="28">28%</option>
+          </select>
+        </div>
+
+        <div class="bg-amber-50/50 border border-amber-200 rounded-lg p-2.5 text-xs space-y-1 font-medium text-slate-700">
+          <div class="flex justify-between"><span>Subtotal:</span><span id="summary-subtotal">₹0.00</span></div>
+          <div class="flex justify-between"><span>GST Amount:</span><span id="summary-gst" class="text-amber-600 font-bold">+₹0.00</span></div>
+          <div class="flex justify-between font-bold text-slate-900 border-t border-slate-200 pt-1 text-sm"><span>Total Bill:</span><span id="summary-total" class="text-emerald-600 font-black">₹0.00</span></div>
         </div>
 
         <div class="grid grid-cols-2 gap-3">
@@ -949,17 +796,17 @@
             <label class="block font-semibold text-slate-700 mb-1">Category</label>
             <select id="category" class="w-full rounded-lg p-2 caphi-input font-semibold">
               <option value="General Trade">General Trade</option>
+              <option value="Job Work">Job Work</option>
               <option value="Office Expenses">Office Expenses</option>
-              <option value="Groceries & Kirana">Groceries & Kirana</option>
               <option value="Services & Logistics">Services & Logistics</option>
             </select>
           </div>
           <div>
             <label class="block font-semibold text-slate-700 mb-1">Payment Mode</label>
             <select id="method" class="w-full rounded-lg p-2 caphi-input font-semibold">
+              <option value="Bank Transfer">Bank Transfer</option>
               <option value="Cash">Cash</option>
               <option value="UPI">UPI</option>
-              <option value="Bank Transfer">Bank Transfer</option>
               <option value="Credit / Udhar">Credit / Udhar</option>
             </select>
           </div>
@@ -970,7 +817,7 @@
     </div>
   </div>
 
-  <!-- MODAL: UPGRADE PRO -->
+  <!-- UPGRADE MODAL -->
   <div id="upgrade-modal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4 z-50">
     <div class="caphi-card max-w-sm w-full p-6 shadow-xl relative space-y-4 border border-amber-300">
       <div class="flex justify-between items-center">
@@ -1010,65 +857,115 @@
     </div>
   </div>
 
-  <!-- PRINTABLE INVOICE TEMPLATE WITH FULL PARTY DETAILS (OFFSCREEN) -->
-  <div id="invoice-pdf-template" style="display: none; width: 700px; max-width: 700px; background: #ffffff; color: #000; font-family: Arial, sans-serif; font-size: 11px; padding: 10px; margin: auto;">
-    <div style="border: 1.5px solid #000;">
-      <div style="text-align: center; padding: 8px; border-bottom: 1.5px solid #000; background: #fafafa;">
-        <div style="font-size: 13px; font-weight: 800; text-transform: uppercase;">TAX INVOICE</div>
-        <div id="pdf-top-company-name" style="font-size: 16px; font-weight: 900; margin-top: 2px;">Store Name</div>
-        <div id="pdf-top-company-address" style="font-size: 10px; color: #333;">Delhi, India</div>
-        <div style="font-size: 9px; margin-top: 2px;">
-          <strong>GSTIN:</strong> <span id="pdf-top-company-gstin">N/A</span> | <strong>Phone:</strong> <span id="pdf-top-company-phone">N/A</span>
+  <!-- EXACT COMMERCIAL INVOICE TEMPLATE (OFFSCREEN) -->
+  <div id="invoice-pdf-template" style="display: none; width: 780px; max-width: 780px; background: #ffffff; color: #000; font-family: 'Arial', sans-serif; font-size: 11.5px; padding: 16px; margin: auto;">
+    <div style="border: 1.5px solid #222;">
+      
+      <!-- TOP DOCUMENT HEADER -->
+      <div style="position: relative; text-align: center; padding: 12px 10px; border-bottom: 1.5px solid #222;">
+        <span style="position: absolute; right: 12px; top: 12px; font-size: 10px; font-style: italic; color: #555;">Original Copy</span>
+        <div id="pdf-doc-title" style="font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">SERVICE INVOICE</div>
+        <div id="pdf-top-company-name" style="font-size: 18px; font-weight: 900; margin-top: 2px; text-transform: uppercase;">SANTOSH JAIN</div>
+        <div id="pdf-top-company-address" style="font-size: 10.5px; color: #222; margin-top: 1px;">U-68A, SHAKARPUR, DELHI-110092</div>
+        <div id="pdf-top-meta-line" style="font-size: 10px; font-weight: bold; margin-top: 3px;">
+          <!-- Dynamically populated without empty N/A placeholders -->
         </div>
       </div>
-      <div style="display: flex; border-bottom: 1px solid #000;">
-        <div style="width: 50%; padding: 6px; border-right: 1px solid #000;">
-          <div style="font-weight: bold; font-style: italic;">Billed to:</div>
-          <div id="pdf-billed-name" style="font-weight: bold; font-size: 12px;">Customer</div>
-          <div id="pdf-billed-address" style="font-size: 10px; color: #222; margin-top: 2px;">Delhi, India</div>
+
+      <!-- PARTY DETAILS & INVOICE DETAILS STRIP -->
+      <div style="display: flex; border-bottom: 1.5px solid #222;">
+        <!-- Left: Party Details -->
+        <div style="width: 55%; padding: 8px 10px; border-right: 1.5px solid #222; line-height: 1.45;">
+          <div style="font-weight: bold; font-style: italic; text-decoration: underline;">Party Details :</div>
+          <div id="pdf-party-name" style="font-weight: 800; font-size: 12px; margin-top: 2px;">NAKODA PRINT & PACK</div>
+          <div id="pdf-party-address" style="color: #222;">C-20, SECTOR-63, NOIDA<br>UTTAR PRADESH-201301</div>
+          <div id="pdf-party-gstin" style="font-weight: bold; margin-top: 2px;">GSTN-09AGVPJ9178P1ZZ</div>
         </div>
-        <div style="width: 50%; padding: 6px;">
-          <div style="font-weight: bold; font-style: italic;">Shipped to:</div>
-          <div id="pdf-shipped-name" style="font-weight: bold; font-size: 12px;">Customer</div>
-          <div id="pdf-shipped-address" style="font-size: 10px; color: #222; margin-top: 2px;">Delhi, India</div>
+
+        <!-- Right: Invoice Metadata -->
+        <div style="width: 45%; padding: 8px 10px; line-height: 1.5;">
+          <div style="display: flex; justify-content: space-between;">
+            <span style="font-weight: bold;">Invoice No.</span>
+            <span style="font-weight: bold;">: <span id="pdf-inv-no">SJ-1/26-27</span></span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Dated</span>
+            <span>: <span id="pdf-inv-date">01-07-2026</span></span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>GR/RR No.</span>
+            <span>: </span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Transport</span>
+            <span>: </span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Vehicle No.</span>
+            <span>: </span>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span>Station</span>
+            <span>: </span>
+          </div>
         </div>
       </div>
+
+      <!-- MAIN GOODS / SERVICES TABLE -->
       <table style="width: 100%; border-collapse: collapse; table-layout: fixed;">
         <thead>
-          <tr style="border-bottom: 1px solid #000; background: #fafafa; font-size: 9.5px;">
-            <th style="border-right: 1px solid #000; padding: 4px; text-align: left; width: 200px;">Description</th>
-            <th style="border-right: 1px solid #000; padding: 4px; text-align: center; width: 40px;">Qty</th>
-            <th style="border-right: 1px solid #000; padding: 4px; text-align: right; width: 60px;">Price</th>
-            <th style="border-right: 1px solid #000; padding: 4px; text-align: center; width: 50px;">CGST%</th>
-            <th style="border-right: 1px solid #000; padding: 4px; text-align: center; width: 50px;">SGST%</th>
-            <th style="padding: 4px; text-align: right; width: 80px;">Amount(₹)</th>
+          <tr style="border-bottom: 1.5px solid #222; background: #fafafa; font-size: 10.5px;">
+            <th style="border-right: 1.5px solid #222; padding: 6px 4px; text-align: center; width: 36px;">S.N.</th>
+            <th style="border-right: 1.5px solid #222; padding: 6px 8px; text-align: left; width: 340px;">Description of Goods</th>
+            <th style="border-right: 1.5px solid #222; padding: 6px 6px; text-align: right; width: 90px;">Qty.</th>
+            <th style="border-right: 1.5px solid #222; padding: 6px 4px; text-align: left; width: 50px;">Unit</th>
+            <th style="border-right: 1.5px solid #222; padding: 6px 6px; text-align: right; width: 75px;">Price</th>
+            <th style="padding: 6px 8px; text-align: right; width: 110px;">Amount(₹)</th>
           </tr>
         </thead>
         <tbody>
-          <tr style="height: 100px; vertical-align: top;">
-            <td id="pdf-item-desc" style="border-right: 1px solid #000; padding: 6px; font-weight: bold;">Goods</td>
-            <td id="pdf-item-qty" style="border-right: 1px solid #000; padding: 6px; text-align: center;">1</td>
-            <td id="pdf-item-price" style="border-right: 1px solid #000; padding: 6px; text-align: right;">0.00</td>
-            <td id="pdf-item-rate" style="border-right: 1px solid #000; padding: 6px; text-align: center;">9%</td>
-            <td id="pdf-item-sgst" style="border-right: 1px solid #000; padding: 6px; text-align: center;">9%</td>
-            <td id="pdf-item-total" style="padding: 6px; text-align: right; font-weight: bold;">0.00</td>
+          <tr style="height: 250px; vertical-align: top;">
+            <td id="pdf-row-sn" style="border-right: 1.5px solid #222; padding: 8px 4px; text-align: center;">1.</td>
+            <td id="pdf-item-desc" style="border-right: 1.5px solid #222; padding: 8px; font-weight: bold; text-transform: uppercase;">JOB WORK CHARGES-DIE STRIPPING & PACKING</td>
+            <td id="pdf-item-qty" style="border-right: 1.5px solid #222; padding: 8px 6px; text-align: right;">46,25,000.00</td>
+            <td id="pdf-item-unit" style="border-right: 1.5px solid #222; padding: 8px 4px;">Pcs.</td>
+            <td id="pdf-item-price" style="border-right: 1.5px solid #222; padding: 8px 6px; text-align: right;">0.10</td>
+            <td id="pdf-item-total" style="padding: 8px; text-align: right; font-weight: bold;">4,62,500.00</td>
           </tr>
         </tbody>
       </table>
-      <div style="display: flex; border-top: 1px solid #000; line-height: 22px; font-weight: bold; font-size: 11px;">
-        <div style="flex: 1; text-align: right; padding-right: 12px;">Grand Total ₹</div>
-        <div id="pdf-grand-total" style="width: 80px; text-align: right; padding-right: 4px; border-left: 1px solid #000;">0.00</div>
+
+      <!-- GRAND TOTAL STRIP -->
+      <div style="display: flex; border-top: 1.5px solid #222; border-bottom: 1.5px solid #222; line-height: 26px; font-weight: bold;">
+        <div style="width: 376px; text-align: right; padding-right: 12px; font-weight: 800;">Grand Total</div>
+        <div id="pdf-total-qty" style="width: 90px; text-align: right; padding-right: 6px; border-left: 1.5px solid #222;">46,25,000.00</div>
+        <div id="pdf-total-unit" style="width: 50px; padding-left: 4px; border-right: 1.5px solid #222;">Pcs.</div>
+        <div style="width: 75px; text-align: center; border-right: 1.5px solid #222;">₹</div>
+        <div id="pdf-grand-total" style="width: 110px; text-align: right; padding-right: 8px; font-weight: 900;">4,62,500.00</div>
       </div>
-      <div style="display: flex; border-top: 1px solid #000;">
-        <div style="flex: 1; padding: 8px; border-right: 1px solid #000;">
-          <div style="font-size: 9px; font-weight: bold;">Receiver's Signature:</div>
-          <div style="border-bottom: 1px dotted #999; width: 80%; margin-top: 30px;"></div>
+
+      <!-- RUPEES IN WORDS STRIP -->
+      <div style="padding: 6px 10px; border-bottom: 1.5px solid #222; font-size: 11px;">
+        <strong id="pdf-rupees-words">Rupees Four Lakh Sixty Two Thousand Five Hundred Only</strong>
+      </div>
+
+      <!-- FOOTER: TERMS & SIGNATORIES -->
+      <div style="display: flex; min-height: 95px;">
+        <div style="width: 55%; padding: 8px 10px; border-right: 1.5px solid #222; font-size: 9.5px; line-height: 1.45;">
+          <div style="font-weight: bold; text-decoration: underline;">Terms & Conditions</div>
+          <div>E.& O.E.</div>
+          <div>1. Goods once sold will not be taken back.</div>
+          <div>2. Interest @ 18% p.a. will be charged if the payment is not made with in the stipulated time.</div>
+          <div>3. Subject to 'Delhi' Jurisdiction only.</div>
+          <div style="margin-top: 18px; font-weight: bold;">Receiver's Signature : ____________________</div>
         </div>
-        <div style="flex: 1; padding: 8px; text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end;">
-          <img id="pdf-sig-preview" src="" style="display: none; max-height: 35px; max-width: 120px; object-fit: contain; margin-bottom: 4px;" alt="Signature" />
-          <div style="font-weight: bold; font-size: 9.5px;">Authorised Signatory</div>
+        <div style="width: 45%; padding: 8px 12px; text-align: right; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;">
+          <div style="font-weight: 800; font-size: 11.5px;">for <span id="pdf-sign-firm-name">SANTOSH JAIN</span></div>
+          <img id="pdf-sig-preview" src="" style="display: none; max-height: 45px; max-width: 130px; object-fit: contain; margin: 4px 0;" alt="Signature" />
+          <div style="font-weight: 800; font-size: 11px;">Authorised Signatory</div>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -1085,7 +982,7 @@
     const PRO_PRICE = 99;
 
     window.companies = JSON.parse(localStorage.getItem('ledger_companies')) || [
-      { id: 'c_default', name: 'Main Branch Outlet', address: 'Delhi, India', gstin: 'N/A', phone: '' }
+      { id: 'c_default', name: 'SANTOSH JAIN', address: 'U-68A, SHAKARPUR, DELHI-110092', gstin: '', pan: 'AAEPJ0862H', phone: '' }
     ];
     window.activeCompanyId = localStorage.getItem('ledger_active_company_id') || window.companies[0].id;
     window.transactions = JSON.parse(localStorage.getItem(`ledger_tx_${window.activeCompanyId}`)) || [];
@@ -1115,27 +1012,22 @@
 
     function updateProStatusUI() {
       const planBadge = document.getElementById('sidebar-plan-badge');
-      const planDesc = document.getElementById('settings-plan-desc');
       const headerUpgradeBtn = document.getElementById('header-upgrade-btn');
-      const settingsUpgradeBtn = document.getElementById('settings-upgrade-btn');
       const proFields = document.getElementById('pro-fields-container');
+      const proGst = document.getElementById('pro-gst-box');
 
       const remainingDays = getProDaysRemaining();
 
       if (isProUser && remainingDays > 0) {
         if (planBadge) planBadge.innerHTML = `<i data-lucide="crown" class="w-3.5 h-3.5 text-amber-300 inline"></i> Pro (${remainingDays}d)`;
-        if (planDesc) planDesc.innerText = `Khata Pro Active (${remainingDays} days remaining)`;
-
         if (headerUpgradeBtn) headerUpgradeBtn.classList.add('hidden');
-        if (settingsUpgradeBtn) settingsUpgradeBtn.classList.add('hidden');
         if (proFields) proFields.classList.remove('hidden');
+        if (proGst) proGst.classList.remove('hidden');
       } else {
         if (planBadge) planBadge.innerHTML = `<i data-lucide="shield" class="w-3.5 h-3.5 text-amber-300 inline"></i> Free Tier`;
-        if (planDesc) planDesc.innerText = "Free Plan (Receipt & Payment Only)";
-
         if (headerUpgradeBtn) headerUpgradeBtn.classList.remove('hidden');
-        if (settingsUpgradeBtn) settingsUpgradeBtn.classList.remove('hidden');
         if (proFields) proFields.classList.add('hidden');
+        if (proGst) proGst.classList.add('hidden');
       }
       lucide.createIcons();
     }
@@ -1175,7 +1067,7 @@
       }
     }
 
-    /* GULLAK SAVINGS WITH RECORD DELETION */
+    /* GULLAK SAVINGS CONTROLLER */
     let gullakBalance = Number(localStorage.getItem(`gullak_bal_${window.activeCompanyId}`)) || 0;
     let gullakHistory = JSON.parse(localStorage.getItem(`gullak_hist_${window.activeCompanyId}`)) || [];
 
@@ -1274,7 +1166,7 @@
       updateGullakUI();
     }
 
-    /* MODERN STORE SWITCHER & MODAL CONTROLLERS */
+    /* STORE SWITCHER MODAL & CONTROLLERS */
     function openStoreSwitchModal() {
       renderStoreModalList();
       document.getElementById('store-switch-modal').classList.remove('hidden');
@@ -1327,6 +1219,7 @@
 
       document.getElementById('set-company-name').value = activeComp.name || '';
       document.getElementById('set-company-gstin').value = activeComp.gstin || '';
+      document.getElementById('set-company-pan').value = activeComp.pan || '';
       document.getElementById('set-company-phone').value = activeComp.phone || '';
       document.getElementById('set-company-address').value = activeComp.address || '';
 
@@ -1360,7 +1253,7 @@
     }
 
     function getActiveCompany() {
-      return (window.companies || []).find(c => c.id === window.activeCompanyId) || { name: 'Main Branch Outlet', address: 'Delhi, India', gstin: 'N/A', phone: '' };
+      return (window.companies || []).find(c => c.id === window.activeCompanyId) || { name: 'SANTOSH JAIN', address: 'U-68A, SHAKARPUR, DELHI-110092', gstin: '', pan: 'AAEPJ0862H', phone: '' };
     }
 
     function loadCompanyTransactions() {
@@ -1379,7 +1272,7 @@
       const name = document.getElementById('new-company-name-input').value.trim();
       if (!name) return alert("Please enter a valid store name!");
 
-      const newC = { id: `c_${Date.now()}`, name: name, address: 'Delhi, India', gstin: 'N/A', phone: '' };
+      const newC = { id: `c_${Date.now()}`, name: name, address: 'Delhi, India', gstin: '', pan: '', phone: '' };
       window.companies.push(newC);
       localStorage.setItem('ledger_companies', JSON.stringify(window.companies));
       
@@ -1398,6 +1291,7 @@
       const activeComp = getActiveCompany();
       activeComp.name = document.getElementById('set-company-name').value.trim();
       activeComp.gstin = document.getElementById('set-company-gstin').value.trim();
+      activeComp.pan = document.getElementById('set-company-pan').value.trim().toUpperCase();
       activeComp.phone = document.getElementById('set-company-phone').value.trim();
       activeComp.address = document.getElementById('set-company-address').value.trim();
 
@@ -1452,7 +1346,7 @@
       tbody.innerHTML = '';
       const txs = window.transactions || [];
       if (txs.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400 font-medium">No ledger entries saved yet. Tap "+ Add Entry" to begin.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="7" class="py-6 text-center text-slate-400 font-medium">No ledger entries saved yet. Tap "+ Add Entry" to begin.</td></tr>`;
         return;
       }
       txs.slice().reverse().slice(0, 5).forEach(item => {
@@ -1460,12 +1354,13 @@
         const isPos = item.type === 'sale' || item.type === 'receipt';
         tr.innerHTML = `
           <td class="py-3 text-slate-500 font-mono">${item.date}</td>
+          <td class="py-3 font-mono font-bold text-slate-700">${item.invoiceNo || '-'}</td>
           <td class="py-3"><span class="${isPos ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'} px-2 py-0.5 rounded text-[10px] font-bold uppercase">${item.type}</span></td>
           <td class="py-3 font-bold text-slate-900">${item.partyName || '-'}</td>
           <td class="py-3 text-slate-600">${item.description}</td>
           <td class="py-3 font-black ${isPos ? 'text-emerald-600' : 'text-rose-600'}">${isPos ? '+' : '-'}₹${(item.totalAmount || item.amount).toFixed(2)}</td>
           <td class="py-3 text-right">
-            <button onclick="generateInvoicePDF(${item.id})" class="text-amber-800 bg-amber-100 p-1.5 rounded-lg hover:bg-amber-200"><i data-lucide="file-text" class="w-3.5 h-3.5"></i></button>
+            <button onclick="generateInvoicePDF(${item.id})" class="text-amber-800 bg-amber-100 p-1.5 rounded-lg hover:bg-amber-200" title="Print Invoice"><i data-lucide="file-text" class="w-3.5 h-3.5"></i></button>
           </td>
         `;
         tbody.appendChild(tr);
@@ -1478,7 +1373,7 @@
       tbody.innerHTML = '';
       const txs = window.transactions || [];
       if (txs.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="6" class="py-6 text-center text-slate-400 font-medium">No records found.</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="7" class="py-6 text-center text-slate-400 font-medium">No records found.</td></tr>`;
         return;
       }
       txs.slice().reverse().forEach(item => {
@@ -1486,6 +1381,7 @@
         const isPos = item.type === 'sale' || item.type === 'receipt';
         tr.innerHTML = `
           <td class="py-3 text-slate-500 font-mono">${item.date}</td>
+          <td class="py-3 font-mono font-bold text-slate-700">${item.invoiceNo || '-'}</td>
           <td class="py-3"><span class="${isPos ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'} px-2 py-0.5 rounded text-[10px] font-bold uppercase">${item.type}</span></td>
           <td class="py-3 font-bold text-slate-900">${item.partyName || '-'}</td>
           <td class="py-3 text-slate-600">${item.description}</td>
@@ -1508,7 +1404,7 @@
       }
     }
 
-    /* DIGITAL UTILITIES EXPANDED */
+    /* DIGITAL UTILITIES */
     let companySignatureDataUrl = localStorage.getItem('user_digital_signature') || '';
 
     function uploadDigitalSignature(event) {
@@ -1611,30 +1507,6 @@
       reader.readAsArrayBuffer(input.files[0]);
     }
 
-    async function convertPdfToImage() {
-      const input = document.getElementById('pdf-to-img-input');
-      if (!input.files.length) return alert('Select a PDF file!');
-      const reader = new FileReader();
-      reader.onload = async function() {
-        try {
-          const pdf = await pdfjsLib.getDocument(new Uint8Array(this.result)).promise;
-          const page = await pdf.getPage(1);
-          const viewport = page.getViewport({ scale: 1.5 });
-          const canvas = document.createElement('canvas');
-          canvas.height = viewport.height;
-          canvas.width = viewport.width;
-          await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
-          const a = document.createElement('a');
-          a.href = canvas.toDataURL("image/png");
-          a.download = `PDF_Page1_${Date.now()}.png`;
-          a.click();
-        } catch (err) {
-          alert("Could not extract image: " + err.message);
-        }
-      };
-      reader.readAsArrayBuffer(input.files[0]);
-    }
-
     function recoverDamagedFile() {
       const input = document.getElementById('damaged-file-input');
       if (!input.files.length) return alert('Select a damaged file to recover!');
@@ -1647,44 +1519,98 @@
         a.href = URL.createObjectURL(blob);
         a.download = `Recovered_Text_${Date.now()}.txt`;
         a.click();
-        alert("Raw printable strings successfully extracted into a text file.");
+        alert("Raw printable strings successfully extracted.");
       };
       reader.readAsText(input.files[0]);
     }
 
+    /* RUPEES TO WORDS CONVERTER HELPER */
+    function numberToWordsINR(amount) {
+      const a = ['', 'One ', 'Two ', 'Three ', 'Four ', 'Five ', 'Six ', 'Seven ', 'Eight ', 'Nine ', 'Ten ', 'Eleven ', 'Twelve ', 'Thirteen ', 'Fourteen ', 'Fifteen ', 'Sixteen ', 'Seventeen ', 'Eighteen ', 'Nineteen '];
+      const b = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+
+      function inWords(num) {
+        if ((num = num.toString()).length > 9) return 'Overflow';
+        const n = ('000000000' + num).substr(-9).match(/^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/);
+        if (!n) return '';
+        let str = '';
+        str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'Crore ' : '';
+        str += (n[2] != 0) ? (a[Number(n[2])] || b[n[2][0]] + ' ' + a[n[2][1]]) + 'Lakh ' : '';
+        str += (n[3] != 0) ? (a[Number(n[3])] || b[n[3][0]] + ' ' + a[n[3][1]]) + 'Thousand ' : '';
+        str += (n[4] != 0) ? (a[Number(n[4])] || b[n[4][0]] + ' ' + a[n[4][1]]) + 'Hundred ' : '';
+        str += (n[5] != 0) ? ((str != '') ? 'and ' : '') + (a[Number(n[5])] || b[n[5][0]] + ' ' + a[n[5][1]]) : '';
+        return str.trim();
+      }
+
+      const whole = Math.floor(amount);
+      const dec = Math.round((amount - whole) * 100);
+      let res = 'Rupees ' + inWords(whole);
+      if (dec > 0) res += ' and ' + inWords(dec) + 'Paise';
+      return res + ' Only';
+    }
+
+    /* COMMERCIAL INVOICE GENERATOR FUNCTION MATCHING SCREENSHOT LAYOUT */
     function generateInvoicePDF(id) {
       const item = (window.transactions || []).find(t => t.id === id);
       if (!item) return alert("Record not found!");
       const activeComp = getActiveCompany();
 
-      // Store Details Header
-      document.getElementById('pdf-top-company-name').innerText = activeComp.name || 'My Store';
-      document.getElementById('pdf-top-company-address').innerText = activeComp.address || 'Delhi, India';
-      document.getElementById('pdf-top-company-gstin').innerText = activeComp.gstin || 'N/A';
-      document.getElementById('pdf-top-company-phone').innerText = activeComp.phone || 'N/A';
+      // Top Title (SERVICE INVOICE vs TAX INVOICE)
+      document.getElementById('pdf-doc-title').innerText = item.invoiceDocType || (item.category === 'Job Work' ? 'SERVICE INVOICE' : 'TAX INVOICE');
+      document.getElementById('pdf-top-company-name').innerText = activeComp.name || 'SANTOSH JAIN';
+      document.getElementById('pdf-top-company-address').innerText = activeComp.address || 'U-68A, SHAKARPUR, DELHI-110092';
 
-      // Party / Customer Information
-      const partyDisplayName = (item.partyName && item.partyName !== '-') ? item.partyName : 'Customer';
-      const partyAddress = item.partyAddress || 'Delhi, India';
-      const partyContact = (item.partyPhone && item.partyPhone !== '-') ? `Phone: ${item.partyPhone}` : '';
-      const partyGst = (item.partyGstin && item.partyGstin !== 'N/A') ? `GSTIN: ${item.partyGstin}` : '';
+      // Meta Line: Show ONLY PAN if only PAN is present, otherwise show GST/Phone cleanly
+      const metaParts = [];
+      if (activeComp.pan && activeComp.pan !== 'N/A' && activeComp.pan.trim() !== '') {
+        metaParts.push(`PAN-${activeComp.pan}`);
+      }
+      if (activeComp.gstin && activeComp.gstin !== 'N/A' && activeComp.gstin.trim() !== '') {
+        metaParts.push(`GSTIN: ${activeComp.gstin}`);
+      }
+      if (activeComp.phone && activeComp.phone !== 'N/A' && activeComp.phone.trim() !== '') {
+        metaParts.push(`Phone: ${activeComp.phone}`);
+      }
+      document.getElementById('pdf-top-meta-line').innerText = metaParts.join('  |  ');
 
-      const fullCustomerBlock = [partyAddress, partyContact, partyGst].filter(Boolean).join(' | ');
+      // Party Details
+      document.getElementById('pdf-party-name').innerText = (item.partyName && item.partyName !== '-') ? item.partyName : 'NAKODA PRINT & PACK';
+      document.getElementById('pdf-party-address').innerText = (item.partyAddress && item.partyAddress !== '-') ? item.partyAddress : 'C-20, SECTOR-63, NOIDA, UTTAR PRADESH-201301';
+      
+      const partyGstEl = document.getElementById('pdf-party-gstin');
+      if (item.partyGstin && item.partyGstin !== 'N/A' && item.partyGstin.trim() !== '') {
+        partyGstEl.innerText = `GSTN-${item.partyGstin}`;
+        partyGstEl.style.display = 'block';
+      } else {
+        partyGstEl.style.display = 'none';
+      }
 
-      document.getElementById('pdf-billed-name').innerText = partyDisplayName;
-      document.getElementById('pdf-billed-address').innerText = fullCustomerBlock;
-      document.getElementById('pdf-shipped-name').innerText = partyDisplayName;
-      document.getElementById('pdf-shipped-address').innerText = partyAddress;
+      // Invoice Details Right Box
+      document.getElementById('pdf-inv-no').innerText = item.invoiceNo || `SJ-${item.id.toString().slice(-4)}/26-27`;
+      document.getElementById('pdf-inv-date').innerText = item.date ? item.date.split('-').reverse().join('-') : '01-07-2026';
 
-      // Item Particulars
-      document.getElementById('pdf-item-desc').innerText = item.description || 'Goods';
-      document.getElementById('pdf-item-qty').innerText = item.quantity || 1;
-      document.getElementById('pdf-item-price').innerText = (item.rate || item.amount || 0).toFixed(2);
-      document.getElementById('pdf-item-rate').innerText = `${((item.gstRate || 0) / 2).toFixed(1)}%`;
-      document.getElementById('pdf-item-sgst').innerText = `${((item.gstRate || 0) / 2).toFixed(1)}%`;
-      document.getElementById('pdf-item-total').innerText = (item.totalAmount || item.amount || 0).toFixed(2);
-      document.getElementById('pdf-grand-total').innerText = (item.totalAmount || item.amount || 0).toFixed(2);
+      // Line Item
+      const qtyVal = Number(item.quantity) || 1;
+      const rateVal = Number(item.rate) || Number(item.amount) || 0;
+      const totalVal = Number(item.totalAmount) || Number(item.amount) || 0;
+      const unitVal = item.unit || 'Pcs.';
 
+      document.getElementById('pdf-item-desc').innerText = item.description || 'JOB WORK CHARGES-DIE STRIPPING & PACKING';
+      document.getElementById('pdf-item-qty').innerText = qtyVal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('pdf-item-unit').innerText = unitVal;
+      document.getElementById('pdf-item-price').innerText = rateVal.toFixed(2);
+      document.getElementById('pdf-item-total').innerText = totalVal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+      // Grand Total Line
+      document.getElementById('pdf-total-qty').innerText = qtyVal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      document.getElementById('pdf-total-unit').innerText = unitVal;
+      document.getElementById('pdf-grand-total').innerText = totalVal.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+      // Rupees in Words
+      document.getElementById('pdf-rupees-words').innerText = numberToWordsINR(totalVal);
+      document.getElementById('pdf-sign-firm-name').innerText = activeComp.name || 'SANTOSH JAIN';
+
+      // Digital Signature
       const sigImg = document.getElementById('pdf-sig-preview');
       if (companySignatureDataUrl) {
         sigImg.src = companySignatureDataUrl;
@@ -1695,7 +1621,13 @@
 
       const el = document.getElementById('invoice-pdf-template');
       el.style.display = 'block';
-      html2pdf().from(el).set({ filename: `Invoice_${partyDisplayName}_${item.id}.pdf` }).save().then(() => el.style.display = 'none');
+      html2pdf().from(el).set({
+        filename: `${(item.invoiceDocType || 'Invoice').replace(/\s+/g, '_')}_${item.invoiceNo || item.id}.pdf`,
+        margin: [5, 5, 5, 5],
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      }).save().then(() => el.style.display = 'none');
     }
 
     /* EXPANDED CALCULATORS */
@@ -1722,30 +1654,6 @@
       res.innerHTML = `<p>Base Amount: ₹${base.toFixed(2)}</p><p>CGST / SGST: ₹${(gst/2).toFixed(2)} each</p><p class="text-emerald-700 font-bold">Total GST: ₹${gst.toFixed(2)}</p>`;
     }
 
-    function calculateProfitMargin() {
-      const cp = parseFloat(document.getElementById('calc-cost-price').value) || 0;
-      const sp = parseFloat(document.getElementById('calc-sell-price').value) || 0;
-      if (!cp || !sp) return alert("Please enter both cost and selling price!");
-      const profit = sp - cp;
-      const margin = (profit / sp) * 100;
-      const res = document.getElementById('profit-result');
-      res.classList.remove('hidden');
-      res.innerHTML = `<p>Net Profit: ₹${profit.toFixed(2)}</p><p class="text-emerald-700 font-bold">Profit Margin: ${margin.toFixed(2)}%</p>`;
-    }
-
-    function convertCommercialUnits() {
-      const val = parseFloat(document.getElementById('calc-unit-val').value) || 0;
-      const type = document.getElementById('calc-unit-type').value;
-      if (!val) return alert("Please enter quantity!");
-      let resText = "";
-      if (type === "quintal-to-kg") resText = `${val} Quintal = ${val * 100} Kilograms (Kg)`;
-      else if (type === "kg-to-gm") resText = `${val} Kilograms = ${val * 1000} Grams (g)`;
-      else if (type === "mound-to-kg") resText = `${val} Maund (Mann) = ${(val * 40).toFixed(2)} Kilograms (Kg)`;
-      const res = document.getElementById('unit-result');
-      res.classList.remove('hidden');
-      res.innerText = resText;
-    }
-
     /* CHARTS */
     function initCharts() {
       lineChart = new Chart(document.getElementById('overviewChart').getContext('2d'), {
@@ -1768,13 +1676,19 @@
       doughnutChart.update();
     }
 
-    function openModal() { document.getElementById('modal').classList.remove('hidden'); calculateAmounts(); }
+    function openModal() { 
+      document.getElementById('modal').classList.remove('hidden'); 
+      if (!document.getElementById('invoice-no-input').value) {
+        document.getElementById('invoice-no-input').value = `SJ-${(window.transactions.length + 1)}/26-27`;
+      }
+      calculateAmounts(); 
+    }
     function closeModal() { document.getElementById('modal').classList.add('hidden'); }
 
     function toggleVoucherFields() {
       const type = document.getElementById('type').value;
       if ((type === 'sale' || type === 'purchase') && !isProUser) {
-        alert('Sale & Purchase Vouchers with GST require an active Pro Membership (₹99/30 days).');
+        alert('Sale & Purchase Vouchers with Custom Invoices require an active Pro Membership (₹99/30 days).');
         document.getElementById('type').value = 'receipt';
         openUpgradeModal();
         return;
@@ -1782,13 +1696,14 @@
 
       const isVoucher = (type === 'sale' || type === 'purchase');
       document.getElementById('pro-fields-container').classList.toggle('hidden', !isVoucher);
+      document.getElementById('pro-gst-box').classList.toggle('hidden', !isVoucher);
       calculateAmounts();
     }
 
     function calculateAmounts() {
       const type = document.getElementById('type').value;
       const isVoucher = (type === 'sale' || type === 'purchase');
-      const qty = parseFloat(document.getElementById('quantity').value) || 1;
+      const qty = parseFloat(document.getElementById('quantity').value) || 0;
       const rate = parseFloat(document.getElementById('rate').value) || 0;
       const gstPct = (isVoucher) ? (parseFloat(document.getElementById('gst-rate').value) || 0) : 0;
 
@@ -1807,23 +1722,27 @@
       const type = document.getElementById('type').value;
       const isVoucher = (type === 'sale' || type === 'purchase');
       const amountVal = parseFloat(document.getElementById('rate').value) || 0;
+      const qtyVal = parseFloat(document.getElementById('quantity').value) || 1;
+      const unitVal = document.getElementById('item-unit').value.trim() || 'Pcs.';
 
       if (isVoucher && isProUser) {
-        const qty = parseFloat(document.getElementById('quantity').value) || 1;
         const gstPct = parseFloat(document.getElementById('gst-rate').value) || 0;
-        const subtotal = qty * amountVal;
+        const subtotal = qtyVal * amountVal;
         const gstAmount = (subtotal * gstPct) / 100;
         const totalAmount = subtotal + gstAmount;
 
         window.transactions.push({
           id: Date.now(),
           type: type,
+          invoiceDocType: document.getElementById('invoice-doc-type').value,
+          invoiceNo: document.getElementById('invoice-no-input').value.trim() || `SJ-${Date.now().toString().slice(-4)}`,
           partyName: document.getElementById('party-name').value.trim() || '-',
           partyPhone: document.getElementById('party-phone').value.trim() || '-',
-          partyGstin: document.getElementById('party-gstin').value.trim() || 'N/A',
-          partyAddress: document.getElementById('party-address').value.trim() || 'Delhi, India',
+          partyGstin: document.getElementById('party-gstin').value.trim() || '',
+          partyAddress: document.getElementById('party-address').value.trim() || '-',
           description: document.getElementById('description').value.trim(),
-          quantity: qty,
+          quantity: qtyVal,
+          unit: unitVal,
           rate: amountVal,
           gstRate: gstPct,
           gstAmount: gstAmount,
@@ -1838,16 +1757,19 @@
         window.transactions.push({
           id: Date.now(),
           type: type,
+          invoiceDocType: 'RECEIPT',
+          invoiceNo: '-',
           partyName: document.getElementById('party-name')?.value.trim() || '-',
           partyPhone: '-',
-          partyGstin: 'N/A',
+          partyGstin: '',
           partyAddress: '-',
           description: document.getElementById('description').value.trim(),
-          quantity: 1,
+          quantity: qtyVal,
+          unit: unitVal,
           rate: amountVal,
-          amount: amountVal,
-          totalAmount: amountVal,
-          subtotal: amountVal,
+          amount: qtyVal * amountVal,
+          totalAmount: qtyVal * amountVal,
+          subtotal: qtyVal * amountVal,
           gstRate: 0,
           gstAmount: 0,
           category: document.getElementById('category').value,
@@ -1865,17 +1787,13 @@
       closeModal();
       e.target.reset();
       document.getElementById('date').value = new Date().toISOString().split('T')[0];
-      document.getElementById('party-name').value = '';
-      document.getElementById('party-phone').value = '';
-      document.getElementById('party-gstin').value = '';
-      document.getElementById('party-address').value = '';
     });
 
     function exportData() {
       const txs = window.transactions || [];
       if (!txs.length) return alert("No transactions to export!");
-      let csv = "Date,Type,Party,Description,Amount\n";
-      txs.forEach(t => csv += `${t.date},${t.type},"${t.partyName || ''}","${t.description}",${t.totalAmount || t.amount}\n`);
+      let csv = "Date,InvoiceNo,Type,Party,Description,Quantity,Unit,Rate,TotalAmount\n";
+      txs.forEach(t => csv += `${t.date},${t.invoiceNo || ''},${t.type},"${t.partyName || ''}","${t.description}",${t.quantity || 1},${t.unit || 'Pcs.'},${t.rate || t.amount},${t.totalAmount || t.amount}\n`);
       const a = document.createElement('a');
       a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;' }));
       a.download = `Khata_Statement_${getActiveCompany().name}.csv`;
@@ -1967,7 +1885,6 @@
       }
     }
 
-    // Cloud Save Sync
     window.syncLedgerToCloud = async function() {
       if (!activeUid || isSyncingFromCloud) return;
       try {
